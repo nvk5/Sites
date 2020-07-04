@@ -1,0 +1,18 @@
+.button {
+    min-width: 170px;
+    height: 53px;
+    background-color: $color-brown;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+
+    &:hover {
+        color: $color-brown;
+        background-color: $color-white;
+        border: 1px solid $color-brown;
+    }
+}

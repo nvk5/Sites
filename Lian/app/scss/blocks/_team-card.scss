@@ -1,0 +1,58 @@
+.team-card {
+    cursor: pointer;
+    box-shadow: 0 0 5px $black;
+
+    &__img {
+        position: relative;
+        padding-bottom: 150%;
+        background: #eee;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 15px 0 10px;
+            transition: transform .3s ease;     
+        }
+    }
+
+    &__desc {
+        padding: 5% 10%;
+        background: $white;
+    }
+
+    &__name {
+        font-family: $RobotoL;
+        font-size: rem(26px);
+        letter-spacing: 0.04em;
+        color: #041608;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+    }
+
+    &__prof {
+        font-size: rem(18px);
+        font-family: $RobotoB;
+        letter-spacing: 0.025em;
+        color: $color-text;
+    }
+
+    &__text {
+        font-size: rem(16px);
+        color: $color-text-copy;
+        margin-top: 20px;
+    }
+}
+
+
+.team-card:hover {
+    .team-card__img img {
+        transform: scale(1.1);
+    }
+}

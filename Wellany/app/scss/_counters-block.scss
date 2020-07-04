@@ -1,0 +1,30 @@
+.counters-block {
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
+    padding: 10px;
+
+    &__num {
+        font-family: $Montserrat;
+        font-size: rem(48px);
+        color: $color-white;
+        display: block;
+        padding-top: 65px;
+    }
+
+    &__desc {
+        font-family: $Montserrat;
+        font-size: rem(14px);
+        color: $color-brown-light;
+        line-height: 1.25;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: $color-white;
+            margin: 25px auto 0;
+        }
+    }
+}

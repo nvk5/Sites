@@ -1,0 +1,76 @@
+.footer-block {
+    padding: 0 10px;
+
+    &__about-us {
+        margin: 27px 0 20px;
+        color: $color-black-light;
+        font-size: rem(16px);
+    }
+
+    &__headline {
+        font-family: $RalewayBold;
+        font-size: rem(28px);
+        color: $color-white;
+        margin-bottom: 23px;
+    }
+
+
+    &__post {
+        font-family: $Montserrat;
+        padding-top: 12px;
+
+        &:not(:last-child)::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #252525;
+            margin-top: 20px;
+        }
+
+        &:hover {
+            .footer-block__date {
+                color: $color-white;
+            }
+
+            .footer-block__desc {
+                color: $color-brown-light;
+            }
+        }
+    }
+
+    &__date {
+        color: $color-gray-light;
+        font-size: rem(14px);
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    &__desc {
+        color: $color-black-light;
+        font-size: rem(16px);
+    }
+
+    &__date,
+    &__desc {
+        transition: color .3s ease;
+    }
+
+    &__date--twit {
+        margin-top: 10px;
+    }
+
+    &__desc-twit {
+        color: $color-gray-light;
+    }
+
+    &__twit {
+        color: #00BFF3;
+    }
+
+    &__widget {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

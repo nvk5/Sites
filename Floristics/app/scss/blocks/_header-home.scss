@@ -1,0 +1,137 @@
+.header-home {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: rem(100px);
+    padding-top: rem(80px);
+    position: relative;
+    padding: 87px 0 100px;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        background: linear-gradient(0deg, #3B181E 3.33%, rgba(59, 24, 30, 0) 100%);
+    }
+
+    &__content {
+        margin-top: 140px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    &__top,
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__top,
+    &__bottom,
+    &__content {
+        padding: 0 5%;
+    }
+
+    &__headline {
+        font-size: rem(120px);
+        font-weight: inherit;
+        letter-spacing: 0.09em;
+        line-height: 1.2;
+        max-width: 818px;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+
+    &__view-catalog {
+        position: relative;
+        letter-spacing: 0.09em;
+        writing-mode: vertical-lr;
+        color: inherit;
+
+        &::before {
+            content: '';
+            width: 10px;
+            height: 23px;
+            position: absolute;
+            background-image: url('../../images/svg/arrow-down.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            transition: all .3s linear;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:hover {
+            &::before {
+                transform: translate(-50%, 10px);
+            }
+        }
+    }
+
+    &__scroll-down {
+        border: 2px solid $text;
+        background: transparent;
+        border-radius: 20px;
+        width: 36px;
+        height: 56px;
+        position: relative;
+        cursor: pointer;
+        opacity: .7;
+        align-self: flex-end;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $text;
+            width: 2px;
+            height: 10px;
+            transition: all .3s linear;
+            opacity: inherit;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+           &::before {
+                top: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+/* для Safari, Safari IOS */
+only screen and (min-resolution: 192dpi),
+/* для IE 10, IE 11, Opera Mini */
+only screen and (min-resolution: 2dppx) {
+
+    /* для нормальных браузеров */
+    .webp .header-home {
+        background-image: url('../../images/home/@2x/webp/bg.webp');
+    }
+
+    .no-webp .header-home {
+        background-image: url('../../images/home/@2x/bg.jpg');
+    }
+
+}
+
+
+.webp .header-home {
+    background-image: url('../../images/home/@1x/webp/bg.webp');
+}
+
+.no-webp .header-home {
+    background-image: url('../../images/home/@1x/bg.jpg');
+}

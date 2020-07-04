@@ -1,0 +1,206 @@
+/*==========  Desktop First  ==========*/
+@media (max-height: 600px) and (orientation: landscape) {
+    .header__slider {
+        height: 140vh;
+    }
+
+    .header .slick-list {
+        height: 100%;
+    }
+}
+
+/* Large Devices, Desktops, Tablets landscape 992-1199 */
+@media  screen and (max-width: 1199.98px) {
+    html {
+        font-size: 90%;
+    }
+
+    .header__search {
+       width: 100%;
+    }
+}
+	
+/* Medium Devices, Tablets portrait 768-991 */
+@media screen and (max-width: 991.98px) {
+
+    .header__hamburger {
+        display: block;
+    }
+
+    .header__logo {
+        margin: auto;
+    }
+    
+    .header__nav {
+        z-index: -1;
+    }
+
+    .nav__list {
+        padding: 100px 15px;
+        padding-left: 20px;
+    }
+
+    .header__search {
+        margin-left: 0;
+    }
+
+    .pushy-open-left .site-overlay, 
+    .pushy-open-right .site-overlay {
+        z-index: 4;
+    }
+
+    .nav__item:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .nav__item {
+        width: 100%;
+    }
+
+    .form {
+        width: 40%;
+    }
+
+    .projects__list {
+        justify-content: space-around;
+    }
+}
+
+/* Small Devices, Phones (landscape) 576-767 */
+@media screen and (max-width: 767.98px) {
+    .search-cart__link--cart {
+        display: none;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .purchase {
+        text-align: center;
+    }
+
+    .about__pos {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .posts .slick-dots {
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: -30px;
+    }
+}
+
+
+/* Extra Small Devices, Phones (portrait) 480-575 */
+@media screen and (max-width: 575.98px) {
+    .header__top {
+        padding: 10px 10px;
+    }
+
+    .form {
+        width: 60%;
+    }
+
+    .services__block {
+        min-height: 240px;
+    }
+
+    .projects__list {
+        display: block;
+        text-align: center;
+    }
+
+    .projects__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .presentation__btn-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .article {
+        margin: 0 5px;
+    }
+}
+
+
+/* Extra Small more, Phones 320-479 */
+@media screen and (max-width: 479.98px) {
+    .header__content-title {
+        white-space: normal;
+    }
+
+    .header__content {
+        width: 535px;
+        max-width: 100%;
+    }
+
+    .form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .header__search {
+        margin-left: auto;
+    }
+}
+
+/* Custom, iPhone Retina 0 - 320 */
+@media screen and (max-width : 319.98px) {
+
+}
+
+
+
+@media (min-width: 992px) {
+    body,
+    .pushy-open-left,
+    .pushy-open-right {
+        #container,
+        .push {
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+        }
+        .site-overlay{
+            display: none;
+            -webkit-animation: none;
+            animation: none;
+        }
+        .pushy-left {
+            transform: none;
+        }
+
+        .pushy-content{
+            visibility: visible;
+        }
+
+        .pushy {
+            position: static;
+            width: auto;
+            height: auto;
+            background: none;
+            overflow: auto;
+
+            a {
+                color: #fff;
+                padding: 0;
+                background: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $color-brown-light;
+                    background: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.content {
+    background-color: $color-bg;
+    padding-bottom: 55px;
+    padding-top: 30px;
+
+    &--about,
+    &--blog,
+    &--single-post {
+        padding: 30px 0;
+        margin-bottom: 0;
+    }
+
+    &--contact,
+    &--portfolio-details {
+        padding-bottom: 55px;
+        padding-top: 60px;
+    }
+
+    &--sec {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}

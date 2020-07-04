@@ -1,0 +1,295 @@
+// — Мобильники 320-767px — mobile, mobile-portrait, mobile-landscape
+// — Планшеты 768-1023px — tablet, tablet-portrait, tablet-landscape
+// — Лаптопы 1024-1199px — laptop, laptop-portrait, laptop-landscape
+// — Десктопы >=1200px — desktop, desktop-portrait, desktop-landscape
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Desktops, Tablets landscape 992-1199 */
+@media only screen and (max-width : 1199.98px) {
+    
+}
+	
+/* Medium Devices, Tablets portrait 768-991 */
+@media screen and (max-width : 991.98px) {
+    html {
+        font-size: 90%;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .main-subtitle {
+        font-size: 1rem;
+    }
+
+    .webp .sidebar .sidebar__block-post,
+    .no-webp .sidebar .sidebar__block-post {
+        background-size: 100% 50%;
+        padding: 50% 7px 7px 7px;
+    }
+
+    .sidebar__block-post-desc {
+        margin-bottom: 10px;
+    }
+
+    .sidebar__list-link {
+        padding: 10px;
+    }
+
+    .sidebar__list-item {
+        width: 100%;
+    }
+
+    .sidebar__socials-item {
+        width: 100%;
+    }
+}
+
+/* Small Devices, Phones (landscape) 576-767 */
+@media screen and (max-width : 767.98px) {
+    .slider__arrow--right {
+        right: 20px;
+    }
+
+    .slider__arrow--left {
+        left: 20px;
+    }
+
+    .slick-dots {
+        bottom: 10px;
+    }
+
+
+    .projects__list {
+        display: block;
+    }
+
+    .projects__item {
+        transform: none;
+        padding: 20px;
+        position: relative;
+        border: 1px solid;
+        box-shadow: 0 0px 9px -5px black;
+        margin-bottom: 5px;
+        transition: all .4s linear;
+        cursor: pointer;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            &::before {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m256 512c-68.378906 0-132.667969-26.628906-181.019531-74.980469-48.351563-48.351562-74.980469-112.640625-74.980469-181.019531s26.628906-132.667969 74.980469-181.019531c48.351562-48.351563 112.640625-74.980469 181.019531-74.980469s132.667969 26.628906 181.019531 74.980469c48.351563 48.351562 74.980469 112.640625 74.980469 181.019531s-26.628906 132.667969-74.980469 181.019531c-48.351562 48.351563-112.640625 74.980469-181.019531 74.980469zm0-472c-119.101562 0-216 96.898438-216 216s96.898438 216 216 216 216-96.898438 216-216-96.898438-216-216-216zm138.285156 182-28.285156-28.285156-110 110-110-110-28.285156 28.285156 138.285156 138.285156zm0 0'/%3E%3C/svg%3E");
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                width: 20px;
+                height: 20px;
+                display: block;
+                animation: arrow-down .5s linear infinite alternate;
+            }
+        }
+    }
+
+    .about {
+        background-repeat: no-repeat;
+        background-position: right center;
+
+        &__bg {
+            display: none;
+        }
+
+        &__headline {
+            color: $white;
+        }
+
+        &__text {
+            color: $white;
+        }
+    }
+
+    .input-range-label {
+        color: $white;
+    }
+
+    .about.content > .container {
+        border: 1px solid $black;
+        background: rgba(0,0,0, 0.5);
+    }
+
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    /* для Safari, Safari IOS */
+    only screen and (min-resolution: 192dpi),
+    /* для IE 10, IE 11, Opera Mini */
+    only screen and (min-resolution: 2dppx) {
+
+        /* для нормальных браузеров */
+        .webp .about {
+            background-image: url('../images/about/@2x/webp/shutterstock_295137809@.webp'), linear-gradient(45deg, rgba(0,0,0, .5), rgba(0,0,0, .5));
+            background-size: cover;
+            background-blend-mode: luminosity;
+        }
+
+        .no-webp .about {
+            background-image: url('../images/about/@2x/shutterstock_295137809@.png'), linear-gradient(45deg, rgba(0,0,0, .5), rgba(0,0,0, .5));
+            background-size: cover;
+            background-blend-mode: luminosity;
+        }
+    }
+
+    .webp .about {
+        background-image: url('../images/about/@1x/webp/shutterstock_295137809@.webp'), linear-gradient(45deg, rgba(0,0,0, .5), rgba(0,0,0, .5));
+        background-size: cover;
+        background-blend-mode: luminosity;
+    }
+
+    .no-webp .about {
+        background-image: url('../images/about/@1x/shutterstock_295137809@.png'), linear-gradient(45deg, rgba(0,0,0, .5), rgba(0,0,0, .5));
+        background-size: cover;
+        background-blend-mode: luminosity;
+    }
+
+
+
+    .project-details__title {
+        font-size: 1.5rem;
+    }
+
+    .project-btns {
+        flex-direction: column-reverse;
+
+        &__item {
+            border: 1px solid #ebebeb;
+        }
+    }
+
+    .project-btns__item--showall {
+        margin-left: 0;
+    }
+
+    .project-btns__item--showall::before,
+    .project-btns__item--prev::before {
+        left: 30%;
+    }
+
+    .project-btns__item--next::before {
+        right: 35%;
+    }
+
+    .project-details__share {
+        flex-direction: column;
+    }
+
+    .share-btn {
+        width: 100%;
+    }
+
+    .pr .socials {
+        display: flex;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .pr .socials__list {
+        width: 100%;
+    }
+
+    .pr .socials__list::after {
+        top: -14px;
+        left: 50%;
+        border-bottom: 15px solid #e1e1e1;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: none;
+        transform: translateX(-50%);
+    }
+
+    .share-btn::after {
+        left: 42%;
+    }
+
+
+    .form__item-wrap {
+        width: 100%;
+    }
+
+    .article__wrap {
+        padding: 30px;
+    }
+
+    .article__headline {
+        font-size: 1.6rem;
+    }
+
+    .sidebar__socials-item {
+        width: 31%;
+    }
+
+    .webp .sidebar .sidebar__block-post,
+    .no-webp .sidebar .sidebar__block-post {
+        background-size: 90px 100%;
+        padding: 5px 5px 5px 100px;
+    }
+}
+
+
+/* Extra Small Devices, Phones (portrait) 480-575 */
+@media screen and (max-width : 575.98px) {
+    html {
+        font-size: 80%;
+    }
+
+    .socials__list {
+        justify-content: space-around;
+    }
+
+    .form__item {
+        width: 100%;
+    }
+}
+
+/* Extra Small more, Phones 320-479 */
+@media screen and (max-width: 479.98px) {
+    html {
+        font-size: 75%;
+    }
+
+    .slider__arrow--right {
+        right: 10px;
+    }
+
+    .slider__arrow--left {
+        left: 10px;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .main-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .article__details {
+        justify-content: space-between;
+    }
+
+    .article__details-item {
+        margin: 10px 30px;
+    }
+}
+	
+/* Custom, iPhone Retina 0 - 320 */
+@media only screen and (max-width : 320.98px) {
+
+}
+

@@ -1,0 +1,35 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 
+// 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+//Font-face mixin
+@mixin font-face($f-name, $f-style, $f-weight, $f-path) {
+    @font-face {
+        font-family: $f-name;
+        font-style: $f-style;
+        font-weight: $f-weight;
+        src: url('#{$f-path}.woff2') format('woff2'), 
+             url('#{$f-path}.woff') format('woff')
+    }	
+}
+
+@include font-face('OpenSansBold', normal, 700, '../fonts/OpenSansBold/OpenSansBold');
+@include font-face('OpenSansRegular', normal, 400, '../fonts/OpenSansRegular/OpenSansRegular');
+@include font-face('RobotoBlack', normal, 400, '../fonts/RobotoBlack/RobotoBlack');
+@include font-face('RobotoBold', normal, 700, '../fonts/RobotoBold/RobotoBold');
+@include font-face('RobotoRegular', normal, 400, '../fonts/RobotoRegular/RobotoRegular');
+
+
+
+
+
+

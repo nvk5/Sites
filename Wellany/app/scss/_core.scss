@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body,h1,h2,h3,h4,p,ul,ol,li,figure,figcaption,blockquote,dl,dd {
+  margin: 0;
+}
+
+html {
+    font-size: 110%;
+}
+
+body {
+    font-size: rem($font-size-main);
+    font-family: $RalewayRegular, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    min-width: 320px;
+    position: relative;
+    overflow-x: hidden;
+    color: $color-gray-light;
+    transition: margin-left .3s linear;
+}
+
+.body-translate {
+  margin-left: 30%;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+}
+
+ul {
+  list-style: none;
+}
+
+.img {
+    max-width: 100%;
+    display: block;
+}
+
+input::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* Firefox < 19 */
+input:-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Firefox > 19 */
+input::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
+
+*::-webkit-search-cancel-button {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,33 @@
+.read-more {
+    color: $color-brown-light;
+    font-family: $Montserrat;
+    font-size: rem(14px);
+    position: relative;
+
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 5px solid #c7b299;
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid transparent;
+        margin-left: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &--footer {
+        color: #D1D1D1;
+        transition: color .3s ease ;
+
+        &::after {
+            border-left-color: #D1D1D1;
+        }
+
+        &:hover {
+            color: $color-brown-light;
+        }
+    }
+}

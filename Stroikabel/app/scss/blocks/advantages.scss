@@ -1,0 +1,31 @@
+.advantages,
+.description {
+    background: #E9F0F6;
+
+    &__block {
+        text-align: center;
+    }
+
+    &__img-wrap {
+        border: 3px solid #00B05A;
+        border-radius: 50%;
+        width: 103px;
+        height: 103px;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__desc {
+        font-family: 'OpenSansRegular';
+        font-size: rem(14px);
+        color: #464646;
+    }
+}

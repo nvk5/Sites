@@ -1,0 +1,38 @@
+.breadcrumbs {
+    &__list {
+        padding: 10px 15px;
+        background: #eee;
+        list-style: none;
+        display: flex;
+        font-size: rem(18px);
+    }
+
+    &__link {
+        color: $gray;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #000;
+            transition: width .3s ease;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+            
+    }
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+    content: "/";
+    padding: 15px;
+    color: black;
+}

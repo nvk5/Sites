@@ -1,0 +1,57 @@
+.promotion {
+    margin-top: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    &__img {
+        width: 50%;
+        padding-top: 30%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        order: 2;
+        transition: all .4s linear;
+    }
+
+    &__content {
+        max-width: 403px;
+        order: 1;
+        transition: all .4s linear;
+    }
+
+    &__details {
+        font-size: rem(20px);
+        line-height: 2;
+        text-transform: none;
+        margin-top: 40px;
+        margin-bottom: 45px;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+/* для Safari, Safari IOS */
+only screen and (min-resolution: 192dpi),
+/* для IE 10, IE 11, Opera Mini */
+only screen and (min-resolution: 2dppx) {
+
+    /* для нормальных браузеров */
+    .webp .promotion__img {
+        background-image: url('../../images/home/@2x/webp/promotion.webp');
+    }
+
+    .no-webp .promotion__img {
+        background-image: url('../../images/home/@2x/promotion.png');
+    }
+
+}
+
+
+.webp .promotion__img {
+    background-image: url('../../images/home/@1x/webp/promotion.webp');
+}
+
+.no-webp .promotion__img {
+    background-image: url('../../images/home/@1x/promotion.png');
+}

@@ -1,0 +1,24 @@
+.purchase {
+    background: linear-gradient(45deg, #211B19, #4E3227);
+    padding: 0 10px;
+
+    &__subtitle {
+        font-family: $Montserrat;
+        font-size: rem(18px);
+        color: #615855;
+    }
+
+    &__title {
+        font-size: rem(28px);
+        color: $color-white;
+    }
+
+    &__title-prev {
+        color: $color-brown;
+    }
+
+    &__btn {
+        font-size: rem(14px);
+        font-family: $RalewayExtraBold;
+    }
+}

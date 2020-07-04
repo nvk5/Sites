@@ -1,0 +1,25 @@
+.nav {
+    background: #0068D9;
+    
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    &__link {
+        font-family: 'OpenSansBold';
+        font-size: rem(18px);
+        color: #fff;
+        padding: 10px 20px;
+        display: block;
+        transition: background .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: #007AFF;
+        }
+    }
+}

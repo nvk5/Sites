@@ -1,0 +1,32 @@
+.logo {
+    width: 100px;
+    height: 70px;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        .path {
+            fill: #333;
+        }
+
+        
+    }
+
+    &.copy {
+        margin-bottom: 50px;
+        padding: 0;
+
+        .path {
+            fill: $white;
+        }
+    }
+
+    &--preload {
+        width: 260px;
+        height: auto;
+        padding: 15px;
+    }
+}
+
+

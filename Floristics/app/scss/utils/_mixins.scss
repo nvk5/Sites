@@ -1,0 +1,111 @@
+//Clearfix mixin
+@mixin clearfix {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+
+	
+
+
+
+// Px to rem
+@function rem($size) {
+  @return $size / $root-font-size * 1rem;
+}
+
+
+
+
+
+// Breakpoints
+@mixin for-orientationLandscape {
+	@media (max-height:500px) and (orientation: landscape) {@content};
+}
+
+/* Iphone 4/5 */
+@mixin  for-iPhone4-5 {
+	@media (max-width: 320px) { @content; }
+}
+
+@mixin for-IE-iPhone4-5 {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 320px) { @content; } 
+}
+
+@mixin for-iPhone-with-landscapeOrientation {
+	@media (max-width: 320px) and (orientation: landscape) { @content; }
+}
+
+/* Portrait phones and smaller */
+@mixin for-phone-portrait {
+	@media (max-width: 480px) { @content; }
+}
+
+@mixin for-IE-phone-portrait {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 480px) { @content; } 
+}
+
+@mixin for-phone-portrait-with-landscapeOrientation {
+	@media (max-width: 480px) and (orientation: landscape) { @content; }
+}
+
+/* Landscape phones and portrait tablets */
+@mixin for-phone-landscape {
+	@media (max-width: 768px) { @content; }
+}
+
+@mixin for-IE-phone-landscape {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 768px) { @content; } 
+}
+
+@mixin for-phone-landscape-with-landscapeOrientation {
+	@media (max-width: 768px) and (orientation: landscape) { @content; }
+}
+
+/* Portrait tablets and small desktops */
+@mixin for-tablet-portrait {
+	@media  (max-width: 992px) { @content; }
+}
+
+@mixin for-IE-tablet-portrait {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 992px) { @content; } 
+}
+
+@mixin for-tablet-portrait-with-landscapeOrientation {
+	@media (max-width: 992px) and (orientation: landscape) { @content; }
+}
+
+/* Landscape tablets and medium desktops */
+@mixin for-tablet-landscape {
+	@media  (max-width: 1199px) { @content; }
+}
+
+@mixin for-IE-tablet-landscape {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 1199px) { @content; } 
+}
+
+@mixin for-tablet-landscape-with-landscapeOrientation {
+	@media (max-width: 1199px) and(max-height:500px) and (orientation: landscape) { @content; }
+}
+
+/*Desktops and laptops */
+@mixin for-desktop-up {
+	@media (min-width: 1200px) { @content; }
+}
+
+@mixin for-IE-desktop-up {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 1200px) { @content; } 
+}
+
+
+/* Large desktops */
+@mixin for-big-desktop-up {
+	@media (min-width: 1800px) { @content; }
+}
+
+@mixin for-IE-big-desktop-up {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 1800px) { @content; } 
+}

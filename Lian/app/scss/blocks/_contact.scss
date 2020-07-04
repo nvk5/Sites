@@ -1,0 +1,37 @@
+.contact {
+    &__office-hours {
+        margin-top: 35px;
+    }
+
+    &__address {
+        margin-bottom: 35px;
+    }
+
+    &__details {
+        color: #777;
+        transition: all .3s ease;
+    }
+
+    &__info {
+        font-family: $RobotoB;
+        letter-spacing: 0.025em;
+        color: #222;
+        padding: 10px 5px 10px 0;
+    }
+
+    &__tel,
+    &__mail {
+        &:hover,
+        &:focus,
+        &:active {
+            > span {
+                color: black;
+                letter-spacing: 0.055em;
+            }
+        }
+    }
+}
+
+.contact-address {
+    font-style: normal;
+}

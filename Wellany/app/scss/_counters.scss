@@ -1,0 +1,25 @@
+.counters {
+    background: linear-gradient(45deg, #211B19, #4E3227);
+    padding: 0 10px;
+
+
+    &__clients {
+        background-image: url('../img/svg/clients.svg');
+    }
+
+    &__coffee {
+        background-image: url('../img/svg/coffee.svg');
+    }
+
+    &__posts {
+        background-image: url('../img/svg/posts.svg');
+    }
+
+    &__likes {
+        background-image: url('../img/svg/likes.svg');
+    }
+
+    &__launch {
+        background-image: url('../img/svg/launch.svg');
+    }
+}

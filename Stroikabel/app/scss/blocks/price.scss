@@ -1,0 +1,17 @@
+.price {
+    font-family: 'OpenSansBold', sans-serif;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    position: fixed;
+    left: -62px;
+    top: 350px;
+    background: #C7665D;
+    border-radius: 5px;
+    padding: 5px 10px;
+    z-index: 2;
+    
+    &__link {
+        color: #fff;
+    }
+}

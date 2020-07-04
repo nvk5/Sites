@@ -1,0 +1,10 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+
+    &__copyright {
+        font-family: $ff-navbottom, sans-serif;
+        font-size: rem($fsz-text2);
+        color: $color-navbottom;
+    }
+}

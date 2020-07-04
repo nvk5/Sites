@@ -1,0 +1,25 @@
+.slick-arrow {
+    width: 40px;
+    height: 73px;
+    color: $color-white;
+    z-index: 2;
+    cursor: pointer;
+    font-size: rem(70px);
+    transition: fill .3s ease;
+
+    &:hover {
+        fill: $color-brown-light;
+    }
+
+    &--right {
+        top: 50%;
+        right: 10%;
+        position: absolute;
+    }
+
+    &--left {
+        top: 50%;
+        left: 10%;
+        position: absolute;
+    }
+}

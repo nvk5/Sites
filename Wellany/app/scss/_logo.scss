@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width: 63px;
+        height: 56px;
+        fill: $color-white;
+    }
+
+    &__desc {
+        font-size: rem(34px);
+        color: $color-white;
+    }
+}
+
+

@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Wellany</title>
+    <meta name="description" content="Веб-студия Wellany. Создание и продвижение сайтов">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff"></head>
+<body>
+    <div class="preload">
+        <div class="cssload-loader">
+            <div class="cssload-inner cssload-one"></div>
+            <div class="cssload-inner cssload-two"></div>
+            <div class="cssload-inner cssload-three"></div>
+        </div>
+    </div>
+    <header class="header" id="home">
+        <div class="header__top">
+            <div class="wrap wrap--header">
+                <div class="header__hamburger hamburger">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </div>
+                <a href="#home" title="Waxom" class="header__logo logo link" aria-label="Веб-студия Wellany">
+                    <svg class="logo__img">
+                        <use xlink:href="img/svg/sprite/sprite.svg#logos"/>
+                    </svg>
+                    <div class="logo__desc d-none d-md-block">Wellany</div>
+                </a>
+                <nav class="header__nav nav fade pushy pushy-left" data-focus="#home" data-menu-btn-class=".hamburger">
+                    <div class="pushy-content">
+                        <ul class="nav__list">
+                            <li class="nav__item pushy-link"><a href="#home" class="nav__link link">Главная</a></li>
+                            <li class="nav__item pushy-link"><a href="#services" class="nav__link link">Услуги</a>
+                            </li>
+                            <li class="nav__item pushy-link"><a href="#about-us" class="nav__link link">О нас</a>
+                            </li>
+                            <li class="nav__item pushy-link"><a href="#projects" class="nav__link link">Наши работы</a>
+                            </li>
+                            <li class="nav__item pushy-link"><a href="#posts" class="nav__link link">Блог</a></li>
+                            <!-- <li class="nav__item pushy-link"><a href="#presentation" class="nav__link link pushy-link">Презентация</a></li> -->
+                            <li class="nav__item pushy-link"><a href="#advantages" class="nav__link link">Наши преимущества</a>
+                            </li>
+                            <li class="nav__item pushy-link"><a href="#partners" class="nav__link link">Партнеры</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="search">
+                    <a href="#" class="search__link link" title="Поиск по сайту" aria-label="Поиск по сайту">
+                        <svg class="search__icon">
+                            <use xlink:href="img/svg/sprite/sprite.svg#icon-search"/>
+                        </svg>
+                    </a>
+                </div>
+                <input type="search" placeholder="Найти..." class="header__search hide">
+            </div>
+        </div>
+        <div class="header__content">
+            <p class="header__content-subtitle d-none d-md-block">Создание и продвижение сайтов</p>
+            <h1 class="header__content-title">Веб студия Wellany</h1>
+            <p class="header__content-text">Мы создаем сайты и интернет-магазины любой сложности и под любые цели</p>
+            <button class="header__content-btn button" aria-label="Свяжитесь с нами, заполнив форму обратной связи">Свяжитесь с нами</button>
+        </div>
+        <div class="header__slider">
+            <div class="header__slider-item"></div>
+            <div class="header__slider-item"></div>
+            <div class="header__slider-item"></div>
+            <div class="header__slider-item"></div>
+            <div class="header__slider-item"></div>
+        </div>
+    </header>
+    <div class="site-overlay"></div>
+    <div class="modal">
+        <form action="#" class="form modal__header" id="form">
+                <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Wellany">
+            <input type="hidden" name="admin_email" value="pewahac459@mail1.top">
+            <input type="hidden" name="form_subject" value="Заявка">
+            <!-- END Hidden Required Fields -->
+            <div class="modal__success"><span class="modal__success-msg">Спасибо за заявку!</span></div>
+            <div class="form__close">
+                <span class="form__close-icon">&times;</span>
+            </div>
+            <input type="text" name="name" placeholder="Имя..." class="form__input" required>
+            <input type="email" name="email" id="name" placeholder="Email..." class="form__input" required>
+            <input type="tel" name="phone" placeholder="Телефон..." class="form__input" required>
+            <textarea name="text" id="textarea" cols="30" rows="10" placeholder="Сообщение..." class="form__input-textarea"></textarea>
+            <button form="form" type="submit" class="button form__btn">Отправить</button>
+        </form>
+    </div>
+    <div class="services" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 my-4 my-lg-0 justify-content-center">
+                    <a href="#" class="services__block link" aria-label="Проектирование и дизайн">
+                        <svg class="services__block-img">
+                            <use xlink:href="img/svg/sprite/sprite.svg#design"/>
+                        </svg>
+                        <h3 class="services__block-title">Проектирование и дизайн</h3>
+                        <p class="services__block-text">Создание индивидуальной концепции, от лаконичных решений до сложных динамических элементов.</p>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 my-4 my-lg-0 justify-content-center">
+                    <a href="#" class="services__block link" aria-label="Изготовление сайтов">
+                        <svg class="services__block-img">
+                            <use xlink:href="img/svg/sprite/sprite.svg#development"/>
+                        </svg>
+                        <h3 class="services__block-title">Изготовление сайтов</h3>
+                        <p class="services__block-text">Комплекс работ, которые решают поставленные клиентом задачи – от имиджевых до продающих</p>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 my-4 my-lg-0 justify-content-center">
+                    <a href="#" class="services__block link" aria-label="Интеграция">
+                        <svg class="services__block-img">
+                            <use xlink:href="img/svg/sprite/sprite.svg#customization"/>
+                        </svg>
+                        <h3 class="services__block-title">Интеграция</h3>
+                        <p class="services__block-text">Внедрение системы для управления несколькими сайтами на разных CMS сразу, в одной административной панели.</p>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 my-4 my-lg-0 justify-content-center">
+                    <a href="#" class="services__block link" aria-label="Оптимизация и продвижение">
+                        <svg class="services__block-img">
+                            <use xlink:href="img/svg/sprite/sprite.svg#marketing"/>
+                        </svg>
+                        <h3 class="services__block-title">Оптимизация и продвижение</h3>
+                        <p class="services__block-text">Создание работающей стратегии и анализ результатов ее внедрения</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="about" id="about-us">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="secondary-header secondary-header--about">
+                        <h2 class="secondary-header__headline">Wellany воплотит ваши идеи в жизнь</h2>
+                        <p class="secondary-header__text">Мы предлагаем услуги по созданию корпоративных сайтов и одностраничников, разработке интернет-магазинов, продвижению сайтов в интернете, настройке и управлению контекстной рекламой, занимаемся сео-настройкой сайтов для улучшения позиций в поисковой выдаче, разрабатываем логотипы и фирменный стиль.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 mt-5 mt-md-0 about__pos">
+                    <picture>
+                        <source type="image/webp" data-srcset="img/@1x/webp/about1.webp 1x, img/@2x/webp/about1.webp 2x">
+                        <img src="data:image/gif;base64,R0lGODlhgQHxAIAAAP///wAAACH5BAEAAAEALAAAAACBAfEAAAL+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aujRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7ZsPgUAADs=" class="lazy img about__images about__images--center" data-src="img/@1x/about1.jpg" data-srcset="img/@1x/about1.jpg 1x, img/@2x/about1.jpg 2x" alt="Пример разработки на десктопе">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="purchase">
+        <div class="container">
+            <div class="row justify-content-md-between justify-content-center py-4 align-items-center">
+                <div class="col-md-6 mb-md-0 mb-4">
+                        <h2 class="purchase__title">Запросить расчет стоимости сайта</h2>
+                    <p class="purchase__subtitle">Предоставьте нам немного деталей и мы предложим отличное решение!</p>
+                </div>
+                <div class="col-md-3 d-flex justify-content-md-end justify-content-center">
+                    <button class="button purchase__btn" aria-label="Buy our templates button">Рассчитать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="projects" id="projects">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="secondary-header secondary-header--projects">
+                        <h2 class="secondary-header__headline">Наши проекты</h2>
+                        <p class="secondary-header__text">Мы ставим эксперименты внутри студии,  изучаем новые тенденции во всех областях веб-разработки, чтобы предложить вам лучшее решение, которое будет сооветствовать вашим ожиданиям и требованиям вашего бизнеса. </p>
+                    </div>
+                </div>
+            </div>
+            <ul class="projects__list">
+                <li class="projects__item"><a href="#projects__all" class="projects__link link">Все</a></li>
+                <li class="projects__item"><a href="#projects__webdesign" class="projects__link link">Интернет-магазины</a>
+                </li>
+                <li class="projects__item"><a href="#projects__mobileapp" class="projects__link link">Сайты с интеграциями</a>
+                </li>
+                <li class="projects__item"><a href="#projects__illustration" class="projects__link link">Сайты-визитки</a></li>
+                <li class="projects__item"><a href="#projects__photography" class="projects__link link">Дизайн</a>
+                </li>
+            </ul>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div id="projects__all" class="projects__block">
+                        <div class="row d-flex justify-content-center">
+                            <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                <a href="#" title="Сайт бизнес-центра 'Alliance'" aria-label="Сайт бизнес-центра 'Alliance'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт бизнес-центра 'Alliance'</h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Интернет-магазин по продаже фитнес-оборудования" aria-label="Интернет-магазин по продаже фитнес-оборудования" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/shop5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Интернет-магазин по продаже фитнес-оборудования</h3>
+                                            <p class="projects-block__text">Интернет-магазины</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Сайт барбершоп салона 'Lucky Guy'" aria-label="Сайт барбершоп салона 'Lucky Guy'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт барбершоп салона 'Lucky Guy'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-none d-xl-block w-100"></div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 loaded">
+                                <a href="#" title="Claritas Etiam Processus" aria-label="Claritas Etiam Processus is one of our projects" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/des5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Проектирование сайта по продаже лодок</h3>
+                                            <p class="projects-block__text">Проектирование, дизайн</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 loaded">
+                                <a href="#" title="Сайт частного фотографа" aria-label="Сайт частного фотографа" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp10.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт частного фотографа</h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 loaded">
+                                <a href="#" title="Сайт арт-галерии 'Davinci'" aria-label="Сайт арт-галерии 'Davinci'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms10.jpg)"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт арт-галерии 'Davinci'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects__load hide fade">
+                            <div class="row d-flex justify-content-center">
+                                <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                    <a href="#" title="Claritas Etiam Processus" aria-label="Claritas Etiam Processus is one of our projects" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/des7.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Логотип стоматологической клиники "Smile"</h3>
+                                                <p class="projects-block__text">Проектирование, дизайн</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Интернет-магазин кондитерских изделий 'Sweet Palace'" aria-label="Интернет-магазин кондитерских изделий 'Sweet Palace'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop8.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Интернет-магазин кондитерских изделий 'Sweet Palace'</h3>
+                                                <p class="projects-block__text">Graphic Design, Mock-Up</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Сайт кофейни 'Golden Cup'" aria-label="Сайт кофейни 'Golden Cup'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms2.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт кофейни 'Golden Cup'</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-none d-xl-block w-100"></div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 loaded">
+                                    <a href="#" title="Сайт магазина здорового питания 'Freshy'" aria-label="Сайт магазина здорового питания 'Freshy'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/lp12.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт магазина здорового питания 'Freshy'</h3>
+                                                <p class="projects-block__text">Сайты-визитки</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 loaded">
+                                    <a href="#" title="Сайт фитнес-центра 'Олимп'" aria-label="Сайт фитнес-центра 'Олимп'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms1.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт фитнес-центра 'Олимп'</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 loaded">
+                                    <a href="#" title="Сайт кофейни 'Chat'" aria-label="Сайт кофейни 'Chat'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop4.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт кофейни 'Chat'</h3>
+                                                <p class="projects-block__text">Интернет-магазины</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col d-flex justify-content-center">
+                                <button class="button projects__btn  " aria-label="Показать больше">Показать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects__shop" class="projects__block">
+                        <div class="row d-flex justify-content-center">
+                            <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                <a href="#" title="Интернет-магазин книг и журналов 'Knowledge is power'" aria-label="Интернет-магазин книг и журналов 'Knowledge is power'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/shop1.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Интернет-магазин книг и журналов 'Knowledge is power'</h3>
+                                            <p class="projects-block__text">Интернет-магазины</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Интернет-магазин спортивной экипировки 'Atlant'" aria-label="Интернет-магазин спортивной экипировки 'Atlant'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/shop2.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Интернет-магазин спортивной экипировки 'Atlant'</h3>
+                                            <p class="projects-block__text">Интернет-магазины</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Сайт продажи разливных напитков" aria-label="Сайт продажи разливных напитков" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/shop3.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт продажи разливных напитков</h3>
+                                            <p class="projects-block__text">Интернет-магазины</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-none d-xl-block w-100"></div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Сайт кофейни 'Chat'" aria-label="Сайт кофейни 'Chat'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/shop4.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт кофейни 'Chat'</h3>
+                                            <p class="projects-block__text">Интернет-магазины</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Интернет-магазин по продаже фитнес-оборудования" aria-label="Интернет-магазин по продаже фитнес-оборудования" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/shop5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Интернет-магазин по продаже фитнес-оборудования</h3>
+                                            <p class="projects-block__text">Интернет-магазины</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Интернет-магазин свадебных платьев 'Queen'" aria-label="Интернет-магазин свадебных платьев 'Queen'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/shop6.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Интернет-магазин свадебных платьев 'Queen'</h3>
+                                            <p class="projects-block__text">Интернет-магазины</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects__load hide fade">
+                            <div class="row d-flex justify-content-center">
+                                <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                    <a href="#" title="Интернет-магазин салона автозапчастей 'Rally Man'" aria-label="Интернет-магазин салона автозапчастей 'Rally Man'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop7.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Интернет-магазин салона автозапчастей 'Rally Man'</h3>
+                                                <p class="projects-block__text">Интернет-магазины</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Интернет-магазин кондитерских изделий 'Sweet Palace'" aria-label="Интернет-магазин кондитерских изделий 'Sweet Palace'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop8.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Интернет-магазин кондитерских изделий 'Sweet Palace'</h3>
+                                                <p class="projects-block__text">Интернет-магазины</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Сайт по продаже париков 'Pastege'" aria-label="Сайт по продаже париков 'Pastege'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop9.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт по продаже париков 'Pastege'</h3>
+                                                <p class="projects-block__text">Интернет-магазины</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-none d-xl-block w-100"></div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт рождественских укражений 'Christmas time'" aria-label="Сайт рождественских укражений 'Christmas time'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop10.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт рождественских укражений 'Christmas time'</h3>
+                                                <p class="projects-block__text">Интернет-магазины</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт кафе-бара '777'" aria-label="Сайт кафе-бара '777'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop11.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт кафе-бара '777'</h3>
+                                                <p class="projects-block__text">Интернет-магазины</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Интернет-магазин брендовой одежды 'Lestan'" aria-label="Интернет-магазин брендовой одежды 'Lestan'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/shop12.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Интернет-магазин брендовой одежды 'Lestan'</h3>
+                                                <p class="projects-block__text">Интернет-магазины</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col d-flex justify-content-center">
+                                <button class="button projects__btn  " aria-label="Показать больше">Показать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects__cms" class="projects__block">
+                        <div class="row d-flex justify-content-center">
+                            <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                <a href="#" title="Сайт фитнес-центра 'Олимп'" aria-label="Сайт фитнес-центра 'Олимп'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms1.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт фитнес-центра 'Олимп'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Сайт кофейни 'Golden Cup'" aria-label="Сайт кофейни 'Golden Cup'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms2.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт кофейни 'Golden Cup'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Сайт магазина 'Все для вашего любимца'" aria-label="Сайт магазина 'Все для вашего любимца'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms3.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт магазина 'Все для вашего любимца'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-none d-xl-block w-100"></div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Сайт магазина женской одежды 'Sharleyn'" aria-label="Сайт магазина женской одежды 'Sharleyn'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms4.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт магазина женской одежды 'Sharleyn'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Сайт барбершоп салона 'Lucky Guy'" aria-label="Сайт барбершоп салона 'Lucky Guy'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт барбершоп салона 'Lucky Guy'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Сайт частной лаборатории 'Invitero'" aria-label="Сайт частной лаборатории 'Invitero'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/cms6.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт частной лаборатории 'Invitero'</h3>
+                                            <p class="projects-block__text">Сайты с интеграциями</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects__load hide fade">
+                            <div class="row d-flex justify-content-center">
+                                <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                    <a href="#" title="Сайт цветочного магазина 'Fleur'" aria-label="Сайт цветочного магазина 'Fleur's" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms7.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт цветочного магазина 'Fleur'</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Сайт магазина 'Fresh Style'" aria-label="Сайт магазина 'Fresh Style'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms8.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт магазина 'Fresh Style'</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Сайт магазина по продаже люстр 'Lumenia'" aria-label="Сайт магазина по продаже люстр 'Lumenia'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms9.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт магазина по продаже люстр 'Lumenia'</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-none d-xl-block w-100"></div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт арт-галерии 'Davinci's" aria-label="Сайт арт-галерии 'Davinci'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms10.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт арт-галерии 'Davinci'</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт магазина детской одежды 'Happy Child'" aria-label="Сайт магазина детской одежды 'Happy Child'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms11.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт магазина детской одежды 'Happy Child'</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт магазина по продаже натяжных потолков" aria-label="Сайт магазина по продаже натяжных потолков" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/cms12.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт магазина по продаже натяжных потолков</h3>
+                                                <p class="projects-block__text">Сайты с интеграциями</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col d-flex justify-content-center">
+                                <button class="button projects__btn  " aria-label="Показать больше">Показать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects__lp" class="projects__block">
+                        <div class="row d-flex justify-content-center">
+                            <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                <a href="#" title="Сайт туристического агентства 'Airplanes'" aria-label="Сайт туристического агентства 'Airplanes'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp1.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт туристического агентства 'Airplanes'</h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Сайт магазина по продаже музыкальных инструментов 'Melony'" aria-label="Сайт магазина по продаже музыкальных инструментов 'Melony'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp2.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт магазина по продаже музыкальных инструментов 'Melony'</h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Сайт центра медитации и йоги 'Refresh'" aria-label="Сайт центра медитации и йоги 'Refresh'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp3.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт центра медитации и йоги 'Refresh'</h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-none d-xl-block w-100"></div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Сайт частного адвоката Самойлина А.Е." aria-label="Сайт частного адвоката Самойлина А.Е." class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp4.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт частного адвоката Самойлина А.Е. </h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Сайт бизнес-центра 'Alliance'" aria-label="Сайт бизнес-центра 'Alliance'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт бизнес-центра 'Alliance'</h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Сайт бизнес-центра 'Progress'" aria-label="Сайт бизнес-центра 'Progress'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/lp6.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Сайт бизнес-центра 'Progress'</h3>
+                                            <p class="projects-block__text">Сайты-визитки</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects__load hide fade">
+                            <div class="row d-flex justify-content-center">
+                                <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                    <a href="#" title="Сайт магазина алкогольных напитков 'Bourbone Master'" aria-label="Сайт магазина алкогольных напитков 'Bourbone Master'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/lp7.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт магазина алкогольных напитков 'Bourbone Master'</h3>
+                                                <p class="projects-block__text">Сайты-визитки</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Сайт студии танцев 'Step Up'" aria-label="Сайт студии танцев 'Step Up'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/lp8.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт студии танцев 'Step Up'</h3>
+                                                <p class="projects-block__text">Сайты-визитки</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Сайт по продаже наборов инструментов домашнего мастера" aria-label="Сайт по продаже наборов инструментов домашнего мастера" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/lp9.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт по продаже наборов инструментов домашнего мастера</h3>
+                                                <p class="projects-block__text">Сайты-визитки</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-none d-xl-block w-100"></div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт частного фотографа" aria-label="Сайт частного фотографа" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/lp10.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт частного фотографа</h3>
+                                                <p class="projects-block__text">Сайты-визитки</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт маникюрного салона 'Princess'" aria-label="Сайт маникюрного салона 'Princess'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/lp11.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт маникюрного салона 'Princess'</h3>
+                                                <p class="projects-block__text">Сайты-визитки</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт магазина здорового питания 'Freshy'" aria-label="Сайт магазина здорового питания 'Freshy'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/lp12.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт магазина здорового питания 'Freshy'</h3>
+                                                <p class="projects-block__text">Сайты-визитки</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col d-flex justify-content-center">
+                                <button class="button projects__btn  " aria-label="Показать больше">Показать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects__design" class="projects__block">
+                        <div class="row d-flex justify-content-center">
+                            <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                <a href="#" title="Дизайн сайта ювелирных украшений 'Pretty Woman'" aria-label="Дизайн сайта ювелирных украшений 'Pretty Woman'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/des1.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Дизайн сайта ювелирных украшений "Pretty Woman"</h3>
+                                            <p class="projects-block__text">Проектирование, дизайн</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Логотип магазина женской одежды 'Golden Lady'" aria-label="Логотип магазина женской одежды 'Golden Lady'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/des2.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Логотип магазина женской одежды "Golden Lady"</h3>
+                                            <p class="projects-block__text">Проектирование, дизайн</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                <a href="#" title="Дизайн сайта по продаже часов 'Flywheel'" aria-label="Дизайн сайта по продаже часов 'Flywheel'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/des3.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Дизайн сайта по продаже часов "Flywheel"</h3>
+                                            <p class="projects-block__text">Проектирование, дизайн</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-none d-xl-block w-100"></div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Дизайн сайта стоматологической клиники 'Добрый доктор'" aria-label="Дизайн сайта стоматологической клиники 'Добрый доктор'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/des4.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Дизайн сайта стоматологической клиники "Добрый доктор"</h3>
+                                            <p class="projects-block__text">Проектирование, дизайн</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Проектирование сайта по продаже лодок" aria-label="Проектирование сайта по продаже лодок" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/des5.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Проектирование сайта по продаже лодок</h3>
+                                            <p class="projects-block__text">Проектирование, дизайн</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" col-lg-4 col-sm-6  mb-4">
+                                <a href="#" title="Редизайн сайта сауны 'Aquatorian'" aria-label="Редизайн сайта сауны 'Aquatorian'" class="projects-block link fade">
+                                    <div class="lazy projects-block__img" data-bg="img/@1x/des6.jpg"></div>
+                                    <div class="row justify-content-center py-4">
+                                        <div class="col-10">
+                                            <h3 class="projects-block__headline">Редизайн сайта сауны "Aquatorian"</h3>
+                                            <p class="projects-block__text">Проектирование, дизайн</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects__load hide fade">
+                            <div class="row d-flex justify-content-center">
+                                <div class=" col-lg-4 col-sm-6 mb-4 fix">
+                                    <a href="#" title="Логотип стоматологической клиники 'Smile'" aria-label="Логотип стоматологической клиники 'Smile'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/des7.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Логотип стоматологической клиники "Smile"</h3>
+                                                <p class="projects-block__text">Проектирование, дизайн</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Дизайн сайта для фотостудии 'Filarenta'" aria-label="Дизайн сайта для фотостудии 'Filarenta'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/des8.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Дизайн сайта для фотостудии "Filarenta"</h3>
+                                                <p class="projects-block__text">Проектирование, дизайн</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4 fix">
+                                    <a href="#" title="Логотип центра контактных линз 'New Vision'" aria-label="Логотип центра контактных линз 'New Vision'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/des9.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Логотип центра контактных линз "New Vision"</h3>
+                                                <p class="projects-block__text">Проектирование, дизайн</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-none d-xl-block w-100"></div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт отеля 'Etiam Doulengo'" aria-label="Сайт отеля 'Etiam Doulengo'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/des10.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт отеля "Etiam Doulengo"</h3>
+                                                <p class="projects-block__text">Проектирование, дизайн</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Сайт компании по развитию нейротехнологий" aria-label="Сайт компании по развитию нейротехнологий" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/des11.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Сайт компании по развитию нейротехнологий</h3>
+                                                <p class="projects-block__text">Проектирование, дизайн</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-lg-4 col-sm-6  mb-4">
+                                    <a href="#" title="Редизайн сайта отеля 'Meido-house'" aria-label="Редизайн сайта отеля 'Meido-house'" class="projects-block link fade">
+                                        <div class="lazy projects-block__img" data-bg="img/@1x/des12.jpg"></div>
+                                        <div class="row justify-content-center py-4">
+                                            <div class="col-10">
+                                                <h3 class="projects-block__headline">Редизайн сайта отеля "Meido-house"</h3>
+                                                <p class="projects-block__text">Проектирование, дизайн</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col d-flex justify-content-center">
+                                <button class="button projects__btn  " aria-label="Показать больше">Показать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="presentation" id="presentation">
+        <div class="presentation__wrap">
+            <video class="lazy presentation__video" data-poster="img/@1x/pres.jpg" muted data-src="img/video.mp4"></video>
+            <div class="presentation__inner">
+                    <div class="presentation__desc">
+                            <button class="presentation__btn" id="playBtn" aria-label="Презентация веб студии Wellany">
+                                <svg class="presentation__btn-icon">
+                                    <use xlink:href="img/svg/sprite/sprite.svg#icon-play"/>
+                                </svg>
+                            </button>
+                            <h2 class="presentation__headline d-none d-md-block">Презентация веб студии Wellany</h2>
+                            <p class="presentation__text d-none d-md-block">Предалагаем вашему вниманию краткий видео экскурс о работе нашей команды профессионалов</p>
+                        </div>
+            </div>
+            <div class="presentation__overlay"></div>
+        </div>
+    </section>
+    <section class="advantages" id="advantages">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                    <div class="secondary-header secondary-header--advant  ">
+                        <h2 class="secondary-header__headline">Преимущества разработки сайтов в студии Wellany</h2>
+                        <p class="secondary-header__text secondary-header__text--advant">Нам приходилось создавать сайты различных уровней сложности, в том числе и для крупных компаний. Сфера деятельности предприятия не играет ключевой роли — мы способны выпустить качественный продукт, удовлетворяющий задачам любого бизнеса</p>
+                    </div>
+                    <ul class="advantages__list">
+                        <li class="advantages__item"><span class="advantages__item-accent">Опыт.</span><br>Мы успешно создаем сайты, идущие в ногу со временем начиная с 2005 года. Благодаря постоянному развитию мы всегда готовы предложить превосходные решения основанные на передовых технологиях</li>
+                        <li class="advantages__item"><span class="advantages__item-accent">Ответственность.</span><br>Каждый сайт, создаваемый нами - это полноценный проект с полным погружением в тематику вне зависимости от типа сайта - одностраничник, интернет-магазин или большой корпоративный портал. Мы также обучаем работе с сайтом и оказываем полноценное сопровождение и поддержку в дальнейшем.</li>
+                        <li class="advantages__item"><span class="advantages__item-accent">Доверие.</span><br>В нашем профессиональном багаже сотрудничество с крупнейшими компаниями и некоммерческими организациями России, получение престижных наград, доверие клиентов и большой профессиональный опыт и компетенции.</li>
+                        <li class="advantages__item"><span class="advantages__item-accent">Открытость.</span><br>Мы всегда открыты для общения, поэтому обращайтесь к нам в любое время и мы с удовольствием обсудим интересующий вас проект.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="counters">
+        <div class="container">
+            <div class="row justify-content-around justify-content-lg-center py-5 align-items-center">
+                <div class="col-6 col-sm-4 col-lg-2 mb-4 mb-lg-0">
+                    <div class="counters-block counters__clients">
+                        <span class="counters-block__num">590</span>
+                        <p class="counters-block__desc">Довольных клиентов</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4 mb-lg-0">
+                    <div class="counters-block counters__coffee">
+                        <span class="counters-block__num">207</span>
+                        <p class="counters-block__desc">Чашек кофе</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4 mb-lg-0">
+                    <div class="counters-block counters__posts">
+                        <span class="counters-block__num">300</span>
+                        <p class="counters-block__desc">Блог постов</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4 mb-lg-0">
+                    <div class="counters-block counters__likes">
+                        <span class="counters-block__num">873</span>
+                        <p class="counters-block__desc">Отметки нравится</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <div class="counters-block counters__launch">
+                        <span class="counters-block__num">600</span>
+                        <p class="counters-block__desc">Запусков проектов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="posts" id="posts">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <div class="secondary-header secondary-header--projects  ">
+                        <h2 class="secondary-header__headline">Блог веб студии Wellany</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__slider">
+                <article class="article">
+                    <div class="article__img lazy" data-bg="img/@1x/blog1.jpg">
+                    </div>
+                    <div class="article__inner">
+                        <h3 class="article__headline">Как продвигать одностраничник</h3>
+                        <p class="article__desc">Одностраничные сайты являются формой рекламы и очень схожи с банерами или листовками</p>
+                        <a href="#" class="read-more link">Читать полностью</a>
+                        <div class="article__date">
+                            <span class="article__date-num">25</span>
+                            <span class="article__date-month">Сент.</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="article">
+                    <div class="article__img lazy" data-bg="img/@1x/blog2.jpg">
+                    </div>
+                    <div class="article__inner">
+                        <h3 class="article__headline">Как создать корпоративный сайт</h3>
+                        <p class="article__desc">Сайт, который облегчает коммуникационные процессы между сотрудниками компании</p>
+                        <a href="#" class="read-more link">Читать полностью</a>
+                        <div class="article__date">
+                            <span class="article__date-num">26</span>
+                            <span class="article__date-month">Сент.</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="article">
+                    <div class="article__img lazy" data-bg="img/@1x/blog3.jpg">
+                    </div>
+                    <div class="article__inner">
+                        <h3 class="article__headline">Мобильный сайт в подарок!</h3>
+                        <p class="article__desc">При заказе корпоративного сайта или интернет-магазина - мобильная версия сайта в подарок!</p>
+                        <a href="#" class="read-more link">Читать полностью</a>
+                        <div class="article__date">
+                            <span class="article__date-num">27</span>
+                            <span class="article__date-month">Сент.</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="article">
+                    <div class="article__img lazy" data-bg="img/@1x/blog4.jpg">
+                    </div>
+                    <div class="article__inner">
+                        <h3 class="article__headline">Тенденции онлайн-продаж в России</h3>
+                        <p class="article__desc">Что именно интересует интернет-пользователей, какие стимулы действуют на целевую аудиторию</p>
+                        <a href="#" class="read-more link">Читать полностью</a>
+                        <div class="article__date">
+                            <span class="article__date-num">28</span>
+                            <span class="article__date-month">Сент.</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="article">
+                    <div class="article__img lazy" data-bg="img/@1x/blog5.jpg">
+                    </div>
+                    <div class="article__inner">
+                        <h3 class="article__headline">Ворованный контент в Facebook</h3>
+                        <p class="article__desc">Сеть Facebook борется с копированием и повторным размещением чужого контента.</p>
+                        <a href="#" class="read-more link">Читать полностью</a>
+                        <div class="article__date">
+                            <span class="article__date-num">29</span>
+                            <span class="article__date-month">Сент.</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <div class="partners lazy" data-bg="img/@1x/partners.jpg" id="partners">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-6 my-5 my-md-0 col-md-3">
+                    <a href="#" class="partners__link link" aria-label="Компания The Barber Haircuts Company" title="The Barber Haircuts">
+                        <picture>
+                            <source type="image/webp" data-srcset="img/@1x/webp/logo-01.webp 1x, img/@2x/webp/logo-01.webp 2x">
+                            <img class="lazy img" src="data:image/gif;base64,R0lGODlh0gB/AIAAAP///wAAACH5BAEAAAEALAAAAADSAH8AAALNjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6ert5WAAA7" data-src="img/@1x/logo-01.png" data-srcset="img/@1x/logo-01.png 1x, img/@2x/logo-01.png 2x" alt="The Barber Haircuts logo">
+                        </picture>
+                    </a>
+                </div>
+                <div class="col-6 my-5 my-md-0 col-md-3">
+                    <a href="#" class="partners__link link" aria-label="Компания High Quality Delicious Products Company" title="High Quality Delicious Products">
+                        <picture>
+                            <source type="image/webp" data-srcset="img/@1x/webp/logo-02.webp 1x, img/@2x/webp/logo-02.webp 2x">
+                            <img class="lazy img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/@1x/logo-02.png" data-srcset="img/@1x/logo-02.png 1x, img/@2x/logo-02.png 2x" alt="High Quality Delicious Products logo">
+                        </picture>
+                    </a>
+                </div>
+                <div class="col-6 my-5 my-md-0 col-md-3">
+                    <a href="#" class="partners__link link" aria-label="Компания We Are Designers Company" title="We Are Designers">
+                        <picture>
+                            <source type="image/webp" data-srcset="img/@1x/webp/logo-03.webp 1x, img/@2x/webp/logo-03.webp 2x">
+                            <img class="lazy img" src="data:image/gif;base64,R0lGODlhFQANAIAAAP///wAAACH5BAEAAAEALAAAAAAVAA0AAAIOjI+py+0Po5y02ouzxgUAOw==" data-src="img/@1x/logo-03.png" data-srcset="img/@1x/logo-03.png 1x, img/@2x/logo-03.png 2x" alt="We Are Designers logo">
+                        </picture>
+                    </a>
+                </div>
+                <div class="col-6 my-5 my-md-0 col-md-3">
+                    <a href="#" class="partners__link link" aria-label="Компания Cafe Royal Company" title="Cafe Royal">
+                        <picture>
+                            <source type="image/webp" data-srcset="img/@1x/webp/logo-04.webp 1x, img/@2x/webp/logo-04.webp 2x">
+                            <img class="lazy img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/@1x/logo-04.png" data-srcset="img/@1x/logo-04.png 1x, img/@2x/logo-04.png 2x" alt="Cafe Royal logo">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__info">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="my-lg-0 my-3 order-lg-1 order-sm-1 col-md-6 col-lg-3">
+                        <div class="footer-block ">
+                            <a href="#" title="Waxom" class="logo link">
+                                <svg class="logo__img">
+                                    <use xlink:href="img/svg/sprite/sprite.svg#logos"/>
+                                </svg>
+                                <div class="logo__desc">Wellany</div>
+                            </a>
+                            <p class="footer-block__about-us">Веб-студия Wellany основана в 2005 году. За долгое время работы мы создали более 500 проектов, многие из которых работают под нашим управлением по настоящее время. В нашем портфолио собраны проекты, выполненные для компаний различных сфер бизнеса.</p>
+                            <a href="#" class="read-more read-more--footer link" aria-label="Читать полностью">Читать полностью</a>
+                        </div>
+                    </div>
+                    <div class="my-lg-0 my-3 order-lg-2 order-sm-3 col-md-6 col-lg-3">
+                        <section class="footer-block  ">
+                            <h4 class="footer-block__headline">Недавние посты</h4>
+                            <div class="footer-block__post">
+                                <a href="#" class="footer-block__link link">
+                                    <time class="footer-block__date" datetime="2018-09-10">Сентябрь 10, 2018</time>
+                                    <p class="footer-block__desc">Как сделать правильный сниппет для Яндекса</p>
+                                </a>
+                            </div>
+                            <div class="footer-block__post">
+                                <a href="#" class="footer-block__link link">
+                                    <time class="footer-block__date" datetime="2018-09-08">Сентябрь 08, 2018</time>
+                                    <p class="footer-block__desc">Характеристика непоискового трафика</p>
+                                </a>
+                            </div>
+                            <div class="footer-block__post">
+                                <a href="#" class="footer-block__link link">
+                                    <time class="footer-block__date" datetime="2018-09-06">Сентябрь 06, 2018</time>
+                                    <p class="footer-block__desc">Веб-дизайн: современные тенденции</p>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="my-lg-0 my-3 order-lg-3 order-sm-4 col-md-6 col-lg-3">
+                        <section class="footer-block  ">
+                            <h4 class="footer-block__headline">Мы в Твиттере</h4>
+                            <div class="footer-block__post">
+                                <a href="#" class="footer-block__link link" aria-label="Waxom link on Twitter">
+                                    <p class="footer-block__desc"><span class="footer-block__twit">@wellany </span>Основные факторы влияющие на продвижение сайта</p>
+                                    <span class="footer-block__date footer-block__date--twit">3 минуты назад</span>
+                                </a>
+                            </div>
+                            <div class="footer-block__post">
+                                <a href="#" class="footer-block__link link" aria-label="Envato link on Twitter">
+                                    <p class="footer-block__desc"><span class="footer-block__twit">@wellany</span> Разработка фирменного стиля сайта сегодня</p>
+                                    <span class="footer-block__date footer-block__date--twit">5 часов назад</span>
+                                </a>
+                            </div>
+                            <div class="footer-block__post">
+                                <a href="#" class="footer-block__link link" aria-label="Soluta nobis option link on Twitter">
+                                    <p class="footer-block__desc">Какие бывают сайты <span class="link footer-block__desc-twit">bit.ly/1Hniso7</span></p>
+                                    <span class="footer-block__date footer-block__date--twit">20 дней назад</span>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-8 my-lg-0 my-3 order-lg-4 order-sm-2 col-md-6 col-lg-3">
+                        <section class="footer-block">
+                            <h4 class=" footer-block__headline">Виджеты Wellany</h4>
+                            <div class="footer-block__widget widget">
+                                <a class="widget__link link" href="#" aria-label="Новостные виджеты" title="Новостные виджеты">
+                                    <picture>
+                                        <source type="image/webp" data-srcset="img/@1x/webp/w-1.webp 1x, img/@2x/webp/w-1.webp 2x">
+                                        <img src="data:image/gif;base64,R0lGODlhHwAXAIAAAP///wAAACH5BAEAAAEALAAAAAAfABcAAAIZjI+py+0Po5y02ouz3rz7D4biSJbmiaZOAQA7" class="lazy img" data-src="img/@1x/w-1.jpg" data-srcset="img/@1x/w-1.jpg 1x, img/@2x/w-1.jpg 2x" alt="Новостные виджеты">
+                                    </picture>
+                                </a>
+                                <a class="widget__link link" href="#" aria-label="Виджеты погоды" title="Виджеты погоды">
+                                    <picture>
+                                        <source type="image/webp" data-srcset="img/@1x/webp/w-2.webp 1x, img/@2x/webp/w-2.webp 2x">
+                                        <img src="data:image/gif;base64,R0lGODlhHwAXAIAAAP///wAAACH5BAEAAAEALAAAAAAfABcAAAIZjI+py+0Po5y02ouz3rz7D4biSJbmiaZOAQA7" class="lazy img" data-src="img/@1x/w-2.jpg" data-srcset="img/@1x/w-2.jpg 1x, img/@2x/w-2.jpg 2x" alt="Виджеты погоды">
+                                    </picture>
+                                </a>
+                                <a class="widget__link link" href="#" aria-label="Виджеты поиска" title="Виджеты поиска">
+                                    <picture>
+                                        <source type="image/webp" data-srcset="img/@1x/webp/w-3.webp 1x, img/@2x/webp/w-3.webp 2x">
+                                        <img src="data:image/gif;base64,R0lGODlhHwAXAIAAAP///wAAACH5BAEAAAEALAAAAAAfABcAAAIZjI+py+0Po5y02ouz3rz7D4biSJbmiaZOAQA7" class="lazy img" data-src="img/@1x/w-3.jpg" data-srcset="img/@1x/w-3.jpg 1x, img/@2x/w-3.jpg 2x" alt="Виджеты поиска">
+                                    </picture>
+                                </a>
+                                <a class="widget__link link" href="#" aria-label="Виджеты иконок" title="Виджеты иконок">
+                                    <picture>
+                                        <source type="image/webp" data-srcset="img/@1x/webp/w-4.webp 1x, img/@2x/webp/w-4.webp 2x">
+                                        <img src="data:image/gif;base64,R0lGODlhHwAXAIAAAP///wAAACH5BAEAAAEALAAAAAAfABcAAAIZjI+py+0Po5y02ouz3rz7D4biSJbmiaZOAQA7" class="lazy img" data-src="img/@1x/w-4.jpg" data-srcset="img/@1x/w-4.jpg 1x, img/@2x/w-4.jpg 2x" alt="Виджеты иконок">
+                                    </picture>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__technical-info">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="mb-4 mb-lg-0 col-xs-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                        <a href="#" class="footer__tech-link link" aria-label="Веб-студия Wellany 2005-2019. Все права защищены">Copyright © 2005-2019 <span class="footer__tech-accent">Wellany</span></a>
+                    </div>
+                    <div class="mb-4 mb-lg-0 col-xs-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                        <a href="#" class="footer__tech-link link" aria-label="Политика Конфиденциальности">Политика Конфиденциальности</a>
+                    </div>
+                    <div class="mb-4 mb-lg-0 col-xs-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                        <a href="#" class="footer__tech-link link" aria-label="FAQ">FAQ</a>
+                    </div>
+                    <div class="mb-4 mb-lg-0 col-xs-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                        <a href="#" class="footer__tech-link link" aria-label="Техническая поддержка">Техническая поддержка</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="arrow" title="Scroll Up" aria-label="Scroll to start">
+        <svg class="arrow__icon">
+            <use xlink:href="img/svg/sprite/sprite.svg#double-arrow-up"/>
+        </svg>
+    </a>
+    <script src="js/libs.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

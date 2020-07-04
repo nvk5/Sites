@@ -1,0 +1,53 @@
+.webp .about__pos::before {
+    background-image: url('../img/@1x/webp/about2.webp');
+}
+
+.no-webp .about__pos::before {
+    background-image: url('../img/@1x/about2.jpg');
+}
+
+.webp .about__pos::after {
+    background-image: url('../img/@1x/webp/about3.webp');
+}
+
+.no-webp .about__pos::after {
+    background-image: url('../img/@1x/about3.jpg');
+}
+
+.about {
+    background-color: #FBFAF8;
+    position: relative;
+    padding: 0 10px;
+
+    &__images {
+        position: relative;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    &__pos {
+        z-index: 2;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 80%;
+            height: 83%;
+            bottom: 0;
+            background-size: cover;
+            position: absolute;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+        }
+
+        &::before {
+            left:-25%;  
+        }
+
+        &::after {
+            right:-25%;
+            z-index: -1;
+        }
+    }
+}
+

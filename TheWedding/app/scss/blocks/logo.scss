@@ -1,0 +1,30 @@
+.logo {
+    text-align: right;
+    padding: 20px 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 339px;
+        height: 205px;
+        background-image: url('../images/img.png');
+        left: -192px;
+        top: 42%;
+        transform: translateY(-50%) rotate(10deg);
+        z-index: -1;
+    }
+
+    &__pre {
+        font-family: $ff-logo-pre;
+        font-size: rem($fsz-logo-pre);
+        color: $color-logo-pre;
+    }
+
+    &__text {
+        font-family: $ff-logo;
+        font-size: rem($fsz-logo);
+        color: $color-logo;
+        line-height: 0.5;
+    }
+}

@@ -1,0 +1,24 @@
+.footer-nav {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        margin: 0 25px;
+        text-align: center;
+    }
+
+    &__link {
+        color:rgb(255, 255, 255);
+        opacity: .5;
+        font-size: rem(16px);
+        line-height: 1.2;
+        text-transform: none;
+        transition: opacity .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 1;
+        }
+    }
+}

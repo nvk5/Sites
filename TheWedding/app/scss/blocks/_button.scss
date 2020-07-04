@@ -1,0 +1,48 @@
+.button {
+    font-family: $ff-button, sans-serif;
+    font-size: rem($fsz-button);
+    color: $color-button;
+    background: linear-gradient(to bottom, rgba(245,86,131,.2), transparent);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    padding-bottom: 138px;
+    text-transform: uppercase;
+    min-height: 64px;
+    min-width: 120px;
+    transition: all .3s ease;
+
+
+    &:hover,
+    &:focus {
+        background: lighten($color: $color-button-bg, $amount: 10);
+    }
+
+    &--content-block {
+        background: $color-button-bg;
+        padding: 5px 10px;
+        padding-left: 38px;
+        position: relative;
+        min-width: 105px;
+        min-height: 40px;
+       
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 44px;
+            height: 33px;
+            background: url('../images/heart.png') no-repeat left top;
+        }
+    }
+}
+
+
+.active {
+    background: lighten($color: $color-button-bg, $amount: 10);
+    transform: translateY(-20px);
+}

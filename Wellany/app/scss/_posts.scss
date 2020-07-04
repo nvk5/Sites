@@ -1,0 +1,57 @@
+.posts {
+    padding-bottom: 20%;
+
+    &__slider {
+        padding: 0 10px;
+    }
+
+    &__arrows {
+        position: absolute;
+        bottom: -100px;
+        fill: #D1D1D1;
+        transition: fill .3s linear;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__arrows--prev {
+        left: 45%;
+        transform: translateX(-50%);
+    }
+
+    &__arrows--next {
+        right: 45%;
+        transform: translateX(50%);
+    }
+
+
+    .slick-dots {
+        position: absolute;
+        top: 140px;
+        left: 120px;
+    }
+}
+
+.article.slick-slide.slick-current.slick-active {
+    .article__inner {
+        background-color: #362F2D;
+
+    }
+    
+    .article__headline {
+        color: $color-brown-light;
+    }
+
+    .article__desc {
+        color: $color-white;
+    }
+
+    .article__date-num {
+        background-color: $color-brown-light;
+    }
+
+    .article__date-month {
+        background-color: $color-brown;
+    }
+
+}

@@ -1,0 +1,31 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+//Font-face mixin
+@mixin font-face($f-name, $f-style, $f-weight, $f-display, $f-local, $file-path) {
+    @font-face {
+        font-family: $f-name;
+        font-style: $f-style;
+        font-weight: $f-weight;
+        font-display: $f-display;
+        src: local('#{$f-local}'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff')
+    }	
+}
+
+
+@include font-face('Roboto', normal, 400, swap, 'RobotoRegular', '../fonts/RobotoRegular/RobotoRegular');
+@include font-face('RobotoMedium', normal, 500, swap, 'RobotoMedium', '../fonts/RobotoMedium/RobotoMedium');
+@include font-face('RobotoBold', normal, bold, swap, 'RobotoBold', '../fonts/RobotoBold/RobotoBold');
+@include font-face('RobotoLight', normal, 200, swap, 'RobotoLight', '../fonts/RobotoLight/RobotoLight');
+@include font-face('RobotoThin', normal, 200, swap, 'RobotoThin', '../fonts/RobotoThin/RobotoThin');
+@include font-face('LatoRegular', normal, 200, swap, 'LatoRegular', '../fonts/LatoRegular/LatoRegular');
+@include font-face('PTSerifBoldItalic', italic, bold, swap, 'PTSerifBoldItalic', '../fonts/PTSerifBoldItalic/PTSerifBoldItalic');

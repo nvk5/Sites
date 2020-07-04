@@ -1,0 +1,33 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+//Font-face mixin
+@mixin font-face($f-name, $f-style, $f-weight, $file-path) {
+    @font-face {
+        font-family: $f-name;
+        font-style: $f-style;
+        font-weight: $f-weight;
+        src: url('#{$file-path}.woff') format('woff')
+    }	
+}
+
+
+@include font-face('DINMittelschriftStd', normal, 400, '../../fonts/DINMittelschriftStd/DINMittelschriftStd');
+@include font-face('KievitProBold', normal, 700, '../../fonts/KievitProBold/KievitProBold');
+@include font-face('RockwellRegular', normal, 400, '../../fonts/RockwellRegular/RockwellRegular');
+@include font-face('SerlioLTStd', normal, 400, '../../fonts/SerlioLTStd/SerlioLTStd');
+@include font-face('TimesNewRomanItalic', italic, 400, '../../fonts/TimesNewRomanItalic/TimesNewRomanItalic');
+@include font-face('TimesNewRomanRegular', normal, 400, '../../fonts/TimesNewRomanRegular/TimesNewRomanRegular');
+@include font-face('TrebuchetBoldItalic', italic, 700, '../../fonts/TrebuchetBoldItalic/TrebuchetBoldItalic');
+@include font-face('TrebuchetMSItalic', italic, 400, '../../fonts/TrebuchetMSItalic/TrebuchetMSItalic');
+@include font-face('TrebuchetMS', normal, 400, '../../fonts/TrebuchetMS/TrebuchetMS');
+@include font-face('ArialItalic', italic, 400, '../../fonts/ArialItalic/ArialItalic');

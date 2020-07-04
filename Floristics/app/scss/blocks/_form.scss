@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+        background: transparent;
+        padding: 14px 22px 10px;
+        border: 1px solid rgba(246, 246, 249, 0.2);
+        color: $text;
+        width: 100%;
+        outline: none;
+    }
+
+    &__input-wrap {
+        margin-bottom: 17px;
+        position: relative;
+    }
+
+    &__btn {
+        margin-top: 30px;
+    }
+}
+

@@ -1,0 +1,209 @@
+.services-slider {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    position: relative;
+    transition: transform .3s linear;
+
+    &__wrap {
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    
+    &::before {
+        content: 'Каталог услуг';
+        position: absolute;
+        top: 6px;
+        right: 0;
+        left: 0;
+        font-size: rem(210px);
+        line-height: 1;
+        letter-spacing: .06em;
+        opacity: .1;
+        z-index: -1;
+    }
+
+    &__item {
+        color: inherit;
+        position: relative;
+        width: calc(100% / 4 - 50px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 34%;
+        overflow: hidden;
+        text-align: left;
+        line-height: 2;
+
+        &:hover,
+        &:focus,
+        &:active {
+            .services-slider__content {
+                background: rgba(0,0,0, .6);
+            }
+
+            .services-slider__inner {
+                transform: none;
+            }
+
+            .services-slider__btn {
+                transform: none;
+            }
+
+        }
+    }
+
+    &__content {
+        padding: 36px 7% 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: background .3s ease;
+    }
+
+    &__inner {
+        transform: translateY(50%);
+        transition: transform .3s ease;
+    }
+
+    &__btn {
+        transform: translateY(100%);
+        transition: transform .3s ease;
+        min-width: auto;
+        min-height: auto;
+        line-height: 1.375;
+    }
+
+
+    &__number {
+        font-size: rem(20px);
+        line-height: 1.375;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 30px;
+            width: 70px;
+            height: 1px;
+            background: $text;
+        }
+    }
+
+    &__headline {
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+        opacity: .8;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+}
+
+.tns-inner {
+    overflow: hidden;
+}
+
+.tns-nav {
+    margin: 0 auto;
+    margin-top: 40px;
+
+    button {
+        margin-right: 13px;
+        height: 3px;
+        width: 62px;
+        background: $text;
+        border-radius: 50px;
+        opacity: .3;
+        outline: none;
+    }
+}
+
+.tns-nav .tns-nav-active {
+    opacity: 1;
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+/* для Safari, Safari IOS */
+only screen and (min-resolution: 192dpi),
+/* для IE 10, IE 11, Opera Mini */
+only screen and (min-resolution: 2dppx) {
+
+    /* для нормальных браузеров */
+    .webp .services-slider__item:nth-child(1) {
+        background-image: url('../../images/home/@2x/webp/service1.webp');
+    }
+
+    .no-webp .services-slider__item:nth-child(1) {
+        background-image: url('../../images/home/@2x/service1.png');
+    }
+
+    .webp .services-slider__item:nth-child(2) {
+        background-image: url('../../images/home/@2x/webp/service2.webp');
+    }
+
+    .no-webp .services-slideritemnk:nth-child(2) {
+        background-image: url('../../images/home/@2x/service2.png');
+    }
+
+    .webp .services-slider__item:nth-child(3) {
+        background-image: url('../../images/home/@2x/webp/service3.webp');
+    }
+
+    .no-webp .services-slideritemnk:nth-child(3) {
+        background-image: url('../../images/home/@2x/service3.png');
+    }
+
+    .webp .services-slider__item:nth-child(4) {
+        background-image: url('../../images/home/@2x/webp/service4.webp');
+    }
+
+    .no-webp .services-slider__item:nth-child(4) {
+        background-image: url('../../images/home/@2x/service4.png');
+    }
+
+}
+
+
+.webp .services-slider__item:nth-child(1) {
+    background-image: url('../../images/home/@1x/webp/service1.webp');
+}
+
+.no-webp .services-slider__item:nth-child(1) {
+    background-image: url('../../images/home/@1x/service1.png');
+}
+
+.webp .services-slider__item:nth-child(2) {
+    background-image: url('../../images/home/@1x/webp/service2.webp');
+}
+
+.no-webp .services-slider__item:nth-child(2) {
+    background-image: url('../../images/home/@1x/service2.png');
+}
+
+.webp .services-slider__item:nth-child(3) {
+    background-image: url('../../images/home/@1x/webp/service3.webp');
+}
+
+.no-webp .services-slider__item:nth-child(3) {
+    background-image: url('../../images/home/@1x/service3.png');
+}
+
+.webp .services-slider__item:nth-child(4) {
+    background-image: url('../../images/home/@1x/webp/service4.webp');
+}
+
+.no-webp .services-slider__item:nth-child(4) {
+    background-image: url('../../images/home/@1x/service4.png');
+}
+

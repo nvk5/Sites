@@ -1,0 +1,24 @@
+.secondary-header {
+    // padding-top: 75px;
+    text-align: center;
+    // padding-bottom: 35px;
+    padding: 15% 0 10%;
+
+    &__headline {
+        margin-bottom: 20px;
+    }
+
+    // &--about {
+    //     padding-bottom: 145px;
+    // }
+
+    &--advant {
+        text-align: left;
+    }
+
+    &__text--advant {
+        font-family: $Montserrat;
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+}

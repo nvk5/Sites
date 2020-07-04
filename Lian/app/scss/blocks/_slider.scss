@@ -1,0 +1,160 @@
+.slider {
+    .slider__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider__content {
+        font-family: $RobotoL;
+        text-transform: uppercase;
+        padding: 15% 0;
+        text-align: center;
+    }
+
+    &__arrow {
+        position: absolute;
+        fill: #000;
+        z-index: 1;
+        background: transparent;
+        fill: $black;
+        border-radius: 50%;
+        width: rem(42px);
+        height: rem(42px);
+        border: 2px solid $black;
+        cursor: pointer;
+        transition: all .4s ease;
+        transform: translateY(-50%);
+
+        &:hover {
+            fill: $white;
+            background: $black;
+        }
+    }
+
+    &__arrow--left {
+        top: 50%;
+        left: 110px;
+
+        &:hover {
+            .slider__arrow-icon-left {
+                animation: slider-arrow-left .5s infinite alternate;
+            }
+        }
+    }
+
+    &__arrow--right {
+        top: 50%;
+        right: 110px;
+
+        &:hover {
+            .slider__arrow-icon-right {
+                animation: slider-arrow-right .5s infinite alternate;
+            }
+        }
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+    li.slick-active {
+        position: relative;
+        
+
+        button {
+            background: $black;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $white;
+                border-radius: 50%;
+                width: 7px;
+                height: 7px;
+            }
+        }
+    }
+
+    li button {
+        position: relative;
+        text-indent: -9999px;
+        width: 15px;
+        height: 15px;
+        background: transparent;
+        margin: 0 7px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2), /* для Safari, Safari IOS */ 
+only screen and (min-resolution: 192dpi), /* для IE 10, IE 11, Opera Mini */ 
+only screen and (min-resolution: 2dppx) { /* для нормальных браузеров */ 
+	.webp .slider__item:nth-child(1) { 
+		background: url('../images/home/@2x/webp/shutterstock_353200073.webp') no-repeat center;
+		background-size: cover; 
+	} 
+	.no-webp .slider__item:nth-child(1) { 
+		background: url('../images/home/@2x/shutterstock_353200073.png') no-repeat center;
+		background-size: cover; 
+    } 
+    
+    .webp .slider__item:nth-child(2) { 
+		background: url('../images/home/@2x/webp/shutterstock_433009291.webp')  no-repeat center;
+		background-size: cover; 
+	} 
+	.no-webp .slider__item:nth-child(2) { 
+		background: url('../images/home/@2x/shutterstock_433009291.png') no-repeat center;
+		background-size: cover; 
+    }
+    
+    .webp .slider__item:nth-child(3) { 
+		background: url('../images/home/@2x/webp/shutterstock_415747804.webp')  no-repeat center;
+		background-size: cover; 
+	} 
+	.no-webp .slider__item:nth-child(3) { 
+		background: url('../images/home/@2x/shutterstock_415747804.png') no-repeat center;
+		background-size: cover; 
+	}
+}
+
+.webp .slider__item:nth-child(1) { 
+    background: url('../images/home/@1x/webp/shutterstock_353200073.webp')  no-repeat center;
+    background-size: cover; 
+} 
+.no-webp .slider__item:nth-child(1) { 
+    background: url('../images/home/@1x/shutterstock_353200073.png') no-repeat center;
+    background-size: cover; 
+} 
+
+.webp .slider__item:nth-child(2) { 
+    background: url('../images/home/@1x/webp/shutterstock_433009291.webp')  no-repeat center;
+    background-size: cover; 
+} 
+.no-webp .slider__item:nth-child(2) { 
+    background: url('../images/home/@1x/shutterstock_433009291.png') no-repeat center;
+    background-size: cover; 
+} 
+
+.webp .slider__item:nth-child(3) { 
+    background: url('../images/home/@1x/webp/shutterstock_415747804.webp')  no-repeat center;
+    background-size: cover; 
+} 
+.no-webp .slider__item:nth-child(3) { 
+    background: url('../images/home/@1x/shutterstock_415747804.png') no-repeat center;
+    background-size: cover; 
+} 
+
+

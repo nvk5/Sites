@@ -1,0 +1,37 @@
+.menu-btn {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    padding-right: 75px;
+    outline: none;
+
+    &__line {
+        height: 2px;
+        width: 23px;
+        background: $text;
+        margin: 4px 0;
+        display: block;
+    }
+
+    &::after {
+        content: 'Меню';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: rem(20px);
+        line-height: 1.375;
+        letter-spacing: 0.06em;
+        color: $text;
+        transition: letter-spacing .3s ease;
+        text-transform: uppercase;
+    }
+
+    &:hover,
+    &:focus {
+        &::after {
+            letter-spacing: 0.1em;
+        }
+    }
+}

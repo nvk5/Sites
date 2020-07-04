@@ -1,0 +1,83 @@
+.about {
+    &__headline {
+        font-family: $RobotoL;
+        font-size: rem(20px);
+        letter-spacing: 0.04em;
+        color: $black;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    &__input-progress {
+        font-family: $Lato;
+        font-size: rem(14px);
+        color: $white;
+        position: absolute;
+        height: 20px;
+        width: 40px;
+        background: $black;
+        right: 0;
+        top: 0;
+        text-align: center;
+        line-height: 20px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            display: block;
+            border-left: 5px solid $black;
+            border-top: 5px solid $black;
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid transparent;
+        }
+    }
+
+    &__text {
+        font-family: $Roboto;
+        font-size: rem(16px);
+        letter-spacing: 0.0025;
+        line-height: 1.9;
+        color: $color-text-copy;
+        margin-bottom: 35px;
+
+    }
+
+    &__bg { 
+        position: relative;
+        padding-top: 56%;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }  
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2), /* для Safari, Safari IOS */ 
+only screen and (min-resolution: 192dpi), /* для IE 10, IE 11, Opera Mini */ 
+only screen and (min-resolution: 2dppx) { /* для нормальных браузеров */ 
+	.webp .about__bg {
+        background-image: url('../images/about/@2x/webp/shutterstock_295137809@.webp');
+        background-size: cover;
+    }
+    
+    .no-webp .about__bg {
+        background-image: url('../images/about/@2x/shutterstock_295137809@.png');
+        background-size: cover;
+    }
+}
+
+.webp .about__bg {
+    background-image: url('../images/about/@1x/webp/shutterstock_295137809@.webp');
+    background-size: cover;
+}
+
+.no-webp .about__bg {
+    background-image: url('../images/about/@1x/shutterstock_295137809@.png');
+    background-size: cover;
+}

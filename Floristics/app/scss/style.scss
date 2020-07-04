@@ -1,0 +1,34 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/libs';
+@import 'blocks/core';
+@import 'blocks/animations';
+
+@import 'blocks/header';
+@import 'blocks/header-home';
+@import 'blocks/container';
+@import 'blocks/logo';
+@import 'blocks/menu-btn';
+@import 'blocks/nav';
+@import 'blocks/close-btn';
+@import 'blocks/view';
+@import 'blocks/socials';
+
+@import 'blocks/content';
+@import 'blocks/title-secondary';
+@import 'blocks/subtitle-secondary';
+@import 'blocks/slider-thumbs';
+@import 'blocks/view-more';
+
+@import 'blocks/secondary-headline';
+@import 'blocks/services-slider';
+@import 'blocks/services';
+@import 'blocks/promotion';
+@import 'blocks/modal';
+@import 'blocks/form';
+@import 'blocks/footer';
+@import 'blocks/footer-nav';
+@import 'blocks/media';
+@import 'blocks/mediaIE';
+

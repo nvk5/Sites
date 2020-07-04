@@ -1,0 +1,11 @@
+.contact {
+    &__details {
+        font-family: 'OpenSansRegular', sans-serif;
+        font-size: rem(14px);
+        color: #0068d9;
+
+        span {
+            color: #000;
+        }
+    }
+}

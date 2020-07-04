@@ -1,0 +1,19 @@
+.advantages {
+    position: relative;
+    padding: 5% 10px;
+    padding-top: 0;
+    font-family: $Montserrat;
+    background: rgb(230, 230, 250);
+
+    &__item {
+        background: url('../img/svg/arrow-right.svg') no-repeat left top;
+        padding-left: 29px;
+        margin-bottom: 25px;
+        line-height: 1.75;
+    }
+    
+    &__item-accent {
+       font-size: 1.4rem;
+       line-height: 0;
+    }
+}

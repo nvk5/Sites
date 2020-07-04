@@ -1,0 +1,27 @@
+.secondary-title {
+    font-family: $ff-h2, serif;
+    font-size: rem($fsz-h2);
+    color: $color-h2;
+    text-transform: capitalize;
+    border-right: 1px dashed #c6c4c8;
+    padding-right: 15px;
+    display: flex;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    font-weight: 100;
+
+    &--content-block {
+        font-size: rem($fsz-h2-content-block);
+        text-transform: uppercase;
+        flex-direction: column;
+        border: none;
+    }
+}
+
+.secondary-title span,
+.secondary-title--content-block span {
+    font-family: $ff-h2-accent, serif;
+    font-size: rem($fsz-h2);
+    color: $color-h2-accent;
+    margin-left: 13px;
+}

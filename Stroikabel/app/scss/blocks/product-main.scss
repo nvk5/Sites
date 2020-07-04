@@ -1,0 +1,12 @@
+.product-main {
+    border-bottom: 1px solid #D5D5D5;
+
+    &__desc {
+        font-family: 'OpenSansRegular', sans-serif;
+        font-size: rem(14px);
+    }
+
+    img {
+        margin: auto;
+    }
+}

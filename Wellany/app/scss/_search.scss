@@ -1,0 +1,26 @@
+.search {
+    display: flex;
+    transform: translateY(7px);
+
+    &__icon {
+        width: 24px;
+        height: 25px;
+        fill: $color-white;
+        transition: fill .3s ease;
+    }
+
+
+    &__link {
+        display: block;
+        margin: 0 10px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            .search__icon {
+                fill: $color-brown-light;
+            }
+        }
+    }
+
+}

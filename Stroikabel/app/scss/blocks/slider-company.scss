@@ -1,0 +1,11 @@
+.slider-company {
+    &__wrap {
+        height: 120px;
+    }
+
+    &__item {
+        height: 100%;
+        object-fit: cover;
+        margin: auto;
+    }
+}

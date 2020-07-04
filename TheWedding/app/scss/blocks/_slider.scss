@@ -1,0 +1,104 @@
+.slider {
+    .slider__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .slider__content {
+        font-family: $RobotoL;
+        text-transform: uppercase;
+        padding: 15% 0;
+        text-align: center;
+    }
+
+    &__arrow {
+        position: absolute;
+        fill: #000;
+        z-index: 1;
+        background: transparent;
+        fill: $black;
+        border-radius: 50%;
+        width: rem(42px);
+        height: rem(42px);
+        border: 2px solid $black;
+        cursor: pointer;
+        transition: all .4s ease;
+        transform: translateY(-50%);
+
+        &:hover {
+            fill: $white;
+            background: $black;
+        }
+    }
+
+    &__arrow--left {
+        top: 50%;
+        left: 110px;
+
+        &:hover {
+            .slider__arrow-icon-left {
+                animation: slider-arrow-left .5s infinite alternate;
+            }
+        }
+    }
+
+    &__arrow--right {
+        top: 50%;
+        right: 110px;
+
+        &:hover {
+            .slider__arrow-icon-right {
+                animation: slider-arrow-right .5s infinite alternate;
+            }
+        }
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+    li.slick-active {
+        position: relative;
+        
+
+        button {
+            background: $black;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $white;
+                border-radius: 50%;
+                width: 7px;
+                height: 7px;
+            }
+        }
+    }
+
+    li button {
+        position: relative;
+        text-indent: -9999px;
+        width: 15px;
+        height: 15px;
+        background: transparent;
+        margin: 0 7px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+
+

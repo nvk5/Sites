@@ -1,0 +1,21 @@
+.order-btn {
+    padding: 19px 30px 16px;
+    background: transparent;
+    font-size: rem(16px);
+    letter-spacing: .15em;
+    border: 1px solid $text;
+    text-transform: inherit;
+    color: inherit;
+    min-width: 133px;
+    min-height: 50px;
+    cursor: pointer;
+    transition: color .4s ease, background .4s ease;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $text;
+        color: $text2;
+    }
+}

@@ -1,0 +1,536 @@
+// — Мобильники 320-767px — mobile, mobile-portrait, mobile-landscape
+// — Планшеты 768-1023px — tablet, tablet-portrait, tablet-landscape
+// — Лаптопы 1024-1199px — laptop, laptop-portrait, laptop-landscape
+// — Десктопы >=1200px — desktop, desktop-portrait, desktop-landscape
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Desktops, Tablets landscape 992-1199 */
+@media only screen and (max-width : 1199.98px) {
+    html {
+        font-size: 90%;
+    }
+
+    .header__content {
+        max-width: 50%;
+    }
+
+    .header-home__top {
+        padding: 0 10px;
+    }
+
+    .view-more {
+        right: auto;
+    }
+
+    .services-slider__btn {
+        padding: 10px 30px 10px;
+    }
+}
+
+/* Medium Devices, Tablets portrait 768-991 */
+@media screen and (max-width : 991.98px) {
+    html {
+        font-size: 85%;
+    }
+
+    .header {
+        flex-direction: column;
+
+        &__slider,
+        &__content,
+        .tns-outer {
+            flex: 0 1 100%;
+            width: 100%;
+        }
+
+        &__slider-wrap {
+            position: relative;
+            height: auto;
+        }
+
+        &__top {
+            background: $bg;
+            padding: 30px 40px 35px;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        &__content {
+            max-width: 100%;
+            padding: 0 60px;
+            margin-bottom: 70px;
+        }
+
+        &__details {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        &__details-btn {
+            align-self: flex-start;
+            margin-bottom: 0;
+        }
+
+        &__thumbs {
+            order: -1;
+            margin-bottom: 70px;
+            margin-top: 30px;
+        }
+
+        &__slider-arrow {
+            display: none;
+        }
+
+        .tns-outer {
+            height: auto;
+        }
+    }
+
+    .view-more {
+        display: none;
+    }
+
+    .menu-btn {
+        padding-right: 0;
+    }
+
+    .menu-btn::after {
+        display: none;
+    }
+    
+    .footer--md {
+        display: flex;
+    }
+
+    .tns-outer #tns1 > .tns-item {
+        padding-top: 80%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .header-home__headline {
+        font-size: 6rem;
+    }
+
+    .services-slider__btn {
+        padding: 19px 30px 16px;
+    }
+
+     .services-slider::before {
+        display: none;
+    }
+
+    .services-slider__item {
+        width: calc(50% - 15px);
+        padding-top: 70%;
+        margin-bottom: 15px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            .services-slider__inner {
+                transform: translateY(50%);
+            }
+
+            .services-slider__btn {
+                transform: translateY(100%);
+            }
+        }
+    }
+    
+}
+
+/* Small Devices, Phones (landscape) 576-767 */
+@media screen and (max-width : 767.98px) {
+
+    .header-home {
+
+        &::after {
+            display: none;
+        }
+
+        &__headline {
+            font-size: rem(70px);
+        }
+
+        &__content {
+            margin-bottom: 180px;
+        }
+
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__view-catalog {
+            width: 30px;
+            height: 50px;
+            margin-top: 35px;
+
+            span {
+                display: none;
+            }
+
+            &::before {
+                width: inherit;
+                height: inherit;
+                background-size: cover;
+                transform: none;
+                position: static;
+            }
+
+            &:hover {
+                &::before {
+                    transform: translateY(10px);
+                }
+            }
+        }
+
+        .view {
+            min-width: 257px;
+            min-height: 60px;
+            font-size: rem(15px);
+        }
+
+        &__scroll-down {
+            display: none;
+        }
+    }
+
+    .menu-btn {
+        padding-right: 0;
+        padding: 10px;
+
+        &::after {
+            display: none;
+        }
+
+        &__line {
+            width: 35px;
+            margin: 10px 0;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__item {
+            background: $bg;
+            border-radius: 50%;
+            padding: 13px;
+        }
+
+        &__link {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    .socials__item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 80px;
+    }
+
+
+   
+
+    .nav {
+        padding: 112px 13% 50px;
+
+        &__socials {
+            display: none;
+        }
+
+        &__top {
+            margin-bottom: 80px;
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &__link {
+            line-height: 1.375;
+        }
+    }
+
+    .content {
+        padding-top: 100px;
+
+        .tns-outer #tns1 > .tns-item {
+            width: calc(25% - 25px);
+            padding-top: 34%;
+            margin-bottom: 0;
+        }
+    }
+
+    .services-slider__wrap {
+        padding: 0;
+    }
+
+    
+
+    .promotion {
+        text-align: center;
+        flex-direction: column;
+
+        &__img {
+            order: 1;
+            width: 70%;
+            padding-top: 44%;
+            margin-bottom: 30px;
+        }
+
+        &__content {
+            order: 2;
+        }
+    }
+
+    .secondary-headline--order {
+        justify-content: center;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+
+        &__link {
+            font-size: rem(24px);
+        }
+
+        &__item {
+            margin: 20px 0;
+        }
+    }
+}
+
+
+/* Extra Small Devices, Phones (portrait) 480-575 */
+@media screen and (max-width : 575.98px) {
+    html {
+        font-size: 80%;
+    }
+
+    .header__content {
+        padding: 0 15px;
+    }
+
+    .header-home__headline {
+        font-size: 3.3rem;
+    }
+
+    .title-secondary {
+        font-size: rem(30px);
+    }
+
+    .header .tns-outer #tns1 > .tns-item {
+        padding-top: 130%;
+    }
+
+
+    .menu-btn {
+        padding: 15px;
+
+        &__line {
+            width: 37px;
+        }
+    }
+
+    .close-btn {
+        position: static;
+    }
+
+    .nav {
+        padding-top: 50px;
+    }
+
+    .socials {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .socials__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .header .view {
+        min-width: 177px;
+        min-height: 50px;
+        font-size: rem(13px);
+    }
+
+    .nav__top {
+        margin-bottom: 85px;
+    }
+
+    .nav__link {
+        line-height: 1.375;
+    }
+
+    .content .tns-outer #tns1 > .tns-item {
+        width: calc(25%);
+    }
+
+    .promotion {
+        text-align: left;
+        align-items: flex-start;
+
+        &__img {
+            width: 100%;
+            padding-top: 65%;
+        }
+
+        &__content {
+            max-width: 65%;
+        }
+    }
+
+    .secondary-headline--order {
+        justify-content: flex-start;
+    }
+
+    .footer {
+        margin: 0 15px;
+
+        .socials {
+            justify-content: center;
+        }
+
+        .socials__item:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .modal {
+        &__inner {
+            margin-left: 0;
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 66px 22px;
+        }
+
+        .view {
+            min-width: auto;
+            min-height: auto;
+        }
+    }
+
+    .webp .modal__content,
+    .no-webp .modal__content {
+        background-image: none;
+    }
+}
+
+/* Extra Small more, Phones 320-479 */
+@media screen and (max-width: 479.98px) {
+    html {
+        font-size: 75%;
+    }
+
+   .header-home {
+        padding-top: 0;
+
+        &__headline {
+            font-size: rem(50px);
+            line-height: 1.375;
+        }
+
+        &__top {
+            background: $bg;
+            padding: 15px 5%;
+        }
+
+        &__content {
+            margin-top: 200px;
+        }
+   }
+    
+   .tns-nav {
+       button {
+           width: 45px;
+       }
+   }
+}
+
+/* Custom, iPhone Retina 0 - 320 */
+@media only screen and (max-width : 320.98px) {
+    .modal__inner {
+        max-width: 90%;
+    }
+
+    .promotion__content {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header__top,
+    .header-home__top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-home__headline {
+        font-size: 2.2rem;
+    }
+
+    .socials {
+        &__item {
+            background: none;
+            width: 50%;
+        }
+
+        &__link {
+            width: 38px;
+            height: 38px;
+            margin: auto;
+        }
+    }
+
+    .nav {
+        &__top {
+            flex-direction: column-reverse;
+        }
+        &__logo {
+            margin: 0;
+            margin-top: 30px;
+        }
+    }
+
+    .close-btn {
+        margin-left: auto;
+    }
+
+    .footer .socials__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .header-home .view,
+    .view--order {
+        min-width: auto;
+        min-height: auto;
+    }
+}
+

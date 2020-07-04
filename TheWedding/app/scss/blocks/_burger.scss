@@ -1,0 +1,29 @@
+.burger {
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+
+    &__line {
+        width: 30px;
+        height: 3px;
+        display: block;
+        background-color: $black;
+        margin: 5px 0;
+        transition: all .4s ease;
+    }
+}
+
+.burger.cross {
+
+    .burger__line:nth-child(1) {
+        transform: rotate(45deg) translateY(11px);
+    }
+
+    .burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger__line:nth-child(3) {
+        transform: rotate(-47deg) translateY(-12px);
+    }
+}

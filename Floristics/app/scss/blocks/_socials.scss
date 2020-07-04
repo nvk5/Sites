@@ -1,0 +1,27 @@
+.socials {
+    &__item:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    &__link {
+        width: 25px;
+        height: 25px;
+        outline: none;
+        position: relative;
+
+        &:hover,
+        &:focus,
+        &:active {
+            .socials__icon {
+                fill: $text2;
+            }
+        }
+    }
+
+    &__icon {
+        fill: $text;
+        width: 100%;
+        height: 100%;
+        transition: fill .3s linear;
+    }
+}

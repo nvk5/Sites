@@ -1,0 +1,29 @@
+.burger {
+    display: none;
+    
+    &__wrap {
+        padding: 10px;
+    }
+
+    &__wrap,
+    &__desc {
+        cursor: pointer;
+    }
+
+    &__desc {
+        font-family: 'OpenSansRegular';
+        font-size: rem(20px);
+        color: #000;
+    }
+
+    &__line {
+        background: #000;
+        width: 30px;
+        height: 3px;
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}

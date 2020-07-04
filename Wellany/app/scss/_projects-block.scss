@@ -1,0 +1,46 @@
+.projects-block {
+    display: block;
+    border: 1px solid #707070;
+    background-color: #FBFAF8;
+    overflow: hidden;
+    transition: background-color .3s ease;
+    height: 100%;
+
+    &__img {
+        padding-top: 56.25%;
+        background-size: cover;
+        background-color: grey;
+        transition: transform .3s linear;
+    }
+
+    &__headline {
+        color: $color-brown-light;
+        font-size: rem(22px);
+        transition: color .3s ease;
+    }
+
+    &__text {
+        color: #D1D1D1;
+        font-size: rem(16px);
+        font-family: $Montserrat;
+        transition: color .3s ease;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #362F2D;
+
+        .projects-block__headline {
+            color: $color-white;
+        }
+
+        .projects-block__text {
+            color: $color-brown-light;
+        }
+
+        .projects-block__img {
+            transform: scale(1.1);
+        }
+    }
+}

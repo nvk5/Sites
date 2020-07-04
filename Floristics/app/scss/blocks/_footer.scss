@@ -1,0 +1,27 @@
+.footer {
+    padding: 20px 0 30px;
+    margin: 0 52px;
+    max-width: 100%;
+    border-top: 1px solid rgba(255,255,255, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .socials {
+        display: inline-flex;
+        margin-top: 30px;
+
+        &__item {
+            margin: 0;
+        }
+
+        &__item:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+
+    &--md {
+        display: none;
+    }
+}

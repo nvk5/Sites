@@ -1,0 +1,31 @@
+.view {
+    font-size: rem(12px);
+    text-align: center;
+    letter-spacing: .15em;
+    text-transform: inherit;
+    color: inherit;
+    border: 1px solid $text;
+    background: transparent;
+    min-width: 199px;
+    min-height: 50px;
+    padding: 19px 30px 16px;
+    line-height: 0.8;
+    cursor: pointer;
+    transition: all .4s ease;
+    outline: none;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+        color: $text2;
+        background: $text;
+    }
+
+    &--order {
+        line-height: 2;
+        background: transparent;
+        font-size: rem(16px);
+        min-width: 133px;
+        min-height: 50px;
+    }
+}

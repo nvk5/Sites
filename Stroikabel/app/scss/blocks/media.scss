@@ -1,0 +1,184 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Desktops, Tablets landscape 992-1199 */
+@media  screen and (max-width: 1199.98px) {
+    html {
+        font-size: 90%;
+    }
+
+    .description {
+        &__block {
+            width: 660px;
+        }
+
+        &__wrap {
+            width: 585px;
+            height: 585px;
+        }
+
+        &__img-wrap {
+            background: #fff;
+        }
+
+        &__center {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+	
+/* Medium Devices, Tablets portrait 768-991 */
+@media screen and (max-width: 991.98px) {
+    .burger {
+        display: block;
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
+
+    .nav__list {
+        padding: 100px 15px;
+    }
+
+
+    .nav__item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider__content {
+        width: 100%;
+    }
+
+    .description {
+        .description__block {
+            width: auto;
+            position: static;
+            transform: none;
+            width: 200px;
+            text-align: center;
+            margin-bottom: 30px;
+
+            > * {
+                transform: none;
+            }
+        }
+
+        &__img-wrap {
+            margin: auto;
+
+            &::after {
+                display: none;
+            }
+        } 
+
+        &__desc {
+            display: block;
+        }
+
+        &__wrap {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        &__img-wrap {
+            background: #fff;
+        }
+
+        &__center {
+            display: none;
+        }
+    }
+}
+
+/* Small Devices, Phones (landscape) 576-767 */
+@media screen and (max-width: 767.98px) {
+    html {
+        font-size: 80%;
+    }
+
+    .form {
+        max-width: auto;
+        width: 90%;
+    }
+
+    .header,
+    .footer {
+        
+        &__contacts {
+            text-align: center;
+        }
+
+        &__contacts-number {
+            font-size: rem(20px);
+        }
+    
+        &__contacts-call {
+            font-size: rem(18px);
+        }
+    
+        &__contacts-btn {
+            font-size: rem(18px);
+            padding: 10px 25px;
+        }
+    }
+
+    .price {
+        display: none;
+    }
+    
+    .secondary-headline {
+        padding: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .offer__success-number {
+        font-size: rem(40px);
+        padding: 5px;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .slider__arrow--next-company {
+        right: -10px;
+    }
+
+    .slider__arrow--prev-company {
+        left: -10px;
+    }
+
+}
+
+
+/* Extra Small Devices, Phones (portrait) 480-575 */
+@media screen and (max-width: 575.98px) {
+    .offer__success-number {
+        font-size: rem(30px);
+    }
+}
+
+
+/* Extra Small more, Phones 320-479 */
+@media screen and (max-width: 479.98px) {
+
+}
+
+@media screen and (max-width: 355px) {
+
+}
+
+/* Custom, iPhone Retina 0 - 320 */
+@media screen and (max-width : 319.98px) {
+
+}

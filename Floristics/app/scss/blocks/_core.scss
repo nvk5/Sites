@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body,h1,h2,h3,h4,p,ul,ol,li,figure,figcaption,blockquote,dl,dd {
+  margin: 0;
+}
+
+html {
+    font-size: 100%;
+    // scroll-behavior: smooth;
+}
+
+body {
+    font-family: $ff-main, serif;
+    line-height: 1.5;
+    position: relative;
+    overflow-x: hidden;
+    text-transform: uppercase;
+    color: $text;
+    background: $bg;
+}
+
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+.img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* Firefox < 19 */
+input:-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Firefox > 19 */
+input::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+// input:focus:required:invalid,
+// textarea:focus:required:invalid {
+//   color: 'red';
+// }
+
+// input:required:valid,
+// textarea:required:valid {
+//   color: 'green';
+// }
+
+// *::-webkit-search-cancel-button {
+//   // margin-left: 20px;
+//   // cursor: pointer;
+//   display: none;
+// }
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}

@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body,h1,h2,h3,h4,p,ul,ol,li,figure,figcaption,blockquote,dl,dd {
+  margin: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: rem($font-size-main);
+    font-family: 'RobotoRegular', sans-serif;
+    line-height: 1.5;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input::-webkit-input-placeholder {
+  color: #7D7D7D;
+  opacity: 1;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* Firefox < 19 */
+input:-moz-placeholder {
+  color: #7D7D7D;
+  opacity: 1;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Firefox > 19 */
+input::-moz-placeholder {
+  color: #7D7D7D;
+  opacity: 1;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+  color: #7D7D7D;
+  opacity: 1;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
+
+*::-webkit-search-cancel-button {
+  margin-left: 20px;
+  cursor: pointer;
+}
+

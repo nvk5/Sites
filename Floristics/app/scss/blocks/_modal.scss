@@ -1,0 +1,98 @@
+.modal {
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background: rgba(0,0,0, .7);
+
+    &__content {
+        background-position: top left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-width: 716px;
+        margin: auto;
+    }
+
+    &__inner {
+        padding: 66px;
+        margin-left: 44%;
+        background: $bg;
+        position: relative;
+        text-align: center;
+    }
+
+    &__success {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 999;
+        font-size: 1.25rem;
+        letter-spacing: .09em;
+        padding: 15px;
+        display: none;
+    }
+
+    &__headline {
+        font-size: rem(20px);
+        letter-spacing: .09em;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 22px;
+        right: 24px;
+    }
+}
+
+
+.sent {
+    display: block;
+
+    & ~ * {
+        filter: blur(10px);
+    }
+}
+
+
+.ordered {
+    display: flex;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+/* для Safari, Safari IOS */
+only screen and (min-resolution: 192dpi),
+/* для IE 10, IE 11, Opera Mini */
+only screen and (min-resolution: 2dppx) {
+
+    /* для нормальных браузеров */
+    .webp .modal__content {
+        background-image: url('../../images/home/@2x/webp/modal.webp');
+    }
+
+    .no-wecontent {
+        background-image: url('../../images/home/@2x/modal.png');
+    }
+
+}
+
+
+.webp .modal__content {
+    background-image: url('../../images/home/@1x/webp/modal.webp');
+}
+
+.no-webp .modal__content {
+    background-image: url('../../images/home/@1x/modal.png');
+}

@@ -1,0 +1,17 @@
+.wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &__field {
+        padding: 0 10px;
+    }
+
+    &--header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,110 @@
+.slider {
+    color: #fff;
+    position: relative;
+
+    &__item {
+        background-size: cover;
+        background-position: right top;
+        background-repeat: no-repeat;
+        min-height: 400px;
+
+        &:nth-child(1) {
+            background-image: url('../images/home/bg.jpg');
+        }
+
+        &:nth-child(2) {
+            background-image: url('../images/home/bg.jpg');
+        }
+
+        &:nth-child(3) {
+            background-image: url('../images/home/bg.jpg');
+        }
+    }
+
+
+    &__content {
+        padding: 35px 35px 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__headline {
+        font-family: 'OpenSansBold', sans-serif;
+        font-size: rem(36px);
+        //width: 60%;
+    }
+
+    &__desc {
+        font-family: 'OpenSansRegular', sans-serif;
+        font-size: rem(18px);
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+
+    &__arrow {
+        width: 50px;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+
+        &--prev {
+            left: 40px;
+
+            &:hover {
+                animation: slider-arrow-left 1s ease-in-out alternate infinite;
+            }
+        }
+
+        &--next {
+            right: 40px;
+
+            &:hover {
+                animation: slider-arrow-right 1s ease-in-out alternate infinite;
+            }
+        }
+
+        &--prev-company {
+            left: -40px;
+        }
+
+        &--next-company {
+            right: -40px;
+        }
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+
+    li {
+        text-indent: -9999px;
+        background: #fff;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        margin: 0 5px;
+    }
+
+    .slick-active {
+        background: #C7665D;
+    }
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+}
+

@@ -1,0 +1,25 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/libs';
+@import 'blocks/core';
+@import 'blocks/animations';
+
+@import 'blocks/container';
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/burger';
+@import 'blocks/logo';
+@import 'blocks/title';
+@import 'blocks/subtitle';
+@import 'blocks/secondary-title';
+@import 'blocks/secondary-subtitle';
+@import 'blocks/button';
+
+@import 'blocks/content';
+@import 'blocks/article';
+@import 'blocks/content-block';
+
+@import 'blocks/footer';
+
+@import 'blocks/media';

@@ -1,0 +1,185 @@
+// — Мобильники 320-767px — mobile, mobile-portrait, mobile-landscape
+// — Планшеты 768-1023px — tablet, tablet-portrait, tablet-landscape
+// — Лаптопы 1024-1199px — laptop, laptop-portrait, laptop-landscape
+// — Десктопы >=1200px — desktop, desktop-portrait, desktop-landscape
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Desktops, Tablets landscape 992-1199 */
+@media only screen and (max-width : 1199.98px) {
+    .nav__item {
+        padding: 0 20px;
+    }
+
+    .content-block {
+        padding-left: 0;
+        padding-top: 100px;
+        background-position: 50% 0;
+        text-align: center;
+        
+        &__btn {
+            align-self: center;
+        }
+    }
+
+    .secondary-title--content-block span {
+        margin-left: 0;
+    }
+}
+	
+/* Medium Devices, Tablets portrait 768-991 */
+@media screen and (max-width : 991.98px) {
+    html {
+        font-size: 90%;
+    }
+
+    .nav__item {
+        line-height: 1.5;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        grid-template-columns: 100%;
+
+        &__section-header {
+            justify-content: flex-start;
+        }
+    }
+}
+
+/* Small Devices, Phones (landscape) 576-767 */
+@media screen and (max-width : 767.98px) {
+    .burger {
+        display: inline-block;
+    }
+
+    .nav {
+        &__list--header {
+            height: 0;
+            opacity: 0;
+            flex-direction: column;
+        }
+
+        &__list--footer {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__link--header {
+            padding: 20px;
+        }
+
+        &__link--footer {
+            padding: 10px;
+        }
+    }
+
+    .header {
+        &__content {
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        &__details-img {
+            bottom: -30px;
+        }
+    }
+    
+
+    .header,
+    .footer {
+        .nav__item {
+            justify-content: center;
+            border: none;
+            padding: 0;
+        }
+    }
+
+    .content__section:nth-child(3) {
+        display: grid;
+        grid-row-gap: 40px;
+    }
+
+    .header__inner::before,
+    .header__inner::after,
+    .header__img::after {
+        display: none;
+    }
+}
+
+
+/* Extra Small Devices, Phones (portrait) 480-575 */
+@media screen and (max-width : 575.98px) {
+    .header {
+
+        &__inner {
+            grid-template-columns: 100%;
+        }
+
+        &__content {
+            grid-template-columns: 100%;
+            grid-gap: 20px;
+        }
+
+        &__details-img {
+            display: none;
+        }
+    }
+
+    .button {
+        background: #f55683;
+        min-height: 63px;
+        min-width: 140px;
+        padding-bottom: 0;
+    
+    }
+
+    .content .content__section {
+        .article {
+            grid-template-columns: 100%;
+            justify-items: center;
+    
+            &__img {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+    
+    .secondary-title {
+        padding-right: 0;
+        border-right: none;
+        line-height: 1.5;
+    }
+
+    .secondary-subtitle {
+        padding-left: 0;
+    }
+    
+    .content__section-header {
+        flex-direction: column;
+    }
+
+
+}
+
+/* Extra Small more, Phones 320-479 */
+@media screen and (max-width: 479.98px) {
+    .header__img::after {
+        top: 10%;
+    }
+}
+	
+/* Custom, iPhone Retina 0 - 320 */
+@media only screen and (max-width : 320.98px) {
+
+}
+

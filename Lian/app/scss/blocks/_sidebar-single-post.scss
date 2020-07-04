@@ -1,0 +1,116 @@
+.sidebar {
+    &__headline {
+        font-family: $RobotoL;
+        font-size: rem(18px);
+        letter-spacing: 0.4em;
+        background: #ebebeb;
+        text-transform: uppercase;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        transition: text-shadow .3s ease;
+
+        &:hover {
+            text-shadow: 2px 2px 3px $black;
+        }
+    }
+
+    &__block {
+        margin-bottom: 20px;
+    }
+
+    &__block-wrap {
+        background: $white;
+        padding: 15px 25px 30px;
+    }
+
+    &__block-post {
+        padding: 5px 5px 5px 100px;
+        cursor: pointer;
+        min-height: 65px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        transition: box-shadow .3s ease;
+        outline: none;
+        background-size: 90px 100%;
+        background-repeat: no-repeat;
+        background-position: left top;
+
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 3px 1px $black;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+
+    &__block-post-desc {
+        font-family: $RobotoM;
+        line-height: 1.25;
+        color: #3d3d3d;
+    }
+
+    &__block-post-date {
+        font-family: $RobotoL;
+        line-height: 1.125;
+        color: #777777;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    &__list-link {
+        font-size: rem(13px);
+        color: #9c9c9c;
+        padding: 7px 7px;
+        border: 1px solid $gray;
+        margin: 4px;
+        outline: none;
+        transition: all .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+            background: $black;
+            box-shadow: 0 0 3px 3px $black;
+        }
+    }
+
+    &__socials-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__socials-item {
+        width: 31%;
+        height: 80px;
+        margin-bottom: 7px;
+        overflow: hidden;
+        outline: none;
+        transition: box-shadow .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 3px 1px $black;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}

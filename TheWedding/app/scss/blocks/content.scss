@@ -1,0 +1,29 @@
+.content {
+    padding: 90px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+
+    &__section:nth-child(1) {
+        grid-row: 1/2;
+
+        .article {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__section:nth-child(3) {
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px dotted $pink-dark2;
+        padding-top: 25px;
+    }
+
+    &__section-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+}

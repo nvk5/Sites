@@ -1,0 +1,70 @@
+.nav {
+    background: $bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    padding: 95px 95px 217px 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-right: -16px;
+    margin-left: -16px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 200px;
+        align-self: stretch;
+    }
+
+    &__logo {
+        flex-grow: 0.5;
+        margin-left: auto;
+    }
+
+    &__list {
+        text-align: center;
+    }
+
+    &__link {
+        color: rgba($color: #fff, $alpha: 0.5);
+        font-size: rem(35px);
+        line-height: 2.4;
+        letter-spacing: .09em;
+        transition: all .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            transform: scale(1.2);
+            color: $text;
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        bottom: 70px;
+        left: 30px;
+    }
+}
+
+
+.nav.show {
+    animation: fadeIn .4s linear;
+}
+
+.nav.hide {
+    animation: fadeOut .4s linear;
+}
+
+.body-scrollbar {
+    padding-right: 16px;
+    overflow: hidden;
+}

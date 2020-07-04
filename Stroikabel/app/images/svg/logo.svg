@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="317" height="64" viewBox="0 0 317 64">
+  <g id="logo" transform="translate(-64 -20)">
+    <text id="СТРОЙКАБЕЛЬ" transform="translate(123 69)" fill="#0068d9" font-size="36" font-family="Roboto-Black, Roboto" font-weight="800"><tspan x="0" y="0">СТРОЙКАБЕЛЬ</tspan></text>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(66 30)" fill="rgba(0,0,0,0)" stroke="#0068d9" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24.5" cy="24.5" r="24.5" stroke="none"/>
+      <circle cx="24.5" cy="24.5" r="25.5" fill="none"/>
+    </g>
+    <text id="С" transform="translate(74 72)" fill="#0068d9" font-size="48" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">С</tspan></text>
+    <text id="К" transform="translate(87 62)" fill="#0068d9" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">К</tspan></text>
+  </g>
+</svg>

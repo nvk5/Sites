@@ -1,0 +1,70 @@
+.pr {
+    .socials {
+        margin-left: 20px;
+
+        &__list {
+            background: #e1e1e1;
+            position: relative;
+            border-radius: 5px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-right: 10px solid #e1e1e1;
+                border-bottom: 10px solid transparent;
+            }
+        }
+
+        &__item {
+            margin: 13px;
+        }
+
+        &__icon {
+            width: 17px;
+            height: 17px;
+        }
+    }
+}
+
+
+
+
+
+.socials {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__link {
+        outline: none;
+        font-size: 0;
+
+        &:hover,
+        &:focus,
+        &:active {
+            .socials__icon {
+                fill: $black;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__item {
+        margin: 25px;
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+        fill: $color-icons;
+        transition: all .3s ease;
+    }
+}

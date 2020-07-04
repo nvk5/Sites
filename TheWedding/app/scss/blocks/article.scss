@@ -1,0 +1,45 @@
+.article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    margin-bottom: 25px;
+
+    &__details {
+        line-height: 2;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 5px solid #f3f3f3;
+        box-shadow: 0 0 0 2px $gray;
+    }
+
+    &__title {
+        font-family: $ff-h2-subtitle2, serif;
+        font-size: rem($fsz-h2-subtitle2);
+        color: $color-h2-subtitle2;
+        text-decoration: underline;
+    }
+
+    &__excerpt {
+        font-family: $ff-text, serif;
+        font-size: rem($fsz-text);
+        color: $color-text;
+    }
+
+    &__list {
+        grid-column: 1/-1;
+    }
+
+    &__list-item {
+        font-family: $ff-article-list;
+        color: $gray-light;
+        font-size: rem($fsz-text2);
+        margin-bottom: 20px;
+        text-decoration: underline;
+        background: url('../images/tick_16.png') no-repeat left;
+        padding-left: 25px;
+    }
+}

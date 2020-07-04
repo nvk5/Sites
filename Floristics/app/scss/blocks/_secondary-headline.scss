@@ -1,0 +1,28 @@
+.secondary-headline {
+    font-size: rem(30px);
+    line-height: 2;
+    letter-spacing: .06em;
+    position: relative;
+    margin: auto;
+    display: inline-flex;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        height: 2px;
+        width: 50%;
+        background: $text;
+    }
+
+    &--services {
+        justify-content: center;
+    }
+
+    &--order {
+        &::before {
+            width: 25%;
+        }
+    }
+}

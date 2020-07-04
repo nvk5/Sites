@@ -1,0 +1,162 @@
+.description {
+    background: transparent;
+
+    &__content {
+        padding-bottom: 100px;
+    }
+
+    &__desc {
+        display: none;
+        margin-top: 15px;
+    }
+
+    &__wrap {
+        width: 1000px;
+        height: 1000px;
+        margin: auto;
+        border: 10px solid #00B05A;
+        position: relative;
+    }
+
+    &__img-wrap {
+        margin: 0;
+        position: relative;
+
+
+        &::after {
+            content: '';
+            font-family: 'OpenSansRegular';
+            font-size: rem(14px);
+            color: #464646;
+            position: absolute;
+            top: 110%;
+            width: 220%;
+            margin-left: -30px;
+        }
+    }
+
+    &__wrap,
+    &__center {
+        border-radius: 50%;
+    }
+
+    &__center {
+        font-family: 'RobotoBlack';
+        font-size: rem(30px);
+        line-height: 1.8;
+        color: #fff;
+        background: #00B25B;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    &__block {
+        position: absolute;
+        width: 760px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        text-align: left;
+
+        &:nth-child(1) {
+            .description__img-wrap::after {
+                content: 'Возможность отсрочки платежа';
+            }
+        }
+
+        &:nth-child(2) {
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            > * {
+               transform: rotate(-45deg);
+            }
+
+            .description__img-wrap::after {
+                content: 'Работаем с любыми объемами под заказ';
+            }
+
+        }
+
+        &:nth-child(3) {
+            transform: translate(-50%, -50%) rotate(90deg);
+
+            > * {
+               transform: rotate(-90deg);
+            }
+
+            .description__img-wrap::after {
+                content: 'Предоставляет полный перечень документов на кабельную продукцию';
+            }
+            
+        }
+
+        &:nth-child(4) {
+            transform: translate(-50%, -50%) rotate(135deg);
+
+            > * {
+               transform: rotate(-135deg);
+            }
+
+            .description__img-wrap::after {
+                content: 'У нас есть свой склад';
+            }
+        }
+
+        &:nth-child(5) {
+            transform: translate(-50%, -50%) rotate(180deg);
+
+            > * {
+               transform: rotate(-180deg);
+            }
+
+            .description__img-wrap::after {
+                content: 'Гарантия самой низкой цены на продукцию';
+            }
+        }
+
+        &:nth-child(6) {
+            transform: translate(-50%, -50%) rotate(225deg);
+
+            > * {
+               transform: rotate(-225deg);
+            }
+
+            .description__img-wrap::after {
+                content: 'Напрямую от производителя';
+            }
+        }
+
+        &:nth-child(7) {
+            transform: translate(-50%, -50%) rotate(270deg);
+
+            > * {
+               transform: rotate(-270deg);
+            }
+
+            .description__img-wrap::after {
+                content: 'Наличный и безналичный расчет';
+            }
+        }
+
+        &:nth-child(8) {
+            transform: translate(-50%, -50%) rotate(315deg);
+
+            > * {
+               transform: rotate(-315deg);
+            }
+
+            .description__img-wrap::after {
+                content: 'Бесплатная доставка по городу при заказе от  20 тыс. рублей';
+            }
+        }
+
+    }
+}

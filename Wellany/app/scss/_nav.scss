@@ -1,0 +1,40 @@
+.nav {
+    transition: all .4s ease;
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 17px;
+    }
+
+    &__link {
+        font-family: $Montserrat;
+        color: $color-white;
+        font-size: rem(14px);
+        transition: color .3s ease;
+    }
+
+    &__item {
+        width: auto;
+    }
+}
+
+
+.pushy {
+    a {
+        transition: all .3s ease;
+        outline: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-brown-light;
+            background: rgba($color: #000000, $alpha: 0.8);
+        }
+    }
+}

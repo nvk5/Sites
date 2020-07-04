@@ -1,0 +1,21 @@
+.search-btn {
+    width: 25px;
+    height: 25px;
+    display: block;
+    outline: none;
+    font-size: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        .search-btn__icon {
+            transform: scale(1.2);
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        transition: transform .3s ease;
+    }
+}

@@ -1,0 +1,90 @@
+.header .relative {
+    position: relative;
+}
+
+.header {
+    &__bg {
+        font-family: $RobotoL;
+        text-transform: uppercase;
+        padding: 11% 0;
+        position: relative;
+        background: linear-gradient(to right, lightgray, transparent);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to bottom, $gray, $gray-light);
+        }
+    }
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2), /* для Safari, Safari IOS */ 
+only screen and (min-resolution: 192dpi), /* для IE 10, IE 11, Opera Mini */ 
+only screen and (min-resolution: 2dppx) { /* для нормальных браузеров */ 
+	.webp .header__bg--about {
+        background: url('../images/about/@2x/webp/shutterstock_415747804.webp') no-repeat center;
+        background-size: cover;
+    }
+    
+    .no-webp .header__bg--about {
+        background: url('../images/about/@2x/shutterstock_415747804.png') no-repeat center;
+        background-size: cover;
+    }
+
+    .webp .header__bg--blog {
+        background: url('../images/blog/@2x/webp/bg.webp') no-repeat center;
+        background-size: cover;
+    }
+    
+    .no-webp .header__bg--blog {
+        background: url('../images/blog/@2x/bg.png') no-repeat center;
+        background-size: cover;
+    }
+
+    .webp .header__bg--portfolio {
+        background: url('../images/portfolio/@2x/webp/bg.webp') no-repeat center;
+        background-size: cover;
+    }
+    
+    .no-webp .header__bg--portfolio {
+        background: url('../images/portfolio/@2x/bg.png') no-repeat center;
+        background-size: cover;
+    }
+}
+
+.webp .header__bg--about {
+    background: url('../images/about/@1x/webp/shutterstock_415747804.webp') no-repeat center;
+    background-size: cover;
+}
+
+.no-webp .header__bg--about {
+    background: url('../images/about/@1x/shutterstock_415747804.png') no-repeat center;
+    background-size: cover;
+}
+
+.webp .header__bg--blog {
+    background: url('../images/blog/@1x/webp/bg.webp') no-repeat center;
+    background-size: cover;
+}
+
+.no-webp .header__bg--blog {
+    background: url('../images/blog/@1x/bg.png') no-repeat center;
+    background-size: cover;
+}
+
+.webp .header__bg--portfolio {
+    background: url('../images/portfolio/@1x/webp/bg.webp') no-repeat center;
+    background-size: cover;
+}
+
+.no-webp .header__bg--portfolio {
+    background: url('../images/portfolio/@1x/bg.png') no-repeat center;
+    background-size: cover;
+}
+
