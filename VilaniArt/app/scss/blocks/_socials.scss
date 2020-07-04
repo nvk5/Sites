@@ -1,0 +1,33 @@
+.socials {
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+
+        .socials__icon--tw {
+            fill: #87cefa;
+        }
+        .socials__icon--fb {
+            fill: #0000ff;
+        }
+        .socials__icon--drb {
+            fill: #800080;
+        }
+        .socials__icon--rss {
+            fill: #ffa500;
+        }
+    }
+
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &__icon {
+        width: 35px;
+        height: 25px;
+        fill: $color-white;
+        transition: fill .3s ease;
+        outline: none; 
+    }
+}

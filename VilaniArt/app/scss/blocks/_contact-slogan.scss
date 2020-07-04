@@ -1,0 +1,22 @@
+.contact-slogan {
+    font-family: $BitterRegular;
+    font-size: rem(20px);
+    text-align: center;
+    margin-bottom: 55px;
+    background: rgb(230, 230, 250);
+    padding: 20px;
+
+    &__btn {
+        background: linear-gradient(45deg,#efbad3,#a254f2);
+        border: none;
+        padding: 20px 40px;
+        color: white;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            background: linear-gradient(45deg,#ff839d,#f50b9a);
+        }
+    }
+}

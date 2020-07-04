@@ -1,0 +1,30 @@
+.contacts {
+
+    &__map {
+        background-color: $color-gray;
+        height: 400px;
+        width: 100%;
+    }
+
+    &__address > * {
+        font-style: normal;
+        font-family: HelveticaMedium;
+        font-size: rem(20px);
+    }
+
+    &__location {
+        margin-bottom: 20px;
+    }
+
+    &__phone,
+    &__mail {
+        cursor: pointer;
+        color: $color-black-light;
+        transition: color .3s ease;
+        padding-left: 10px;
+
+        &:hover {
+            color: $color-red;
+        }
+    }
+}

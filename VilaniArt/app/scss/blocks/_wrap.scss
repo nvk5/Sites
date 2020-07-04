@@ -1,0 +1,23 @@
+.wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+
+    &--header-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &--socials {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &--top {
+        padding: 30px;
+        overflow: hidden;
+        background: $color-black-light;
+    }
+}

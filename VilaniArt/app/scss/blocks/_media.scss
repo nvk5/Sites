@@ -1,0 +1,84 @@
+// — Мобильники 320-767px — mobile, mobile-portrait, mobile-landscape
+// — Планшеты 768-1023px — tablet, tablet-portrait, tablet-landscape
+// — Лаптопы 1024-1199px — laptop, laptop-portrait, laptop-landscape
+// — Десктопы >=1200px — desktop, desktop-portrait, desktop-landscape
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Desktops, Tablets landscape 992-1199 */
+@media only screen and (max-width : 1199px) {
+
+}
+	
+/* Medium Devices, Tablets portrait 768-991 */
+@media screen and (max-width : 991px) {
+    html {
+        font-size: 90%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav__list {
+        padding: 150px 15px;
+    }
+
+    .nav__item:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .header__nav {
+        z-index: 3;
+    }
+}
+
+/* Small Devices, Phones (landscape) 576-767 */
+@media screen and (max-width : 767px) {
+    html {
+        font-size: 85%;
+    }
+
+    .projects__list {
+        justify-content: space-around;
+    }
+}
+
+
+/* Extra Small Devices, Phones (portrait) 480-575 */
+@media screen and (max-width : 575px) {
+    .header__content-desc {
+        left: 0;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .wrap--socials {
+        justify-content: center;
+    }
+
+    .projects__list {
+        display: block;
+        text-align: center;
+    }
+
+    .form__input {
+        width: 100%;
+    }
+}
+
+/* Extra Small more, Phones 320-479 */
+@media screen and (max-width: 479px) {
+    html {
+        font-size: 80%;
+    }
+}
+	
+/* Custom, iPhone Retina 0 - 320 */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+

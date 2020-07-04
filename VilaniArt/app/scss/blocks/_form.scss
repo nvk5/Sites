@@ -1,0 +1,47 @@
+.form {
+    font-family: $HelveticaRoman;
+    font-size: rem(14px);
+    color: #252525;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__input {
+        width: 30%;
+        padding: 10px 15px;
+        margin-bottom: 30px;
+        border: 1px solid $color-black;
+        outline: none;
+    }
+
+    &__input-textarea {
+        width: 100%;
+        resize: none;
+        line-height: 1.75;
+
+        &::placeholder {
+            color: #252525;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 30px;
+        background: $color-red;
+        padding: 10px 15px;
+        color: $color-white;
+        border: none;
+        transition: all .3s ease;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-red;
+            background: $color-white;
+            outline: 1px solid $color-red;
+        }
+    }
+}
+
+
+
+  
+ 

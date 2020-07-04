@@ -1,0 +1,13 @@
+.content {
+    &__headline {
+        font-family: $HelveticaRoman;
+        color: $color-white;
+        font-size: rem(30px);
+        letter-spacing: 2px;
+    }
+
+    &__desc {
+        color: $color-gray;
+        font-size: rem(25px);
+    }
+}

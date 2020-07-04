@@ -1,0 +1,35 @@
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: $color-gray-dark;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s ease;
+    z-index: 2;
+
+    &:hover {
+        background: $color-white;
+        border-color: $color-gray-dark;
+
+        .arrow__icon {
+            fill: $color-gray-dark;
+        }
+    }
+
+    &__active {
+        right: 50px;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        fill: $color-white;
+        transition: fill .3s linear;
+        transform: translateY(25%);
+    }
+}

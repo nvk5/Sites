@@ -1,0 +1,30 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+//Font-face mixin
+@mixin font-face($f-name, $f-style, $f-weight, $f-display, $f-local, $file-path) {
+    @font-face {
+        font-family: $f-name;
+        font-style: $f-style;
+        font-weight: $f-weight;
+        font-display: $f-display;
+        src: local('#{$f-local}'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff')
+    }	
+}
+
+
+@include font-face('HelveticaNeueCyrBold', normal, bold, swap, 'HelveticaNeueCyr-Bold', '../fonts/main/HelveticaNeueCyrBold/HelveticaNeueCyrBold');
+@include font-face('HelveticaNeueCyrMedium', normal, 500, swap, 'HelveticaNeueCyr-Medium', '../fonts/main/HelveticaNeueCyrMedium/HelveticaNeueCyrMedium');
+@include font-face('HelveticaNeueCyrRoman', normal, 400, swap, 'HelveticaNeueCyr-Roman', '../fonts/main/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman');
+@include font-face('BitterBold', normal, bold, swap, 'BitterBold', '../fonts/main/BitterBold/BitterBold');
+@include font-face('BitterRegular', normal, 400, swap, 'BitterRegular', '../fonts/main/BitterRegular/BitterRegular');
+

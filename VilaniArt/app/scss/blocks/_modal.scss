@@ -1,0 +1,40 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba($color: #000000, $alpha: .5);
+    padding: 20px;
+    transition: all .4s linear;
+    overflow: auto;
+    display: none;
+
+    &__success {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        color: black;
+        z-index: 1;
+        font-size: 2rem;
+        display: none;
+
+        span {
+            margin: auto;
+        }
+
+        ~* {
+            transition: all .4s ease;
+        }
+    }
+
+
+    &__active ~* {
+        opacity: 0.5;
+        filter: blur(10px);
+    }
+}

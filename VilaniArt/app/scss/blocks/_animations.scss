@@ -1,0 +1,38 @@
+//autofill input form
+//Фон и цвет текста для input который был заполнен через автозаполнение:
+@keyframes autofill {
+    to {
+      color: inherit;
+      background: transparent;
+    }
+  }
+
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 2.5s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}

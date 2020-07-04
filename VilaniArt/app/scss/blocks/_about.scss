@@ -1,0 +1,39 @@
+.about {
+    padding: 50px 10px;
+
+    &__headline {
+        font-size: rem(18px);
+        font-family: $BitterRegular;
+        margin-bottom: 30px;
+        text-align: center;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 50%;
+            margin: 30px auto;
+            margin-right: auto;
+            height: 2px;
+            background: $color-black-light;
+        }
+    }
+
+    &__desc {
+        font-family: $HelveticaMedium;
+        font-size: rem(14px);
+        line-height: 1.8;
+    }
+
+    &__link {
+        display: block;
+        color: $color-black-light;
+        transition: color .3s ease;
+        outline: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-red;
+        }
+    }
+}

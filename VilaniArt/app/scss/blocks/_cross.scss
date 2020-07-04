@@ -1,0 +1,11 @@
+.cross .hamburger__line:first-child {
+    transform: rotate(-45deg) translate(-8px,4px);
+}
+
+.cross .hamburger__line:nth-child(2) {
+    opacity: 0;
+}
+
+.cross .hamburger__line:last-child {
+    transform: rotate(45deg) translate(-9px,-6px);
+}
