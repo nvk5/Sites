@@ -79,20 +79,20 @@ only screen and (min-resolution: 2dppx) {
 
     /* для нормальных браузеров */
     .webp .modal__content {
-        background-image: url('../../images/home/@2x/webp/modal.webp');
+        background-image: url('../images/home/@2x/webp/modal.webp');
     }
 
     .no-wecontent {
-        background-image: url('../../images/home/@2x/modal.png');
+        background-image: url('../images/home/@2x/modal.png');
     }
 
 }
 
 
 .webp .modal__content {
-    background-image: url('../../images/home/@1x/webp/modal.webp');
+    background-image: url('../images/home/@1x/webp/modal.webp');
 }
 
 .no-webp .modal__content {
-    background-image: url('../../images/home/@1x/modal.png');
+    background-image: url('../images/home/@1x/modal.png');
 }

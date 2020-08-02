@@ -38,20 +38,20 @@ only screen and (min-resolution: 2dppx) {
 
     /* для нормальных браузеров */
     .webp .promotion__img {
-        background-image: url('../../images/home/@2x/webp/promotion.webp');
+        background-image: url('../images/home/@2x/webp/promotion.webp');
     }
 
     .no-webp .promotion__img {
-        background-image: url('../../images/home/@2x/promotion.png');
+        background-image: url('../images/home/@2x/promotion.png');
     }
 
 }
 
 
 .webp .promotion__img {
-    background-image: url('../../images/home/@1x/webp/promotion.webp');
+    background-image: url('../images/home/@1x/webp/promotion.webp');
 }
 
 .no-webp .promotion__img {
-    background-image: url('../../images/home/@1x/promotion.png');
+    background-image: url('../images/home/@1x/promotion.png');
 }

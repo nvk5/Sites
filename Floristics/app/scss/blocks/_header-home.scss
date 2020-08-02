@@ -58,7 +58,7 @@
             width: 10px;
             height: 23px;
             position: absolute;
-            background-image: url('../../images/svg/arrow-down.svg');
+            background-image: url('../images/svg/arrow-down.svg');
             background-repeat: no-repeat;
             background-position: center;
             display: block;
@@ -118,20 +118,20 @@ only screen and (min-resolution: 2dppx) {
 
     /* для нормальных браузеров */
     .webp .header-home {
-        background-image: url('../../images/home/@2x/webp/bg.webp');
+        background-image: url('../images/home/@2x/webp/bg.webp');
     }
 
     .no-webp .header-home {
-        background-image: url('../../images/home/@2x/bg.jpg');
+        background-image: url('../images/home/@2x/bg.jpg');
     }
 
 }
 
 
 .webp .header-home {
-    background-image: url('../../images/home/@1x/webp/bg.webp');
+    background-image: url('../images/home/@1x/webp/bg.webp');
 }
 
 .no-webp .header-home {
-    background-image: url('../../images/home/@1x/bg.jpg');
+    background-image: url('../images/home/@1x/bg.jpg');
 }

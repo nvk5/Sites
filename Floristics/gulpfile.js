@@ -132,6 +132,7 @@ const jslibs = () => {
     return src([
         // 'node_modules/jquery/dist/jquery.min.js',
         'node_modules/svg4everybody/dist/svg4everybody.min.js',
+        'node_modules/@babel/polyfill/dist/polyfill.min.js',
         'node_modules/object-fit-images/dist/ofi.js',
         'node_modules/tiny-slider/dist/tiny-slider.js',
         'node_modules/smoothscroll-polyfill/dist/smoothscroll.js',
