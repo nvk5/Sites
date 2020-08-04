@@ -1,0 +1,92 @@
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    &--header,
+    &--contact,
+    &--payment,
+    &--footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &--header {
+        justify-content: space-between;
+    }
+
+    &--contact {
+        justify-content: space-between;
+        min-height: 55px;
+    }
+
+    &--payment {
+        justify-content: center;
+        min-height: 60px;
+    }
+
+    &--footer {
+        justify-content: space-between;
+        min-height: 75px;
+    }
+
+    &--novelty {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    &--slider-clothes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-border;
+        padding-top: 30px;
+    }
+
+    &--single-product {
+        display: grid;
+        grid-template-columns: 400px 2fr;
+        gap: 30px;
+        margin-bottom: 35px;
+    }
+
+    &--product-socials {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 90px;
+        flex-wrap: wrap;
+        border-top: 1px solid $color-border;
+        border-bottom: 1px solid $color-border;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+// @media (max-width: 575.98px) {
+//     .container {
+//         max-width: 100%;
+//     }
+// }

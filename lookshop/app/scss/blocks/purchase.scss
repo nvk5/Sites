@@ -1,0 +1,53 @@
+.purchase {
+    margin-left: 20px;
+    min-width: 212px;
+    border: 1px solid $color-purchase;
+    color: $color-purchase;
+    order: 3;
+
+    &__details {
+        display: flex;
+        justify-content: flex-end;
+        background: #fafafa;
+        padding: 8px;
+        margin-top: -8px;
+        background-image: url('../../images/svg/bag.svg');
+        background-size: 20px 20px;
+        background-position: 10px center;
+        background-repeat: no-repeat;
+    }
+
+    &__item {
+        span {
+            margin: 0 3px;
+            display: inline-block;
+        }
+    }
+
+    &__item:nth-child(1)::after {
+        content: '|';
+        padding: 0 5px;
+    }
+
+    .selectize-input {
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid $color-purchase;
+        border-radius: 0;
+    }
+    
+    .selectize-dropdown .active {
+        background-color: #c4c4c4;
+        color: inherit;
+    }
+    
+    .selectize-dropdown, .selectize-input, .selectize-input input {
+        color: inherit;
+        line-height: inherit;
+    }
+    
+    .selectize-dropdown .optgroup-header, .selectize-dropdown .option {
+        padding: 8px;
+    }
+}
+

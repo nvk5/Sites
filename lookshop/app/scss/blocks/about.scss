@@ -1,0 +1,16 @@
+.about {
+    margin-bottom: 50px;
+    text-align: center;
+
+    &__headline {
+        font-size: rem($fsz-about-headline);
+        color: $color-h2;
+        font-weight: 100;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: rem($fsz-text);
+        color: $color-text;
+    }
+}

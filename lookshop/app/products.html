@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Lookshop</title>
+   <meta name="description" content="Lookshop">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   <header class="header">
+      <div class="header__top">
+         <div class="container container--header">
+            <a href="tel:888-23-4567" class="link header__top-phone">Custom Rare: <span>888-23-4567</span></a>
+            <select name="value" class="header__top-item header__top-value">
+               <option value="dollar">$ US</option>
+               <option value="euro">€ EU</option>
+            </select>
+            <button class="header__top-item header__top-account">My account</button>
+            <button class="header__top-item header__top-search">search</button>
+         </div>
+      </div>
+      <div class="header__bottom">
+         <div class="container container--header">
+            <a href="index.html" class="link header__logo"><img src="images/home/logo.png" alt="Logo"></a>
+            <nav class="nav">
+               <div class="burger burger--header">
+                  <span class="burger__line">mobile-btn-line</span>
+                  <span class="burger__line">mobile-btn-line</span>
+                  <span class="burger__line">mobile-btn-line</span>
+               </div>
+               <ul class="nav__list">
+                  <li class="nav__item">new
+                     <ul class="nav__inner">
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Clothes</a></li>
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Shoes</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav__item">designers
+                     <ul class="nav__inner">
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Clothes</a></li>
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Shoes</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav__item">women
+                     <ul class="nav__inner">
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Clothes</a></li>
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Shoes</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav__item">men
+                     <ul class="nav__inner">
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Clothes</a></li>
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Shoes</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav__item">clearence
+                     <ul class="nav__inner">
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Clothes</a></li>
+                        <li class="nav__inner-item"><a href="products.html" class="nav__inner-link">Shoes</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </nav>
+            <div class="purchase">
+               <select name="purchase" class="purchase__card purchase__item">
+                  <option class="purchase__item" value="" disabled selected>Your card</option>
+                  <option class="purchase__item">2342 1234 3244 2356</option>
+               </select>
+               <div class="purchase__details ">
+                  <p class="purchase__item"><span>0</span>Items</p>
+                  <p class="purchase__item">$<span>0</span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <div class="container">
+      <div class="breadcrumbs">
+         <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">
+                  <img src="images/svg/Home.svg" alt="home">
+               </a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Women</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Clothes</a></li>
+         </ul>
+      </div>
+   </div>
+   <section class="slider-clothes">
+      <div class="container container--slider-clothes">
+         <div class="slider-clothes__item">
+            <picture>
+               <source type="image/webp"
+                  srcset="images/products/@1x/webp/bg.webp 1x, images/products/@2x/webp/bg.webp 2x">
+               <img src="images/products/@1x/bg.jpg"
+                  srcset="images/products/@1x/bg.jpg 1x, images/products/@2x/bg.jpg 2x" alt="img"
+                  class="slider-clothes__img">
+            </picture>
+            <div class="slider-clothes__content">
+               <h2 class="slider-clothes__headline">Open heart top</h2>
+               <span class="slider-clothes__price">$13.95</span>
+               <p class="slider-clothes__details">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                  velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+                  sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+                  accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
+               <button class="button button--clothes ">Add to card</button>
+            </div>
+         </div>
+         <div class="slider-clothes__item">
+            <picture>
+               <source type="image/webp"
+                  srcset="images/products/@1x/webp/bg.webp 1x, images/products/@2x/webp/bg.webp 2x">
+               <img src="images/products/@1x/bg.jpg"
+                  srcset="images/products/@1x/bg.jpg 1x, images/products/@2x/bg.jpg 2x" alt="img"
+                  class="slider-clothes__img">
+            </picture>
+            <div class="slider-clothes__content">
+               <h2 class="slider-clothes__headline">Gooding shorts</h2>
+               <span class="slider-clothes__price">$20.65</span>
+               <p class="slider-clothes__details">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                  velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+                  sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+                  accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
+               <button class="button button--clothes">Add to card</button>
+            </div>
+         </div>
+         <div class="slider-clothes__item">
+            <picture>
+               <source type="image/webp"
+                  srcset="images/products/@1x/webp/bg.webp 1x, images/products/@2x/webp/bg.webp 2x">
+               <img src="images/products/@1x/bg.jpg"
+                  srcset="images/products/@1x/bg.jpg 1x, images/products/@2x/bg.jpg 2x" alt="img"
+                  class="slider-clothes__img">
+            </picture>
+            <div class="slider-clothes__content">
+               <h2 class="slider-clothes__headline">Sofi dress</h2>
+               <span class="slider-clothes__price">$50.67</span>
+               <p class="slider-clothes__details">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                  velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+                  sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+                  accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
+               <button class="button button--clothes">Add to card</button>
+            </div>
+         </div>
+         <div class="slider-clothes__item">
+            <picture>
+               <source type="image/webp"
+                  srcset="images/products/@1x/webp/bg.webp 1x, images/products/@2x/webp/bg.webp 2x">
+               <img src="images/products/@1x/bg.jpg"
+                  srcset="images/products/@1x/bg.jpg 1x, images/products/@2x/bg.jpg 2x" alt="img"
+                  class="slider-clothes__img">
+            </picture>
+            <div class="slider-clothes__content">
+               <h2 class="slider-clothes__headline">Folicia silk shirt</h2>
+               <span class="slider-clothes__price">$17.95</span>
+               <p class="slider-clothes__details">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                  velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+                  sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+                  accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
+               <button class="button button--clothes">Add to card</button>
+            </div>
+         </div>
+         <div class="slider-clothes__item">
+            <picture>
+               <source type="image/webp"
+                  srcset="images/products/@1x/webp/bg.webp 1x, images/products/@2x/webp/bg.webp 2x">
+               <img src="images/products/@1x/bg.jpg"
+                  srcset="images/products/@1x/bg.jpg 1x, images/products/@2x/bg.jpg 2x" alt="img"
+                  class="slider-clothes__img">
+            </picture>
+            <div class="slider-clothes__content">
+               <h2 class="slider-clothes__headline">Nadia dress</h2>
+               <span class="slider-clothes__price">$109.95</span>
+               <p class="slider-clothes__details">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                  velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+                  sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+                  accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
+               <button class="button button--clothes">Add to card</button>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="container products">
+      <section class="products__content">
+         <div class="products__content-header">
+            <div class="products__content-sort">
+               <span>Sort by</span>
+               <select name="sort" class="products__sort">
+                  <option value="Date">Date</option>
+                  <option value="Price">Price</option>
+                  <option value="Alphabet">Alphabet</option>
+               </select>
+            </div>
+            <div class="pagination">
+               <span class="pagination__item">Showing 1-12 of 347 results</span>
+               <button class="pagination__button pagination__item pagination__button--prev">previous</button>
+               <ul class="pagination__list pagination__item">
+                  <li class="pagination__list-item"><a href="#" class="pagination__list-link active">1</a></li>
+                  <li class="pagination__list-item"><a href="#" class="pagination__list-link">2</a></li>
+                  <li class="pagination__list-item"><a href="#" class="pagination__list-link">3</a></li>
+               </ul>
+               <button class="pagination__button pagination__item pagination__button--next">next</button>
+            </div>
+         </div>
+         <div class="products__content-body">
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card1.webp 1x, images/products/@2x/webp/card1.webp 2x">
+                     <img src="images/products/@1x/card1.png"
+                        srcset="images/products/@1x/card1.png 1x, images/products/@2x/card1.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">NADIA DRESS</h4>
+                  <span class="card__price">$64.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card2.webp 1x, images/products/@2x/webp/card2.webp 2x">
+                     <img src="images/products/@1x/card2.png"
+                        srcset="images/products/@1x/card2.png 1x, images/products/@2x/card2.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">SOFI BLOUSE</h4>
+                  <span class="card__price">$26.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card3.webp 1x, images/products/@2x/webp/card3.webp 2x">
+                     <img src="images/products/@1x/card3.png"
+                        srcset="images/products/@1x/card3.png 1x, images/products/@2x/card3.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">GOODING SHORTS</h4>
+                  <span class="card__price">$79.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card4.webp 1x, images/products/@2x/webp/card4.webp 2x">
+                     <img src="images/products/@1x/card4.png"
+                        srcset="images/products/@1x/card4.png 1x, images/products/@2x/card4.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">NADIA DRESS</h4>
+                  <span class="card__price">$64.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card5.webp 1x, images/products/@2x/webp/card5.webp 2x">
+                     <img src="images/products/@1x/card5.png"
+                        srcset="images/products/@1x/card5.png 1x, images/products/@2x/card5.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">SOFI BLOUSE</h4>
+                  <span class="card__price">$26.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card6.webp 1x, images/products/@2x/webp/card6.webp 2x">
+                     <img src="images/products/@1x/card6.png"
+                        srcset="images/products/@1x/card6.png 1x, images/products/@2x/card6.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">GOODING SHORTS</h4>
+                  <span class="card__price">$79.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card7.webp 1x, images/products/@2x/webp/card7.webp 2x">
+                     <img src="images/products/@1x/card7.png"
+                        srcset="images/products/@1x/card7.png 1x, images/products/@2x/card7.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">NADIA DRESS</h4>
+                  <span class="card__price">$64.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card8.webp 1x, images/products/@2x/webp/card8.webp 2x">
+                     <img src="images/products/@1x/card8.png"
+                        srcset="images/products/@1x/card8.png 1x, images/products/@2x/card8.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">SOFI BLOUSE</h4>
+                  <span class="card__price">$26.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+            <article class="card card--products">
+               <a href="single-product.html" class="card__link">
+                  <picture>
+                     <source type="image/webp"
+                        srcset="images/products/@1x/webp/card9.webp 1x, images/products/@2x/webp/card9.webp 2x">
+                     <img src="images/products/@1x/card9.png"
+                        srcset="images/products/@1x/card9.png 1x, images/products/@2x/card9.png 2x" alt="card-item">
+                  </picture>
+               </a>
+               <div class="card__details card__details--products">
+                  <h4 class="card__name">GOODING SHORTS</h4>
+                  <span class="card__price">$79.95</span>
+                  <button class="button button--card">Add to card</button>
+               </div>
+            </article>
+         </div>
+         <div class="pagination pagination--bottom">
+            <span class="pagination__item">Showing 1-12 of 347 results</span>
+            <button class="pagination__button pagination__item pagination__button--prev">previous</button>
+            <ul class="pagination__list pagination__item">
+               <li class="pagination__list-item"><a href="#" class="pagination__list-link active">1</a></li>
+               <li class="pagination__list-item"><a href="#" class="pagination__list-link">2</a></li>
+               <li class="pagination__list-item"><a href="#" class="pagination__list-link">3</a></li>
+            </ul>
+            <button class="pagination__button pagination__item pagination__button--next">next</button>
+         </div>
+      </section>
+      <aside class="sidebar products__sidebar">
+         <section class="sidebar__section">
+            <h3 class="sidebar__headline">Categories</h3>
+            <ul class="sidebar__list">
+               <li class="sidebar__list-item">
+                  <a href="#" class="sidebar__list-link">New
+                     <span>+</span>
+                  </a>
+               </li>
+               <li class="sidebar__list-item">
+                  <a href="#" class="sidebar__list-link">Designers
+                     <span>+</span>
+                  </a>
+               </li>
+               <li class="sidebar__list-item">
+                  <a href="#" class="sidebar__list-link">Women
+                     <span>-</span>
+                  </a>
+                  <ul class="sidebar__list-inner">
+                     <li class="sidebar__list-inner-item"><a class="sidebar__list-inner-link active"
+                           href="#">Clothes</a></li>
+                     <li class="sidebar__list-inner-item"><a class="sidebar__list-inner-link" href="#">Shoes</a></li>
+                  </ul>
+               </li>
+               <li class="sidebar__list-item">
+                  <a href="#" class="sidebar__list-link">Men
+                     <span>+</span>
+                  </a>
+               </li>
+               <li class="sidebar__list-item">
+                  <a href="#" class="sidebar__list-link">Clearance
+                     <span>+</span>
+                  </a>
+               </li>
+            </ul>
+            <div class="sidebar__filter">
+               <input type="range" min="0" max="300" step="1" value="200">
+               <p>Price $<span class="min">0</span> - $<span class="max">200</span></p>
+               <button class="button button--filter">Filter</button>
+            </div>
+            <div class="sidebar__sizes">
+               <span>Select your size</span>
+               <div class="sidebar__size-select">
+                  <span class="sidebar__size-select-item">XS</span>
+                  <span class="sidebar__size-select-item active">S</span>
+                  <span class="sidebar__size-select-item">M</span>
+                  <span class="sidebar__size-select-item">L</span>
+                  <span class="sidebar__size-select-item">XL</span>
+               </div>
+            </div>
+         </section>
+         <section class="sidebar__section">
+            <h3 class="sidebar__headline">On sale</h3>
+            <div class="sidebar__cards">
+               <article class="card card--sidebar">
+                  <a href="single-product.html" class="card__link card__link--sidebar">
+                     <picture>
+                        <source type="image/webp"
+                           srcset="images/products/@1x/webp/aside1.webp 1x, images/products/@2x/webp/aside1.webp 2x">
+                        <img src="images/products/@1x/aside1.png"
+                           srcset="images/products/@1x/aside1.png 1x, images/products/@2x/aside1.png 2x"
+                           alt="card-item">
+                     </picture>
+                  </a>
+                  <div class="card__details card__details--sidebar">
+                     <h4 class="card__name">PINTUCK TANK</h4>
+                     <span class="card__price card__price--sidebar">$45.55</span>
+                  </div>
+               </article>
+               <article class="card card--sidebar">
+                  <a href="single-product.html" class="card__link card__link--sidebar">
+                     <picture>
+                        <source type="image/webp"
+                           srcset="images/products/@1x/webp/aside2.webp 1x, images/products/@2x/webp/aside2.webp 2x">
+                        <img src="images/products/@1x/aside2.png"
+                           srcset="images/products/@1x/aside2.png 1x, images/products/@2x/aside2.png 2x"
+                           alt="card-item">
+                     </picture>
+                  </a>
+                  <div class="card__details card__details--sidebar">
+                     <h4 class="card__name">FOLICIA SILK SHIRT</h4>
+                     <span class="card__price card__price--sidebar">$69.49</span>
+                  </div>
+               </article>
+               <article class="card card--sidebar">
+                  <a href="single-product.html" class="card__link card__link--sidebar">
+                     <picture>
+                        <source type="image/webp"
+                           srcset="images/products/@1x/webp/aside3.webp 1x, images/products/@2x/webp/aside3.webp 2x">
+                        <img src="images/products/@1x/aside3.png"
+                           srcset="images/products/@1x/aside3.png 1x, images/products/@2x/aside3.png 2x"
+                           alt="card-item">
+                     </picture>
+                  </a>
+                  <div class="card__details card__details--sidebar">
+                     <h4 class="card__name">Laylala Shirt</h4>
+                     <span class="card__price card__price--sidebar">$78.25</span>
+                  </div>
+               </article>
+            </div>
+         </section>
+         <section class="sidebar__section">
+            <h3 class="sidebar__headline">Featured Products</h3>
+            <div class="sidebar__cards">
+               <article class="card card--sidebar">
+                  <a href="single-product.html" class="card__link card__link--sidebar">
+                     <picture>
+                        <source type="image/webp"
+                           srcset="images/products/@1x/webp/aside4.webp 1x, images/products/@2x/webp/aside4.webp 2x">
+                        <img src="images/products/@1x/aside4.png"
+                           srcset="images/products/@1x/aside4.png 1x, images/products/@2x/aside4.png 2x"
+                           alt="card-item">
+                     </picture>
+                  </a>
+                  <div class="card__details card__details--sidebar">
+                     <h4 class="card__name">Basic Sunglasses</h4>
+                     <span class="card__price card__price--sidebar">$14.95</span>
+                  </div>
+               </article>
+               <article class="card card--sidebar">
+                  <a href="single-product.html" class="card__link card__link--sidebar">
+                     <picture>
+                        <source type="image/webp"
+                           srcset="images/products/@1x/webp/aside5.webp 1x, images/products/@2x/webp/aside5.webp 2x">
+                        <img src="images/products/@1x/aside5.png"
+                           srcset="images/products/@1x/aside5.png 1x, images/products/@2x/aside5.png 2x"
+                           alt="card-item">
+                     </picture>
+                  </a>
+                  <div class="card__details card__details--sidebar">
+                     <h4 class="card__name">Billie J</h4>
+                     <span class="card__price card__price--sidebar">$69.49</span>
+                  </div>
+               </article>
+               <article class="card card--sidebar">
+                  <a href="single-product.html" class="card__link card__link--sidebar">
+                     <picture>
+                        <source type="image/webp"
+                           srcset="images/products/@1x/webp/aside6.webp 1x, images/products/@2x/webp/aside6.webp 2x">
+                        <img src="images/products/@1x/aside6.png"
+                           srcset="images/products/@1x/aside6.png 1x, images/products/@2x/aside6.png 2x"
+                           alt="card-item">
+                     </picture>
+                  </a>
+                  <div class="card__details card__details--sidebar">
+                     <h4 class="card__name">Sandie Shopperbag</h4>
+                     <span class="card__price card__price--sidebar">$69.95</span>
+                  </div>
+               </article>
+            </div>
+         </section>
+      </aside>
+   </div>
+
+   <section class="payment">
+      <div class="container container--payment">
+         <h4 class="payment__headline">We accept</h4>
+         <ul class="payment__list">
+            <li class="payment__item"><img src="images/svg/maestro-1.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/mastercard-6.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/paypal.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/visa-electron.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/laser-1.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/amex-card.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/asatsu-dk-33492.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/ayuntamiento-de-huelva-2.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/email.svg" alt="payment system"></li>
+            <li class="payment__item"><img src="images/svg/visa.svg" alt="payment system"></li>
+         </ul>
+      </div>
+   </section>
+   <footer class="footer">
+      <div class="footer__top">
+         <div class="container container--footer">
+            <section class="footer__block">
+               <h3 class="footer__block-header">Customer Service</h3>
+               <ul class="footer__block-list">
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Contact</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">FAQ</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Terms of payment</a>
+                  </li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Delivery terms and
+                        conditions</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Returns and
+                        refunds</a></li>
+               </ul>
+            </section>
+            <section class="footer__block">
+               <h3 class="footer__block-header">Information</h3>
+               <ul class="footer__block-list">
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Affiliate</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Cookies</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">How to shop</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">About Nelly</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Investor relations</a>
+                  </li>
+               </ul>
+            </section>
+            <section class="footer__block">
+               <h3 class="footer__block-header">Campaigns</h3>
+               <ul class="footer__block-list">
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Evening dress</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Makeup</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Fashion forward</a>
+                  </li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Training clothes</a>
+                  </li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Special occasion
+                        dresses</a></li>
+               </ul>
+            </section>
+            <section class="footer__block">
+               <h3 class="footer__block-header">Stores</h3>
+               <ul class="footer__block-list">
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Paris</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">New York</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">London</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Madrid</a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link">Tokio</a></li>
+               </ul>
+            </section>
+            <section class="footer__block footer__socials">
+               <h3 class="footer__block-header">Social</h3>
+               <ul class="footer__block-list">
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link"><img
+                           src="images/svg/iconfinder_facebook_circle_black_107153.svg" alt="socials"></a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link"><img
+                           src="images/svg/iconfinder_twitter_circle_black_107155.svg" alt="socials"></a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link"><img
+                           src="images/svg/iconfinder_pinterest_287676.svg" alt="socials"></a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link"><img
+                           src="images/svg/iconfinder_80-google-plus_104424.svg" alt="socials"></a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link"><img
+                           src="images/svg/iconfinder_55-tumblr_104448.svg" alt="socials"></a></li>
+                  <li class="footer__block-list-item"><a href="#" class="footer__block-list-link"><img
+                           src="images/svg/iconfinder_53-vimeo_104450.svg" alt="socials"></a></li>
+               </ul>
+            </section>
+            <img class="footer__top-img footer__block" src="images/home/secured.png" alt="img">
+         </div>
+      </div>
+      <div class="footer__bottom">
+         <div class="container container--footer">
+            <div class="burger burger--footer">
+               <span class="burger__line">mobile-btn-line</span>
+               <span class="burger__line">mobile-btn-line</span>
+               <span class="burger__line">mobile-btn-line</span>
+            </div>
+            <ul class="footer__bottom-list">
+               <li><a href="#">Privacy & Cookies</a></li>
+               <li><a href="#">Terms & Conditions</a></li>
+               <li><a href="#">Accessibility</a></li>
+               <li><a href="#">Store Directory</a></li>
+               <li><a href="#">About Us</a></li>
+            </ul>
+            <div class="footer__copyright">
+               <span>© LookShop.com</span>
+               <span>All Rights Reserved</span>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <script src="js/libs.min.js"></script>
+   <script src="js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.related-product {
+    margin-bottom: 50px;
+
+    &__headline {
+        font-size: rem(15px);
+        font-family: 'ArialBold', sans-serif;
+        color: #414141;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        position: relative;
+        text-align: center;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $color-border;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            display: block;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .card {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.card {
+    width: 220px;
+    color: $color-card;
+    margin: -10px 15px 0;
+    text-align: center;
+
+    &--products,
+    &--sidebar {
+        margin: 0;
+        width: auto;
+    }
+
+    &--sidebar {
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid $color-border;
+        padding: 7px 0;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+    &__link {
+        outline: none;
+        padding-top: 130%;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform .3s linear;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &--sidebar {
+            img {
+                width: auto;
+                height: auto;
+                position: static;
+            }
+        }
+    }
+
+    &__name {
+        font-size: rem($fsz-card-name);
+    }
+
+    &__price {
+        font-size: rem($fsz-card-price);
+
+        &--sidebar {
+            font-size: rem(16px);
+            color: $orange;
+            font-weight: bold;
+            margin-right: auto;
+        }
+    }
+
+    &__details {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        &--products {
+            background-color: #f9f5f4;
+        }
+    }
+}
+
+.card__details--sidebar,
+.card__link--sidebar {
+    padding-top: 0;
+    border-radius: 0;
+}

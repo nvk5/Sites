@@ -1,0 +1,58 @@
+.discount {
+    &__headline {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin: 0;
+        width: 255px;
+    }
+}
+
+.brand {
+    border-bottom: 1px solid $gray;
+
+    &__headline {
+        font-family: $ff-brands, sans-serif;
+        font-size: rem($fsz-brands);
+        color: $color-brands;
+        white-space: nowrap;
+    }
+    
+}
+
+.discount,
+.brand {
+    text-transform: uppercase;
+    margin-bottom: 55px;
+
+    &__headline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 50%;
+            height: 1px;
+            background-color: $gray;
+        }
+
+        &::before {
+            margin-right: 20px;
+        }
+
+        &::after {
+            margin-left: 20px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        min-height: 115px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

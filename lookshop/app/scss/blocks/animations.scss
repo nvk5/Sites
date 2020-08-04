@@ -1,0 +1,9 @@
+//autofill input form
+//Фон и цвет текста для input который был заполнен через автозаполнение:
+@keyframes autofill {
+  to {
+    color: inherit;
+    background: #fff;
+  }
+}
+

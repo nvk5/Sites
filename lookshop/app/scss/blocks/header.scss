@@ -1,0 +1,123 @@
+.header {
+    &__top {
+        background-color: $black;
+        font-size: rem($fsz-header-top);
+        text-transform: uppercase;
+        color: $color-header-top;
+        letter-spacing: -0.005em;
+
+        .selectize-control {
+            min-width: 70px;
+            border-right: 1px solid $gray;
+            border-left: 1px solid $gray;
+        }
+
+        .selectize-input {
+            box-shadow: none;
+            border: none;
+            border-radius: 0;
+            background: #000;
+            display: flex;
+        }
+        
+        .selectize-dropdown .active {
+            background-color: $black;
+            color: $white;
+        }
+        
+        .selectize-dropdown, .selectize-input, .selectize-input input {
+            color: inherit;
+            line-height: inherit;
+            margin: 0;
+        }
+        
+        .selectize-dropdown .optgroup-header, .selectize-dropdown .option {
+            color: $color-active;
+            padding: 5px;
+        }
+
+        .selectize-input.items.full.has-options.has-items.focus {
+            background: #000;
+        }
+
+       
+
+        .selectize-dropdown.single.header__top-item.header__top-value {
+            outline: 1px solid $black;
+        }
+    }
+
+    &__top-phone,
+    &__logo {
+        margin-right: auto;
+        align-self: center;
+    }
+
+    &__top-phone,
+    &__top-item {
+        color: inherit;
+    }
+
+    &__logo {
+        order: 1;
+    }
+
+    &__top-phone {
+        span {
+            transition: color .3s ease;
+        }
+
+        &:hover {
+            span {
+                color: $color-active;
+            }
+        }
+    }
+
+    &__top-item {
+        text-transform: inherit;
+        background-color: inherit;
+        border: none;
+        outline: none;
+        transition: all .3s linear;
+        
+    }
+
+    &__top-account {
+        background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' enable-background='new 0 0 515.556 515.556' height='15' viewBox='0 0 515.556 515.556' fill='%23999' width='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m348.918 37.751c50.334 50.334 50.334 131.942 0 182.276s-131.942 50.334-182.276 0-50.334-131.942 0-182.276c50.334-50.335 131.942-50.335 182.276 0'/%3E%3Cpath d='m455.486 350.669c-117.498-79.391-277.917-79.391-395.415 0-17.433 11.769-27.848 31.656-27.848 53.211v111.676h451.111v-111.676c0-21.555-10.416-41.442-27.848-53.211z'/%3E%3C/svg%3E");
+        background-position: 15px 50%;
+        background-repeat: no-repeat;
+        padding: 10px 15px;
+        padding-left: 40px;
+        border: none;
+       
+
+        &:hover,
+        &:focus {
+            color: $color-active;
+        }
+    }
+
+    &__top-search {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 15 15' fill='%23fff'%3E%3Cpath class='cls-1' d='M1072.25,18.136a5.947,5.947,0,1,0-9.37-1.256l-3.43,3.428a1.546,1.546,0,0,0,0,2.2l0.02,0.019a1.558,1.558,0,0,0,2.2,0l3.42-3.428A5.967,5.967,0,0,0,1072.25,18.136Zm-7.03-1.384a3.988,3.988,0,1,1,5.64,0A4,4,0,0,1,1065.22,16.752Z' transform='translate(-1059 -8)'/%3E%3C/svg%3E%0A");
+        background-position: center;
+        background-repeat: no-repeat;
+        min-width: 40px;
+        border-right: 1px solid $gray;
+        border-left: 1px solid $gray;
+        align-self: stretch;
+        font-size: 0;
+
+        &:hover,
+        &:focus {
+            background-color: $color-active;
+        }
+    }
+
+
+    &__bottom {
+        padding: 20px 0;
+    }
+
+}
+

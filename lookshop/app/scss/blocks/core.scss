@@ -1,0 +1,91 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+body,h1,h2,h3,h4,p,ul,ol,li,figure,figcaption,blockquote,dl,dd {
+  margin: 0;
+}
+
+
+body {
+    font-family: $ff-main, sans-serif;
+    line-height: 1.5;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a, button, select {
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* Firefox < 19 */
+input:-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Firefox > 19 */
+input::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+
+*::-webkit-search-cancel-button {
+  display: none;
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}

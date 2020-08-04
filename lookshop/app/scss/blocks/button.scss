@@ -1,0 +1,117 @@
+.button {
+    min-width: 160px;
+    min-height: 55px;
+    padding: 20px;
+    padding-right: 40px;
+    font-family: $ff-shop-button, sans-serif;
+    font-size: rem($fsz-shop-button--header);
+    color: $color-button;
+    background: $color-button-bg;
+    text-transform: uppercase;
+    position: relative;
+    box-shadow: inset 0 -2px 0 darken($color: $color-button-bg, $amount: 20);
+    transition: background .3s ease;
+
+    &:hover,
+    &:focus {
+        background-color: darken($color: $color-button-bg, $amount: 10);
+    }
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 5px solid $color-button;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+    }
+
+    &--contact {
+        min-width: 30px;
+        min-height: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' fill='%23fff' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 341.4 341.4' style='enable-background:new 0 0 341.4 341.4;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpolygon points='192,149.4 192,0 149.4,0 149.4,149.4 0,149.4 0,192 149.4,192 149.4,341.4 192,341.4 192,192 341.4,192 341.4,149.4 '/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0;
+        font-size: 0;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &--novelty {
+        min-width: 96px;
+        min-height: 30px;
+        background: $color-button-bg2;
+        padding: 8px;
+        padding-right: 30px;
+        box-shadow: none;
+
+        &::after {
+            right: 15px;
+        }
+    }
+
+    &--card {
+        font-family: $ff-card-button, sans-serif;
+        font-size: rem($fsz-card-button);
+        min-width: 120px;
+        min-height: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' fill='%23fff' width='15px' height='15px' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 341.4 341.4' style='enable-background:new 0 0 341.4 341.4;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpolygon points='192,149.4 192,0 149.4,0 149.4,149.4 0,149.4 0,192 149.4,192 149.4,341.4 192,341.4 192,192 341.4,192 341.4,149.4 '/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-position: 106px 50%;
+        background-repeat: no-repeat;
+        padding: 15px;
+        padding-right: 40px;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &--clothes {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' fill='%23fff' width='15px' height='15px' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 341.4 341.4' style='enable-background:new 0 0 341.4 341.4;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpolygon points='192,149.4 192,0 149.4,0 149.4,149.4 0,149.4 0,192 149.4,192 149.4,341.4 192,341.4 192,192 341.4,192 341.4,149.4 '/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-position: 130px 50%;
+        background-repeat: no-repeat;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &--filter {
+        font-family: $ff-main, sans-serif;
+        font-size: rem($fsz-filter-button);
+        min-width: 70px;
+        min-height: 30px;
+        align-self: flex-start;
+        padding: 10px 15px;
+        background: $color-button-bg3;
+        box-shadow: inset 0 -2px 0 darken($color: $color-button-bg3, $amount: 20);
+        color: $color-button2;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            box-shadow: inset 0 -2px 0 darken($color: $color-active, $amount: 20);
+        }
+    }
+
+    &--single-product {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' fill='%23fff' width='15px' height='15px' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 341.4 341.4' style='enable-background:new 0 0 341.4 341.4;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpolygon points='192,149.4 192,0 149.4,0 149.4,149.4 0,149.4 0,192 149.4,192 149.4,341.4 192,341.4 192,192 341.4,192 341.4,149.4 '/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 125px 21px;
+        padding: 0 40px 0 0;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+

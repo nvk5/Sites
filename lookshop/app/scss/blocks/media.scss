@@ -1,0 +1,432 @@
+// — Мобильники 320-767px — mobile, mobile-portrait, mobile-landscape
+// — Планшеты 768-1023px — tablet, tablet-portrait, tablet-landscape
+// — Лаптопы 1024-1199px — laptop, laptop-portrait, laptop-landscape
+// — Десктопы >=1200px — desktop, desktop-portrait, desktop-landscape
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Desktops, Tablets landscape 992-1199 */
+@media only screen and (max-width : 1199.98px) {
+    .discount .card {
+        width: 220px;
+    }
+
+    .slider-product button.slick-next {
+        right: 110px;
+    }
+
+    .slider-product button.slick-prev {
+        right: 160px;
+    }
+
+    .slider__content {
+        width: auto;
+    }
+
+    .slider-clothes__details, .slider-clothes__headline, .slider-clothes__price {
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium Devices, Tablets portrait 768-991 */
+@media screen and (max-width : 991.98px) {
+    html {
+        font-size: 90%;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        min-height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: $color-nav-mobile-bg;
+        margin-top: 25px;
+        padding: 5px 10px;
+
+        &::before {
+            content: 'Menu';
+            text-transform: uppercase;
+            font-size: rem(18px);
+            color: $color-button;
+        }
+
+        &__list {
+            display: none;
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        &__inner {
+            position: static;
+        }
+
+        &__item {
+            color: $color-button;
+            text-align: left;
+
+            &::after {
+                right: 20px;
+                top: 20px;
+                border-top-color: $color-button;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $black;
+                background-color: $white;
+                box-shadow: inset 0 0 5px $color-active;
+
+                &::after {
+                    transform: translateY(-50%) rotate(180deg);
+                    border-top-color: $color-active;
+                }
+            }
+        }
+    }
+
+    .burger--header {
+        display: block;
+    }
+
+    .purchase {
+        order: 2;
+    }
+
+    .container--slider,
+    .container--novelty {
+        max-width: 100%;
+    }
+
+
+    .slider__content {
+        z-index: 1;
+    }
+
+
+    .brand__content-img:nth-last-child(-n+2),
+    .discount__content .card:nth-last-child(-n+1) {
+        display: none;
+    }
+
+    .footer__block:nth-child(5),
+    .footer__block:nth-child(6) {
+        order: 2;
+    }
+
+    .footer__block:not(img) {
+        width: 28%;
+        margin-bottom: 20px;
+    }
+
+    .container--footer {
+        justify-content: flex-start;
+    }
+
+    .footer__bottom .container--footer {
+        justify-content: space-between
+    }
+
+    .slider-clothes img {
+        margin: 0;
+    }
+
+    .slider-clothes__content {
+        flex: 0 1 100%;
+    }
+
+    .container--slider-clothes {
+        padding-bottom: 30px;
+    }
+
+    .slider-clothes__arrow {
+        width: 150px;
+    }
+
+    span.pagination__item {
+        margin-left: 0;
+    }
+
+    .products__content-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .products__content-sort {
+        margin-bottom: 20px;
+    }
+
+    .button--card {
+        padding-left: 0;
+        padding-right: 15px;
+        background-position: 96px 50%;
+    }
+
+    .single-product__size {
+        margin-bottom: 10px;
+    }
+
+    .related-product__cards {
+        justify-content: space-around;
+
+        .card {
+            margin-bottom: 20px;
+        }
+    }
+
+    .related-product__headline {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+/* Small Devices, Phones (landscape) 576-767 */
+@media screen and (max-width : 767.98px) {
+    html {
+        font-size: 115%;
+    }
+
+    .novelty,
+    .slider,
+    .footer__top,
+    .payment,
+    .about,
+    .brand,
+    .footer__bottom-list,
+    .slider-clothes {
+        display: none;
+    }
+
+    .burger--footer {
+        display: block;
+    }
+
+    .container--header {
+        text-align: center;
+    }
+
+
+    .header__top .selectize-control {
+        border-left: none;
+    }
+
+    .header__top-search {
+        border-right: none;
+    }
+
+    .header__top-phone {
+        width: 100%;
+        padding: 40px 0;
+        border-bottom: 1px solid;
+    }
+
+    .header__logo,
+    .header__top-phone {
+        margin-right: 0;
+    }
+
+    .header__logo {
+        margin-bottom: 10px;
+    }
+
+    .header__bottom {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    .purchase {
+        border: none;
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+
+        &__card {
+            display: none;
+        }
+
+        &__details {
+            margin-top: 0;
+            background-size: 30px 30px;
+        }
+    }
+
+
+    .contact {
+        margin-top: 0;
+        background: none;
+
+        &__input {
+            width: 100%;
+            background: $color-contact-bg;
+            min-height: 45px;
+            padding: 10px 15px;
+        }
+
+        &__form {
+            margin-bottom: 20px;
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .contact__list,
+    .contact__socials {
+        align-self: center;
+    }
+
+    .button--contact {
+        min-width: 45px;
+    }
+
+    .container--contact {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .discount__content .card:nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .discount .card {
+        width: 44%;
+    }
+
+    .footer__bottom-list {
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        align-items: center;
+        background: $color-footer-bg2;
+
+        li {
+            padding: 20px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+    
+    .products {
+        margin-top: 25px;
+    }
+
+    .products__content {
+        grid-column: 1 / -1;
+    }
+
+    .sidebar {
+        grid-row: 1;
+        grid-column: 1/-1;
+        // font-size: 120%;
+    }
+
+    .sidebar__section:not(:first-child) {
+        display: none;
+    }
+
+    .button--filter {
+        padding: 15px 30px;
+    }
+
+    .sidebar__filter input[type="range"] {
+        margin-bottom: 20px;
+    }
+    
+    .sidebar__size-select-item {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .card--products:not(:nth-child(-n+3)) {
+        display: none;
+    }
+
+    .button--card {
+        background-image: none;
+        padding-left: 15px;
+    }
+
+    .container--single-product {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container--product-socials {
+        flex-direction: column;
+    }
+
+    .single-product__socials-link {
+        min-width: 220px;
+        margin: 10px 0;
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+
+    .single-product__main-thumb {
+        img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+/* Extra Small Devices, Phones (portrait) 480-575 */
+@media screen and (max-width : 575.98px) {
+    // html {
+    //     font-size: 80%;
+    // }
+
+    .card--products:not(:nth-child(-n+2)) {
+        display: none;
+    }
+
+    .products__content-body {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .slider-product__list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button--card {
+        min-width: auto;
+        min-height: auto;
+    }
+
+    .pagination {
+        flex-wrap: nowrap;
+    }
+
+    .container--single-product {
+        grid-template-columns: 100%;
+    }
+
+     .single-product__details {
+        grid-row: 1;
+    }
+}
+
+/* Extra Small more, Phones 320-479 */
+@media screen and (max-width: 479.98px) {
+
+}
+
+/* Custom, iPhone Retina 0 - 320 */
+@media only screen and (max-width : 320.98px) {}

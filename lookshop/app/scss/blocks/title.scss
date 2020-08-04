@@ -1,0 +1,50 @@
+.title {
+    font-family: $ff-h1, sans-serif;
+    font-size: rem($fsz-h1);
+    color: $color-h1;
+    line-height: 0.9;
+    letter-spacing: -0.025em;
+    mix-blend-mode: lighten;
+    background: rgb(246,243,236);
+    position: relative;
+}
+
+.title-wrap {
+    background: url(../images/home/mask.png);
+    background-size: cover;
+    border-bottom: 5px solid $color-h1;
+    position: relative;
+    width: 337px;
+    margin: auto;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: $color-h1;
+        bottom: -10px;
+        left: 0;
+    }
+}
+
+.title-pre {
+    font-family: $ff-h1-pre, sans-serif;
+    font-size: rem($fsz-h1-pre);
+    color: $color-h1;
+    font-weight: 400;
+    text-transform: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   
+
+    &::before,
+    &::after {
+        content: '';
+        width: 70px;
+        height: 1px;
+        background: $color-h1;
+        margin: 0 15px;
+    }
+}

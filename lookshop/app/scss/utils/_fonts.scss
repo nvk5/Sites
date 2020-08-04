@@ -1,0 +1,44 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+//Font-face mixin
+@mixin font-face($f-name, $file-path, $f-style, $f-weight, ) {
+    @font-face {
+        font-family: $f-name;
+        src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff');
+        font-style: $f-style;
+        font-weight: $f-weight;
+    }	
+}
+
+
+@include font-face('AempirialItalic', '../fonts/AempirialItalic/AempirialItalic', italic, 400);
+@include font-face('HelveticaLTCondensedRegular', '../fonts/HelveticaLTCondensedRegular/HelveticaLTCondensedRegular', normal, 400);
+@include font-face('HelveticaNeueBlackCondensed', '../fonts/HelveticaNeueBlackCondensed/HelveticaNeueBlackCondensed', normal, 800);
+@include font-face('HelveticaNeueBoldCondensed', '../fonts/HelveticaNeueBoldCondensed/HelveticaNeueBoldCondensed', normal, 700);
+@include font-face('HelveticaNeueCyrHeavy', '../fonts/HelveticaNeueCyrHeavy/HelveticaNeueCyrHeavy', normal, 800);
+@include font-face('HelveticaNeueCyrLight', '../fonts/HelveticaNeueCyrLight/HelveticaNeueCyrLight', normal, 200);
+@include font-face('HelveticaNeueCyrThin', '../fonts/HelveticaNeueCyrThin/HelveticaNeueCyrThin', normal, 200);
+@include font-face('HelveticaNeueCyrUltraLight', '../fonts/HelveticaNeueCyrUltraLight/HelveticaNeueCyrUltraLight', normal, 100);
+@include font-face('ArialRegular', '../fonts/ArialRegular/ArialRegular', normal, 400);
+@include font-face('ArialBold', '../fonts/ArialBold/ArialBold', normal, 700);
+@include font-face('ArialItalic', '../fonts/ArialItalic/ArialItalic', italic, 400);
+@include font-face('BelloScript', '../fonts/BelloScript/BelloScript', normal, 400);
+
+@font-face {
+    font-family: 'LuxuryRoyaleJf';
+    src: url('../../fonts/LuxuryRoyaleJf/LuxuryRoyaleJF.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+

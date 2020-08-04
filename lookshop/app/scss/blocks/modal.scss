@@ -1,0 +1,36 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $white;
+    border: 1px solid $black;
+    border-radius: 10px;
+    background: rgba(0,0,0, .5);
+    display: none;
+    z-index: 10;
+    transition: all .4s linear;
+
+    & ~ * {
+        transition: all .4s linear;
+    }
+
+    &.active {
+        & ~ * {
+            opacity: .5;
+            filter: blur(10px);
+
+        }
+    }
+
+    &__msg {
+        line-height: 2;
+        font-size: rem(25px);
+        letter-spacing: 0.1em;
+    }
+}

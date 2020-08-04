@@ -1,0 +1,50 @@
+.radio {
+    &__colors {
+        -webkit-appearance: none;
+        appearance: none;
+        position: absolute;
+    }
+
+    &__box {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        font-size: 0;
+    }
+
+    &:nth-child(1) {
+        .radio__box {
+            background-color: $color-checkbox-1;
+        }
+    }
+
+    &:nth-child(2) {
+        .radio__box {
+            background-color: $color-checkbox-2;
+        }
+    }
+
+    &:nth-child(3) {
+        .radio__box {
+            background-color: $color-checkbox-3;
+        }
+    }
+
+    &:nth-child(4) {
+        .radio__box {
+            background-color: $color-checkbox-4;
+        }
+    }
+
+    &:nth-child(5) {
+        .radio__box {
+            background-color: $color-checkbox-5;
+        }
+    }
+}
+
+.radio__colors:checked + .radio__box {
+    outline: 1px solid #000;
+}

@@ -1,0 +1,41 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/libs';
+@import 'blocks/core';
+@import 'blocks/animations';
+
+@import 'blocks/container';
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/burger';
+@import 'blocks/purchase';
+
+@import 'blocks/slider';
+@import 'blocks/slider-clothes';
+@import 'blocks/breadcrumbs';
+@import 'blocks/single-product';
+@import 'blocks/radio';
+@import 'blocks/related-product';
+@import 'blocks/title';
+@import 'blocks/subtitle';
+@import 'blocks/button';
+@import 'blocks/products';
+@import 'blocks/pagination';
+@import 'blocks/sidebar';
+@import 'blocks/contact';
+
+@import 'blocks/novelty';
+
+@import 'blocks/slider-product';
+@import 'blocks/card';
+
+@import 'blocks/discount';
+
+@import 'blocks/about';
+
+@import 'blocks/payment';
+
+@import 'blocks/footer';
+
+@import 'blocks/media';

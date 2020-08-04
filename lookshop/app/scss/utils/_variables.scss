@@ -1,0 +1,192 @@
+$white: #ffffff;
+$black: #000000;
+$black-light: #555555;
+$black-light2: #6A6A6A;
+$black-light3: #414141;
+$black-light4: #373737;
+$black-light5: #525252;
+$black-light6: #544F4D;
+$black-light7: #3B3B3B;
+$black-light8: #4a4a4a;
+$black-light9: #4d4d4d;
+$gray: #999999;
+$gray2: #8D8D8D;
+$gray3: #949393;
+$gray4: #ededed;
+$gray5: #9f9f9f;
+$gray6: #f7f7f7;
+$gray7: #f2f2f2;
+$gray8: #8f8f8f;
+$gray9: #727272;
+$gray10: #e5e5e5;
+$gray11: #f4f4f4;
+$gray12: #848484;
+$gray13: #e5e5e5;
+$gray-dark: #6b6b6b;
+$green: #4fafa0;
+$orange: #fd926d;
+$orange2: #FFA687;
+$brown: #78645d;
+$brown-light: #867a76;
+$brown-light2: #c1aea8;
+$brown-light3: #544f4d;
+$brown-light4: #7a706d;
+$brown-light5: #b8a9a4;
+
+
+
+//Colors
+$color-h1: $brown;
+$color-h2: $black-light3;
+$color-h2-post: $green;
+$color-h2-sec-pre: $orange2;
+$color-h2-sec: $white;
+$color-h2-sec-post: $black-light2;
+$color-button: $white;
+$color-button2: $black-light9; 
+$color-button-bg: $orange;
+$color-button-bg2: $green;
+$color-card: $black-light4;
+$color-sale: $white;
+$color-brands: $black-light3;
+$color-text: $gray;
+$color-discount: $black-light5;
+$color-footer-headlines: $black-light6;
+$color-footer-list: $brown-light3;
+$color-footer-bg: $gray4;
+$color-footer-bg2: $black;
+$color-copyright: $gray2;
+$color-socials: $black-light7;
+$color-socials-2: $brown-light5;
+$color-header-top: $white;
+$color-purchase: $gray3;
+$color-nav: $black;
+$color-slider-btn: $white;
+$color-dots: $brown-light;
+$color-contact: $gray-dark;
+$color-contact-bg: $gray4;
+$color-contact-bg2: $gray6;
+$color-input: $gray5;
+$color-slider-product-bg: $orange;
+$color-slider-product-bg2: $gray7;
+$color-bg-payment: $gray6;
+$color-nav-mobile-bg: $orange;
+$color-active: $orange2;
+$color-tab-active: $white;
+$color-tab-active-bg: $orange;
+$color-border: $gray;
+
+$color-slider-clothes-price: $orange;
+$color-slider-clothes-headline: $black-light8;
+$color-slider-clothes-details: $gray8;
+$color-breadcrumbs: $brown-light4;
+$color-products-header: $black-light9;
+$color-sidebar-headline: $white;
+$color-sidebar: $gray9;
+$color-range: $gray5;
+$color-button-bg3: $gray13;
+$color-pagination-bg: $gray10;
+$color-sort-bg: $gray10;
+
+$color-single-h1: $black-light8;
+$color-single-price: $orange;
+$color-single-text: $gray8;
+$color-single-select: $black-light9;
+
+
+$color-checkbox-1: #efebe2;
+$color-checkbox-2: #c9c1c6;
+$color-checkbox-3: #b29b88;
+$color-checkbox-4: #968886;
+$color-checkbox-5: #cde0ef;
+
+// Font-family
+$ff-main: 'ArialRegular';
+
+$ff-h1-pre: 'LuxuryRoyaleJf';
+$ff-h1: 'HelveticaNeueBoldCondensed';
+$ff-h1-post: 'HelveticaLTCondensedRegular';
+$ff-h2-pre: 'HelveticaNeueBlackCondensed';
+$ff-h2: 'HelveticaNeueCyrThin';
+$ff-h2-post: 'HelveticaNeueBlackCondensed';
+$ff-h2-sec-pre: 'BelloScript';
+$ff-h2-sec: 'HelveticaNeueCyrUltraLight';
+$ff-h2-sec-post: 'HelveticaNeueBoldCondensed';
+$ff-card-name: 'ArialRegular';
+$ff-card-price: 'ArialRegular';
+$ff-card-button: 'HelveticaNeueCyrLight';
+$ff-shop-button: 'HelveticaLTCondensedRegular';
+$ff-discount: 'AempirialItalic';
+$ff-sale: 'HelveticaLTCondensedRegular';
+$ff-footer-headlines: 'ArialBold';
+$ff-input: 'ArialItalic';
+$ff-brands: 'ArialBold';
+
+$ff-slider-clothes-price: 'ArialBold';
+
+$ff-single-price: 'ArialBold';
+
+//Font-size
+$root-font-size: 16px;
+
+$fsz-h1-pre: 35px;
+$fsz-h1: 96px;
+$fsz-h1-post: 36px;
+$fsz-h2-pre: 34px;
+$fsz-h2: 75px;
+$fsz-h2-post: 82px;
+$fsz-h2-sec-pre: 22px;
+$fsz-h2-sec: 20px;
+$fsz-h2-sec-post: 14px;
+$fsz-card-name: 12px;
+$fsz-card-price: 22px;
+$fsz-card-button: 12px;
+$fsz-shop-button: 12px;
+$fsz-shop-button--header: 16px;
+$fsz-discount: 36px;
+$fsz-sale: 10px;
+$fsz-footer-headlines: 16px;
+$fsz-footer-lists : 14px;
+$fsz-copyright: 11px;
+$fsz-about-headline: 24px;
+$fsz-text: 14px;
+$fsz-about-text: 14px;
+$fsz-nav: 16px;
+$fsz-basket-field: 12px; 
+$fsz-tabs: 15px;
+$fsz-brands: 15px;
+$fsz-header-top: 14px;
+$fsz-contact: 12px;
+
+$fsz-slider-clothes-price: 36px;
+$fsz-slider-clothes-headline: 24px;
+$fsz-slider-clothes-details: 18px;
+$fsz-breadcrumbs: 12px;
+$fsz-products-header: 12px;
+$fsz-sidebar-headline: 14px;
+$fsz-sidebar: 14px;
+$fsz-filter-button: 12px;
+
+$fsz-single-h1: 24px;
+$fsz-single-price: 36px;
+$fsz-single-text: 12px;
+$fsz-single-select: 12px;
+$fsz-single-socials: 12px;
+
+
+/////////////////////////////////
+//          Mobile             //
+/////////////////////////////////
+$fsz-mobile-card-name: 18px;
+$fsz-mobile-card-price: 25px;
+$fsz-mobile-card-button: 18px;
+$fsz-mobile-discount: 30px;
+$fsz-mobile-sale: 10px;
+$fsz-mobile-footer-headlines: 18px;
+$fsz-mobile-footer-lists : 16px;
+$fsz-mobile-copyright: 20px;
+$fsz-mobile-nav: 18px;
+$fsz-mobile-basket-field: 25px; 
+$fsz-mobile-header-top: 25px;
+$fsz-mobile-tabs: 25px;
+$fsz-mobile-contact: 25px;
