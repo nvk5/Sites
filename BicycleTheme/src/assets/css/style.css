@@ -1,6 +1,7 @@
 @import 'libs';
 @import 'fonts';
 @import 'animations';
+@import 'visually-hidden';
 
 
 .container {
@@ -88,7 +89,7 @@ body {
     overflow-x: hidden;
 }
 
-.link {
+a {
     text-decoration: none;
     cursor: pointer;
 }
@@ -139,23 +140,6 @@ input:-ms-input-placeholder {
 input:focus:-ms-input-placeholder {
   color: transparent;
 }
-
-input:focus:required:invalid,
-textarea:focus:required:invalid {
-  color: 'red';
-}
-
-input:required:valid,
-textarea:required:valid {
-  color: 'green';
-}
-
-*::-webkit-search-cancel-button {
-  margin-left: 20px;
-  cursor: pointer;
-}
-
-
 
 /* Header */
 .header {
@@ -431,17 +415,20 @@ textarea:required:valid {
     color: var(--color-text);
 }
 
-.glide__slide img{
+.glide__slide-icon {
     width: 30px;
 }
 
+.glide__bullets {
+    margin-top: 20px;
+}
+
 .glide__bullet {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background-color: transparent;
-    border: 1px solid var(--color-text);
     border-radius: 50%;
-    text-indent: -9999px;
+    border: 1px solid var(--color-text);
 }
 
 
@@ -675,7 +662,8 @@ textarea:required:valid {
 }
 
 .address__link {
-    color: inherit;
+    color: var(--color-headlines);
+    font-weight: 700;
 }
 
 .author {
