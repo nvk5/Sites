@@ -12,7 +12,7 @@ export default function sendMail() {
             if (xhr.status == 200) {
                 alert('Сообщение отправлено. Скоро мы с вами свяжемся!')
             } else {
-                alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
+                alert(`Ошибка ${xhr.status}: ${xhr.statusText.toString()}`);
             }
            
         })
