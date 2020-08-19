@@ -11,8 +11,10 @@ export default function sendMail() {
         xhr.addEventListener('load', () => {
             if (xhr.status !== 200) {
                 alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
+            } else {
+                alert('Сообщение отправлено. Скоро мы с вами свяжемся!')
             }
-            alert('Сообщение отправлено. Скоро мы с вами свяжемся!')
+           
         })
 
         xhr.addEventListener('error', () => alert('Ошибка соединения или неверный URL'))
