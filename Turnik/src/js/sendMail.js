@@ -9,10 +9,10 @@ export default function sendMail() {
         this.querySelector('.success').classList.add('show');
 
         xhr.addEventListener('load', () => {
-            if (xhr.status !== 200) {
-                alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
-            } else {
+            if (xhr.status == 200) {
                 alert('Сообщение отправлено. Скоро мы с вами свяжемся!')
+            } else {
+                alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
             }
            
         })
