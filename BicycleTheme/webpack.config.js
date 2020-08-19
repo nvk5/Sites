@@ -133,7 +133,8 @@ module.exports = {
     optimization: optimization(),
     devtool: isDev ? 'source-map' : '',
     entry: {
-        app: ['@babel/polyfill', PATHS.src]
+        // app: ['@babel/polyfill', PATHS.src]
+        app: PATHS.src
     },
     output: {
         filename: filename('js'),
