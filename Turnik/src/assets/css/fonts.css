@@ -1,0 +1,50 @@
+/* font-weight helper:
+
+100 Extra Light or Ultra Light;
+200 Light or Thin; 300 Book or Demi;
+400 Regular or Normal;
+500 Medium;
+600 Semibold or Demibold;
+700 Bold;
+800 Black or Extra Bold or Heavy;
+900 Extra Black or Fat or Ultra Black */
+
+@font-face {
+    font-family: 'HelveticaNeueCyrBold';
+    src: url('../fonts/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyrBold/HelveticaNeueCyrBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyrLightItalic';
+    src: url('../fonts/HelveticaNeueCyrLightItalic/HelveticaNeueCyrLightItalic.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyrLightItalic/HelveticaNeueCyrLightItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyrRoman';
+    src: url('../fonts/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyrRoman/HelveticaNeueCyrRoman.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyrLight';
+    src: url('../fonts/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyrLight/HelveticaNeueCyrLight.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyrMedium';
+    src: url('../fonts/HelveticaNeueCyrMedium/HelveticaNeueCyrMedium.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyrMedium/HelveticaNeueCyrMedium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
