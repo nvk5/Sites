@@ -64,7 +64,7 @@ const imageLoaders = () => {
                     pngquant: {quality: [0.65, 0.90], speed: 4},
                     gifsicle: {interlaced: false},
                     // the webp option will enable WEBP
-                    webp: {quality: 75},
+                    // webp: {quality: 75},
                     svgo: {plugins:[{removeViewBox: false}]}
                 }
             }
@@ -117,7 +117,7 @@ const jsLoaders = () => {
 const babelOptions = preset => {
     const options = {
         presets: ['@babel/preset-env'],
-        plugins: ['@babel/plugin-proposal-class-properties'] 
+        // plugins: ['@babel/plugin-proposal-class-properties'] 
     };
 
     if (preset) {

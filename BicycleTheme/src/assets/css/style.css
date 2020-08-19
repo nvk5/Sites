@@ -746,6 +746,11 @@ input:focus:-ms-input-placeholder {
         -ms-grid-column: 1;
         -ms-grid-column-span: 6;
     }
+
+
+    .footer {
+        height: 250px;
+    }
 }
 
 
@@ -775,7 +780,7 @@ input:focus:-ms-input-placeholder {
         width: 100%;
     }
 
-    .shop {
+    #shop {
         display: flex;
         flex-wrap: wrap;
     }

@@ -43,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
 
             if (window.matchMedia('(min-width: 768px)').matches && flag == 1 ) {
+                document.body.style.overflowY = 'auto';
                 closeMenubtn.style.display = 'none';
                 menu.style.display = 'block';
                 flag = 2;
@@ -92,43 +93,44 @@ window.addEventListener('DOMContentLoaded', () => {
         }));
     }
 
-
     {
-        const form = document.querySelector('.form');
-        const success = document.querySelector('.contact > span');
-
-        form.addEventListener('submit', event => {
-            event.preventDefault();
-            let formData = new FormData(this);
-            formData = Object.fromEntries(formData);
-            ajaxSend(formData);
-        });
-
-        const ajaxSend = async formData => {
-            try {
-                const response = await fetch('mail.php', {
-                    method: 'POST',
-                    headers: {
-                        // 'Content-Type': 'application/x-www-form-urlencoded',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                if (response.ok) {
-                    success.innerHTML = 'Success!'
-                    document.querySelectorAll('.form__input').forEach(item => {
-                        item.value = '';
-                    });
-                    setTimeout(() => {
-                        success.innerHTML = 'Stay on the saddle!'
-                    }, 3000);
+        const ajaxSend = function(formData) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'mail.php');
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8')
+            xhr.send(JSON.stringify(formData));
+            const text = document.querySelector('.contact__text');
+    
+            text.textContent = 'Loading...'
+    
+            xhr.addEventListener('load', () => {
+                if (xhr.status == 200) {
+                    alert('Сообщение отправлено. Скоро мы с вами свяжемся!')
+                } else {
+                    alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
                 }
-            }
-            catch (error) {
-                alert(error);
-            }
-        };
+            })
+    
+            xhr.addEventListener('error', () => alert('Ошибка соединения или неверный URL'))
+    
+            xhr.addEventListener('loadend', () => {
+                text.textContent = 'Stay on the saddle!'
+                this.reset();
+            })
+        }
+    
+        document.querySelectorAll('.form').forEach(form => {
+            form.addEventListener('submit', function() {
+                event.preventDefault();
+                let formData = new FormData(this);
+                let obj = {};
+        
+                for (let i = 0; i < formData.length; i++) {
+                    obj[formData[i][0]] = obj[formData[i][1]];
+                }
+                
+                ajaxSend.call(this, obj);
+            })
+        })
     }
-       
-
 })
