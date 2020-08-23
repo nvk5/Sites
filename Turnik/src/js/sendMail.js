@@ -2,7 +2,7 @@ export default function sendMail() {
 
     const ajaxSend = function(formData) {
         const xhr = new XMLHttpRequest();
-        xhr.open(this.method, this.action);
+        xhr.open('POST', 'https://formspree.io/mpzyeobo');
         // xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8')
         xhr.setRequestHeader("Accept", "application/json");
         xhr.send(formData);
