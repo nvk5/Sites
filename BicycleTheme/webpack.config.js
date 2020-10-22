@@ -10,6 +10,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const OptimizeCSSAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 
+
 const PATHS = {
     src: path.join(__dirname, './src'),
     dist: path.join(__dirname, './dist'),
@@ -161,6 +162,11 @@ module.exports = {
         // new SvgSpriteLoaderPlugin({plainSprite: true}),
         new CleanWebpackPlugin(),
     ],
+    resolve: {
+        alias: {
+          modernizr$: path.resolve(__dirname, `${PATHS.src}/js/libs/.modernizrrc.js`)
+        }
+    },
     module: {
         rules: [
             {test: /\.css$/, use: cssLoaders()},
@@ -170,6 +176,7 @@ module.exports = {
             {test: /\.(ttf|woff|woff2|eot)$/, use: [{loader: 'file-loader', options: {publicPath:'../fonts', outputPath: `${PATHS.assets}/fonts`, name: `[name]/[name].[ext]`}}]},
             {test: /\.(ico|txt|xml|csv|php)$/, use: [{loader: 'file-loader', options: {name: '[name].[ext]'}}]},
             {test: /\.js$/, exclude: /node_modules/, use: jsLoaders()},
+            {loader: "webpack-modernizr-loader",test: /\.modernizrrc\.js$/}
             // {test: /\.ts$/, exclude: /node_modules/, loader: {loader: 'babel-loader', options: babelOptions('@babel/preset-typescript')}},
             // {test: /\.jsx$/,exclude: /node_modules/, loader: {loader: 'babel-loader', options: babelOptions('@babel/preset-react')}}
         ]

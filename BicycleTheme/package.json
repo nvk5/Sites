@@ -41,7 +41,8 @@
     "terser-webpack-plugin": "^3.0.8",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-modernizr-loader": "^5.0.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
@@ -50,6 +51,7 @@
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "object-fit-images": "^3.2.4",
-    "smoothscroll-polyfill": "^0.4.4"
+    "smoothscroll-polyfill": "^0.4.4",
+    "svg4everybody": "^2.1.9"
   }
 }

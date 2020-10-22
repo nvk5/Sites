@@ -5,3 +5,5 @@
  */
 
 /*! npm.im/object-fit-images 3.2.4 */
+
+/*! svg4everybody v2.1.9 | github.com/jonathantneal/svg4everybody */

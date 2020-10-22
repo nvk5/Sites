@@ -1,13 +1,12 @@
-export default function sendMail() {
-
+const sendMail = () => {
     const ajaxSend = function(formData) {
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://formspree.io/mpzyeobo');
-        // xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8')
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.send(formData);
+        xhr.open('POST', 'mail.php');
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8')
+        xhr.send(JSON.stringify(formData));
+        const text = document.querySelector('.contact__text');
 
-        this.querySelector('.success').classList.add('show');
+        text.textContent = 'Loading...'
 
         xhr.addEventListener('load', () => {
             if (xhr.status == 200) {
@@ -20,17 +19,24 @@ export default function sendMail() {
         xhr.addEventListener('error', () => alert('Ошибка соединения или неверный URL'))
 
         xhr.addEventListener('loadend', () => {
-            this.querySelector('.success').classList.remove('show');
+            text.textContent = 'Stay on the saddle!'
             this.reset();
         })
     }
 
     document.querySelectorAll('.form').forEach(form => {
-        form.addEventListener('submit', function() {
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
             let formData = new FormData(this);
-
-            ajaxSend.call(this, formData);
+            let obj = {};
+    
+            for (let i = 0; i < formData.length; i++) {
+                obj[formData[i][0]] = obj[formData[i][1]];
+            }
+            
+            ajaxSend.call(this, obj);
         })
     })
 }
+
+export default sendMail;
