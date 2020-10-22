@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PostCssPresetEnv = require('postcss-preset-env');
-// const CopyWebpackPlugin = require("copy-webpack-plugin");
-// const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const OptimizeCSSAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
@@ -159,7 +159,12 @@ module.exports = {
               })
           ),
         
-        // new SvgSpriteLoaderPlugin({plainSprite: true}),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: `${PATHS.src}/static`, to: ''}
+            ]
+        }),
+        new SvgSpriteLoaderPlugin({plainSprite: true}),
         new CleanWebpackPlugin(),
     ],
     resolve: {
@@ -171,10 +176,9 @@ module.exports = {
         rules: [
             {test: /\.css$/, use: cssLoaders()},
             {test: /\.(scss|sass)$/, use: cssLoaders({loader: "sass-loader",options: {sourceMap: isDev}})},
-            {test: /\.(png|jpg|jpeg|gif|webp|svg)$/, use: imageLoaders()},
-            // {test: /\.svg$/, use: [{loader: 'svg-sprite-loader', options: {extract: true, spriteFilename: './assets/images/icons.svg'}}]},
+            {test: /\.(png|jpg|jpeg|gif|webp)$/, use: imageLoaders()},
+            {test: /\.svg$/, use: [{loader: 'svg-sprite-loader', options: {extract: true, spriteFilename: './assets/images/sprite.svg'}}]},
             {test: /\.(ttf|woff|woff2|eot)$/, use: [{loader: 'file-loader', options: {publicPath:'../fonts', outputPath: `${PATHS.assets}/fonts`, name: `[name]/[name].[ext]`}}]},
-            {test: /\.(ico|txt|xml|csv|php)$/, use: [{loader: 'file-loader', options: {name: '[name].[ext]'}}]},
             {test: /\.js$/, exclude: /node_modules/, use: jsLoaders()},
             {loader: "webpack-modernizr-loader",test: /\.modernizrrc\.js$/}
             // {test: /\.ts$/, exclude: /node_modules/, loader: {loader: 'babel-loader', options: babelOptions('@babel/preset-typescript')}},
