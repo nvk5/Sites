@@ -167,11 +167,6 @@ module.exports = {
         new SvgSpriteLoaderPlugin({plainSprite: true}),
         new CleanWebpackPlugin(),
     ],
-    resolve: {
-        alias: {
-          modernizr$: path.resolve(__dirname, `${PATHS.src}/js/libs/.modernizrrc.js`)
-        }
-    },
     module: {
         rules: [
             {test: /\.css$/, use: cssLoaders()},
@@ -180,7 +175,6 @@ module.exports = {
             {test: /\.svg$/, use: [{loader: 'svg-sprite-loader', options: {extract: true, spriteFilename: './assets/images/sprite.svg'}}]},
             {test: /\.(ttf|woff|woff2|eot)$/, use: [{loader: 'file-loader', options: {publicPath:'../fonts', outputPath: `${PATHS.assets}/fonts`, name: `[name]/[name].[ext]`}}]},
             {test: /\.js$/, exclude: /node_modules/, use: jsLoaders()},
-            {loader: "webpack-modernizr-loader",test: /\.modernizrrc\.js$/}
             // {test: /\.ts$/, exclude: /node_modules/, loader: {loader: 'babel-loader', options: babelOptions('@babel/preset-typescript')}},
             // {test: /\.jsx$/,exclude: /node_modules/, loader: {loader: 'babel-loader', options: babelOptions('@babel/preset-react')}}
         ]

@@ -24,7 +24,11 @@
 </head>
 
 <body>
-    <header class="header" style="background-image: url(assets/images/header.png);">
+    <header class="header">
+        <picture>
+            <source type="image/webp" srcset="assets/images/header.webp">
+            <img class="header__bg" src="assets/images/header.png" alt="bicycle">
+        </picture>
         <button class="burger">
             <svg class="burger__icon">
                 <use xlink:href="assets/images/sprite.svg#burger"></use>

@@ -143,10 +143,27 @@ input:focus:-ms-input-placeholder {
 
 /* Header */
 .header {
-    height: 100vh;
+    padding-top: 56.25%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+@media (max-width: 575.98px) {
+    .header {
+        padding-top: 100%;
+    }
+}
+
+.header__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
 @media (max-width: 767.98px) {
@@ -159,6 +176,9 @@ input:focus:-ms-input-placeholder {
 
 .nav {
     padding-top: 30px;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .nav__list {
@@ -197,7 +217,6 @@ input:focus:-ms-input-placeholder {
     background-color: transparent;
     border: none;
     padding: 20px;
-    margin-top: 10px;
     outline: none;
 }
 
@@ -207,15 +226,33 @@ input:focus:-ms-input-placeholder {
     height: 100%;
 }
 
+.burger, .logo-link {
+    position: absolute;
+    top: 0;
+}
+
 .burger {
     width: 100px;
     height: 100px;
-    padding-top: 10px;
+    left: 20px;
+}
+
+/* @media (max-width: 575.98px) {
+    .burger {
+        width: 50px;
+        height: 50px;
+    }
+} */
+
+.logo-link {
+    right: 20px;
+    top: 20px;
 }
 
 .close {
     position: fixed;
     left: 20px;
+    top: 20px;
     z-index: 2;
     width: 70px;
     height: 70px;
@@ -251,10 +288,6 @@ input:focus:-ms-input-placeholder {
     .burger,
     .logo-link {
         display: block;
-    }
-
-    .logo-link {
-        padding-top: 10px;
     }
 }
 
@@ -542,6 +575,12 @@ input:focus:-ms-input-placeholder {
     align-items: center;
 }
 
+@media (max-width: 575.98px) {
+    .shop__btn-area {
+        padding: 70px 20px;
+    }
+}
+
 .shop-btn {
     font-family: var(--font-family-secondary), Arial, Helvetica, sans-serif;
     border: 1px solid var(--color-shop-btn);
@@ -627,6 +666,7 @@ input:focus:-ms-input-placeholder {
     .form {
         flex-direction: column;
         align-self: stretch;
+        padding: 0 15px;
     }
 
     .form__input {
