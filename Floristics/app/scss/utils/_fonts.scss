@@ -11,16 +11,15 @@
 
 
 //Font-face mixin
-@mixin font-face($f-name, $f-style, $f-weight, $f-display, $f-local, $file-path) {
+@mixin font-face($f-name, $f-style, $f-weight, $f-local, $file-path) {
     @font-face {
         font-family: $f-name;
         font-style: $f-style;
         font-weight: $f-weight;
-        font-display: $f-display;
         src: local('#{$f-local}'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff')
     }	
 }
 
 
-@include font-face('Forum', normal, normal, swap, 'ForumRegular', '../../fonts/ForumRegular/ForumRegular');
+@include font-face('Forum', normal, normal, 'ForumRegular', '../fonts/ForumRegular/ForumRegular');
 
