@@ -71,23 +71,17 @@
 }
 
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-/* для Safari, Safari IOS */
-only screen and (min-resolution: 192dpi),
-/* для IE 10, IE 11, Opera Mini */
-only screen and (min-resolution: 2dppx) {
-
-    /* для нормальных браузеров */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), /* для Safari, Safari IOS */
+only screen and (min-resolution: 192dpi), /* для IE 10, IE 11, Opera Mini */
+only screen and (min-resolution: 2dppx) { /* для нормальных браузеров */
     .webp .modal__content {
         background-image: url('../images/home/@2x/webp/modal.webp');
     }
 
-    .no-wecontent {
+    .no-webp .modal-content {
         background-image: url('../images/home/@2x/modal.png');
     }
-
 }
-
 
 .webp .modal__content {
     background-image: url('../images/home/@1x/webp/modal.webp');
