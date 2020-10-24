@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const OptimizeCSSAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, './src'),
@@ -155,7 +156,11 @@ module.exports = {
                 minify:  {collapseWhitespace: isProd}
               })
           ),
-        
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: `${PATHS.src}/static`, to: ''}
+            ]
+        }),
         // new SvgSpriteLoaderPlugin({plainSprite: true}),
         new CleanWebpackPlugin(),
     ],
@@ -166,7 +171,6 @@ module.exports = {
             {test: /\.(png|jpg|jpeg|gif|webp|svg)$/, use: imageLoaders()},
             // {test: /\.svg$/, use: [{loader: 'svg-sprite-loader', options: {extract: true, spriteFilename: './assets/images/icons.svg'}}]},
             {test: /\.(ttf|woff|woff2|eot)$/, use: [{loader: 'file-loader', options: {publicPath:'../fonts', outputPath: `${PATHS.assets}/fonts`, name: `[name]/[name].[ext]`}}]},
-            {test: /\.(ico|txt|xml|csv|php)$/, use: [{loader: 'file-loader', options: {name: '[name].[ext]'}}]},
             {test: /\.js$/, exclude: /node_modules/, use: jsLoaders()},
             // {test: /\.ts$/, exclude: /node_modules/, loader: {loader: 'babel-loader', options: babelOptions('@babel/preset-typescript')}},
             // {test: /\.jsx$/,exclude: /node_modules/, loader: {loader: 'babel-loader', options: babelOptions('@babel/preset-react')}}

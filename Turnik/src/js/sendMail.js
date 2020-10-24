@@ -3,7 +3,6 @@ export default function sendMail() {
     const ajaxSend = function(formData) {
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://formspree.io/mpzyeobo');
-        // xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8')
         xhr.setRequestHeader("Accept", "application/json");
         xhr.send(formData);
 
@@ -26,7 +25,7 @@ export default function sendMail() {
     }
 
     document.querySelectorAll('.form').forEach(form => {
-        form.addEventListener('submit', function() {
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
             let formData = new FormData(this);
 

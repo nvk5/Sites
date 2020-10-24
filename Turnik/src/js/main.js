@@ -2,6 +2,7 @@ import timer from './timer';
 import setTabs from './tabs';
 import sendMail from './sendMail';
 import polyfillsInit from './polyfills';
+import video from './video';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -10,4 +11,5 @@ window.addEventListener('DOMContentLoaded', () => {
     timer();
     setTabs();
     sendMail();
+    video();
 });

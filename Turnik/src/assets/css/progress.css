@@ -1,4 +1,4 @@
-#floatingBarsG{
+.floatingBarsG{
 	position:relative;
 	width:60px;
 	height:75px;
@@ -42,7 +42,7 @@
 		-moz-animation-direction:normal;
 }
 
-#rotateG_01{
+.rotateG_01{
 	left:0;
 	top:27px;
 	animation-delay:0.45s;
@@ -57,7 +57,7 @@
 		-moz-transform:rotate(-90deg);
 }
 
-#rotateG_02{
+.rotateG_02{
 	left:8px;
 	top:10px;
 	animation-delay:0.6s;
@@ -72,7 +72,7 @@
 		-moz-transform:rotate(-45deg);
 }
 
-#rotateG_03{
+.rotateG_03{
 	left:25px;
 	top:3px;
 	animation-delay:0.75s;
@@ -87,7 +87,7 @@
 		-moz-transform:rotate(0deg);
 }
 
-#rotateG_04{
+.rotateG_04{
 	right:8px;
 	top:10px;
 	animation-delay:0.9s;
@@ -102,7 +102,7 @@
 		-moz-transform:rotate(45deg);
 }
 
-#rotateG_05{
+.rotateG_05{
 	right:0;
 	top:27px;
 	animation-delay:1.05s;
@@ -117,7 +117,7 @@
 		-moz-transform:rotate(90deg);
 }
 
-#rotateG_06{
+.rotateG_06{
 	right:8px;
 	bottom:7px;
 	animation-delay:1.2s;
@@ -132,7 +132,7 @@
 		-moz-transform:rotate(135deg);
 }
 
-#rotateG_07{
+.rotateG_07{
 	bottom:0;
 	left:25px;
 	animation-delay:1.35s;
@@ -147,7 +147,7 @@
 		-moz-transform:rotate(180deg);
 }
 
-#rotateG_08{
+.rotateG_08{
 	left:8px;
 	bottom:7px;
 	animation-delay:1.5s;
