@@ -8,12 +8,15 @@ window.addEventListener('DOMContentLoaded', function () {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
 
+  ////objectFit IE
   (function () {
     let images = document.querySelectorAll('img');
     images.forEach(item => item.style.fontFamily = "'object-fit: cover'");
     objectFitImages(images);
   }());
 
+
+  ////scrollToSection
   (function () {
     let btnScroll = document.querySelector('.header-home__scroll-down');
     let viewCatalog = document.querySelector('.header-home .header-home__view-catalog');
@@ -23,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
       viewCatalog.addEventListener('click', scrollTo);
       btnScroll.addEventListener('click', scrollTo);
 
-      function scrollTo() {
+      function scrollTo(event) {
         event.preventDefault();
         services.scrollIntoView({ behavior: "smooth" });
       }
@@ -31,13 +34,17 @@ window.addEventListener('DOMContentLoaded', function () {
   }());
 
 
+  ////toggleNav
   (function () {
     let burger = document.querySelector('.menu-btn');
+    let closeBtn = document.querySelector('.close-btn');
     let nav = document.querySelector('.nav');
     let body = document.body;
-    burger.addEventListener('click', openMenu);
 
-    function openMenu(event) {
+    burger.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+
+    function openMenu() {
       nav.classList.add('show');
       nav.style.display = 'block';
       body.classList.add('body-scrollbar');
@@ -45,15 +52,6 @@ window.addEventListener('DOMContentLoaded', function () {
         nav.classList.remove('show');
       }, 400);
     }
-  })();
-
-
-
-  (function () {
-    let closeBtn = document.querySelector('.close-btn');
-    let nav = document.querySelector('.nav');
-    let body = document.body;
-    closeBtn.addEventListener('click', closeMenu);
 
     function closeMenu() {
       body.classList.remove('body-scrollbar');
@@ -63,8 +61,10 @@ window.addEventListener('DOMContentLoaded', function () {
         nav.classList.remove('hide');
       }, 400);
     }
+
   })();
 
+  //toggleModalWindow
   (function () {
     let order = document.querySelector('.view--order');
     let modal = document.querySelector('.modal');
@@ -94,6 +94,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
   }());
 
+
+  ////sendMail
   (function () {
     let form = document.querySelector('.form');
     let modalSuccess = document.querySelector('.modal__success');
@@ -135,6 +137,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
+  ////sliderInit - home
   (function () {
     let container = document.querySelectorAll('.services-slider');
 
@@ -168,7 +171,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+  ////sliderInit
   (function () {
     let container = document.querySelectorAll('.header__slider');
 
@@ -186,6 +189,7 @@ window.addEventListener('DOMContentLoaded', function () {
         nextButton: '.header__slider--next',
         loop: false,
         mouseDrag: true,
+        autoHeight: false
       });
 
       let sliderThumbs = tns({
@@ -215,23 +219,27 @@ window.addEventListener('DOMContentLoaded', function () {
   }());
 
 
-  //setEqualHeight
+  ////setSliderHeight
   (function(){
-    let slider = document.querySelector('.header__slider');
-    let sliderContent = document.querySelector('.header__content');
-    let sm = window.matchMedia('(min-width: 992px)');
+    window.addEventListener('load', function(){
+      let target = document.querySelectorAll('.header__slider-wrap');
+      let targetHeight = document.querySelector('.header__slider-img');
+      let sm = window.matchMedia('(min-width: 992px)');
 
-    function setEqualHeight() {
-      if (slider && sliderContent && sm.matches) {
-        slider.style.maxHeight = `${sliderContent.clientHeight}px`;
+      function setEqualHeight() {
+        [...target].filter((item,i) => i !== 0).forEach(item => item.style.height = `${targetHeight.clientHeight}px`);
       }
-    }
-    setEqualHeight();
+      function removeEqualHeight() {
+        [...target].filter((item,i) => i !== 0).forEach(item => item.style.height = `auto`);
+      }
+      
+      function setFunc() {
+        target && sm.matches ? setEqualHeight() : removeEqualHeight();
+      }
+      setFunc();
 
-    if (slider && sliderContent && sm.matches) {
-      window.addEventListener('resize', setEqualHeight);
-    }
-  
+      window.addEventListener('resize', setFunc)
+    })
   }())
 
 });
