@@ -67,7 +67,7 @@ $(function () {
         infinite: true,
         speed: 500,
         autoplay: true,
-        prevArrrow: '<svg class="slider__arrow  slider__arrow--left"><use class="slider__arrow-icon-left" xlink:href="images/svg/sprite/sprite.svg#arrow-left"></use></svg>',
+        prevArrow: '<svg class="slider__arrow  slider__arrow--left"><use class="slider__arrow-icon-left" xlink:href="images/svg/sprite/sprite.svg#arrow-left"></use></svg>',
         nextArrow: '<svg class="slider__arrow  slider__arrow--right"><use class="slider__arrow-icon-right" xlink:href="images/svg/sprite/sprite.svg#arrow-right"></use></svg>',
         responsive: [{
             breakpoint: 479.98,
