@@ -1,5 +1,8 @@
 .burger {
     cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
 
     &__line {
         width: 30px;
@@ -9,6 +12,10 @@
         margin: 5px 0;
         transition: all .4s ease;
     }
+}
+
+.burger:focus {
+    outline: 1px solid;
 }
 
 .burger.cross {

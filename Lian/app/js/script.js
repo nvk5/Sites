@@ -6,7 +6,7 @@ $(function () {
     objectFitImages();
     $('img').not('[src$="svg"]').css('font-family', "'object-fit: cover'");
 
-    var lazyLoadInstance = new LazyLoad({
+    let lazyLoadInstance = new LazyLoad({
         elements_selector: ".lazy"
     });
 
@@ -21,9 +21,9 @@ $(function () {
 
 
     function menu() {
-        var cancelBtn = $('<svg class="pushy__cancel"><use xlink:href="images/svg/sprite/sprite.svg#cancel"></use><svg>');
-        var cloneLogo = $('a.logo').eq(0).clone().addClass('copy');
-        var flag = 1;
+        let cancelBtn = $('<svg class="pushy__cancel"><use xlink:href="images/svg/sprite/sprite.svg#cancel"></use><svg>');
+        let cloneLogo = $('a.logo').eq(0).clone().addClass('copy');
+        let flag = 1;
     
         if (window.matchMedia('(max-width: 991.98px)').matches) {
             $('.nav__list').prepend(cancelBtn,cloneLogo);
@@ -67,7 +67,7 @@ $(function () {
         infinite: true,
         speed: 500,
         autoplay: true,
-        prevArrow: '<svg class="slider__arrow  slider__arrow--left"><use class="slider__arrow-icon-left" xlink:href="images/svg/sprite/sprite.svg#arrow-left"></use></svg>',
+        preletrow: '<svg class="slider__arrow  slider__arrow--left"><use class="slider__arrow-icon-left" xlink:href="images/svg/sprite/sprite.svg#arrow-left"></use></svg>',
         nextArrow: '<svg class="slider__arrow  slider__arrow--right"><use class="slider__arrow-icon-right" xlink:href="images/svg/sprite/sprite.svg#arrow-right"></use></svg>',
         responsive: [{
             breakpoint: 479.98,
@@ -82,16 +82,16 @@ $(function () {
     //// ABOUT
 
     function setInputRangeValue() {
-        var range = $('.input-range');
-        var progress = $('.about__input-progress');
+        let range = $('.input-range');
+        let progress = $('.about__input-progress');
     
         range.each(function(i,elem){
             progress[i].style.left = $(this).val() + '%';
         });
     
         $('.input-range').on('input change', function () {
-            var index = range.index($(this));
-            var currentVal = $(this).val() + '%';
+            let index = range.index($(this));
+            let currentVal = $(this).val() + '%';
     
             progress[index].style.left = $(this).val() + '%';
             progress.each(function (i, elem) {
@@ -109,13 +109,13 @@ $(function () {
     ////HOME, PORTFOLIO
 
     function relocateProjectItems() {
-        var query = window.matchMedia('(max-width: 767.98px)');
+        let query = window.matchMedia('(max-width: 767.98px)');
 
         if (query.matches) {
             $('.projects__content').hide();
 
             $('.projects__item').each(function (i, elem) {
-                var contentItem = $('.projects__content').eq(i);
+                let contentItem = $('.projects__content').eq(i);
                 $(elem).append(contentItem);
             });
 
@@ -140,10 +140,10 @@ $(function () {
                 $('.projects__content').hide();
 
                 $('.projects__item')
-                    .off('click') //снимаем предыдущий обработчик
+                    .off('click') 
                     .each(function (i, elem) {
-                        var contentItem = $('.projects__content').eq(i);
-                        $(elem).append(contentItem); //если индекс proj item и proj content равны то вкладываем в item в конец соответствующий content 
+                        let contentItem = $('.projects__content').eq(i);
+                        $(elem).append(contentItem); 
                     })
                     .on('click', function (event) { //новый обработчик 
                         $(this).find('.projects__content').slideToggle('slow');
@@ -161,8 +161,8 @@ $(function () {
                     .not(":first").hide();
 
                 $(".projects__item")
-                    .off('click') //снимаем предыдущий обработчик
-                    .click(function (event) { //новый обработчик
+                    .off('click') 
+                    .click(function (event) { 
                         $(".projects__content").hide().eq($(this).index()).fadeIn();
                     });
 
@@ -184,14 +184,13 @@ $(function () {
     $('.load-more-btn').on('click', function () {
         let index = $('.load-more-btn').index($(this));
         let parentGrid = $('.projects-grid').eq(index);
+
+        $('.load-more-btn').html('Loading...');
     
         $.ajax({
                 type: "GET",
                 url: "https://jsonplaceholder.typicode.com/photos",
                 dataType: "json"
-            })
-            .progress(function(){
-                $('.load-more-btn').html('Loading...');
             })
             .done(function(result){
                 $('.load-more-btn').html('Load more');
@@ -228,7 +227,7 @@ $(function () {
         infinite: true,
         speed: 500,
         autoplay: true,
-        prevArrow: $('.project-btns__item--prev'),
+        preletrow: $('.project-btns__item--prev'),
         nextArrow: $('.project-btns__item--next'),
         asNavFor: '.project-slider-thumb, .project-details-slider'
     });
@@ -240,7 +239,7 @@ $(function () {
         dots: false,
         fade: false,
         autoplay: true,
-        prevArrow: $('.project-btns__item--prev'),
+        preletrow: $('.project-btns__item--prev'),
         nextArrow: $('.project-btns__item--next'),
     });
     
@@ -253,7 +252,7 @@ $(function () {
         infinite: true,
         speed: 500,
         autoplay: true,
-        prevArrow: $('.project-btns__item--prev'),
+        preletrow: $('.project-btns__item--prev'),
         nextArrow: $('.project-btns__item--next'),
         asNavFor: '.project-slider-thumb, .project-slider'
     });
@@ -291,7 +290,7 @@ $(function () {
     
       function sidebarSlide() {
         $('.sidebar__headline').on('click', function () {
-          var head = $('.sidebar__headline');
+          let head = $('.sidebar__headline');
           $('.sidebar__block-wrap').eq(head.index($(this))).slideToggle('slow');
         });
       }
@@ -299,7 +298,7 @@ $(function () {
     
     
       function bgWebpCheck() {
-        var query = "(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)";
+        let query = "(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)";
     
         Modernizr.on('webp', function () {
           if (matchMedia(query).matches) {
@@ -308,7 +307,7 @@ $(function () {
             $('.blog__video').attr('data-poster', videoPath);
     
             $('.sidebar__block-post').each(function (i, elem) {
-              var newPath = $(this).attr('data-bg').replace(/1x/, '2x').replace(/@[12]x/, '$&/webp').replace(/png|jpg/, 'webp');
+              let newPath = $(this).attr('data-bg').replace(/1x/, '2x').replace(/@[12]x/, '$&/webp').replace(/png|jpg/, 'webp');
               $(this).attr('data-bg', newPath);
             });
     
@@ -318,7 +317,7 @@ $(function () {
             $('.blog__video').attr('data-poster', videoPath);
     
             $('.sidebar__block-post').each(function (i, elem) {
-              var newPath = $(this).attr('data-bg').replace(/@[12]x/, '$&/webp').replace(/png|jpg/, 'webp');
+              let newPath = $(this).attr('data-bg').replace(/@[12]x/, '$&/webp').replace(/png|jpg/, 'webp');
               $(this).attr('data-bg', newPath);
             });
           }
@@ -335,7 +334,7 @@ $(function () {
     
         $('.sidebar__list-link').on('click', function (event) {
           event.preventDefault();
-          var currentIndex = $('.sidebar__list-link').index($(this));
+          let currentIndex = $('.sidebar__list-link').index($(this));
     
           $('.blog').hide().eq(currentIndex).fadeIn('slow');
           $('html, body').animate({
@@ -351,7 +350,7 @@ $(function () {
 
 
     $('form').on('submit', function(event){
-        var context = $(this);
+        let context = $(this);
         
         $.ajax({
             type: "POST",
@@ -373,8 +372,8 @@ $(function () {
     // CONTACT
 
     $(window).on('scroll', function(){
-        var th = $(this).scrollTop();
-        var mapWrap = $('.contact-map__wrap');
+        let th = $(this).scrollTop();
+        let mapWrap = $('.contact-map__wrap');
 
         if (th > 20) { 
             mapWrap.append('<iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3026.5870734444266!2d-73.8038992!3d40.6610319!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2671aa27f068f%3A0x445d1a3a7a3329cf!2sJfk%20Training%20Center!5e0!3m2!1sen!2sru!4v1582342248500!5m2!1sen!2sru" width="100%" height="365px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>');
