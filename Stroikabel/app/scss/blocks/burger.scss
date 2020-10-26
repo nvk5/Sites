@@ -5,6 +5,18 @@
         padding: 10px;
     }
 
+    &__btn {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        outline: none;
+
+        &:focus {
+            outline: 1px solid;
+        }
+    }
+
     &__wrap,
     &__desc {
         cursor: pointer;

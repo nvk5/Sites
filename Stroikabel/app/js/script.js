@@ -1,5 +1,6 @@
 $(function(){
     
+    //toggleSmMenu
     $(document).on('click', '.burger__wrap, .burger__desc', function(){
         $('.nav').slideToggle('600');
     });
@@ -31,6 +32,7 @@ $(function(){
     toggleNavOnMatchMediaOnResize();
 
 
+    //Header home slider
     $('.slider').slick({
         dots: true,
         fade: true,
@@ -47,6 +49,7 @@ $(function(){
     ]
     });
 
+    //home slider
     $('.slider-company').slick({
         dots: false,
         slidesToShow: 4,
@@ -69,6 +72,8 @@ $(function(){
     ]
     });
 
+
+    //toggleModalWindow
     $('.button').not('.form__btn').on('click', function(){
         $('.modal').fadeIn('600');
     });
@@ -77,6 +82,9 @@ $(function(){
         $('.modal').fadeOut('600');
     });
 
+
+
+    //sendMail
     $('.form').on('submit', function(){
         var context = $(this);
 

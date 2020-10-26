@@ -7,7 +7,8 @@ const { src, dest, parallel, series, watch } = require('gulp'),
       cheerio      = require('gulp-cheerio'),
       concat       = require('gulp-concat'),
       
-
+    //html
+      htmlmin      = require('gulp-htmlmin'),
 
       //css
       sass         = require('gulp-sass'),
@@ -80,7 +81,7 @@ const styles = () => {
             cascade: false,
             grid: true
         }))
-        .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+        .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) 
         .pipe(sourcemaps.write('.'))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream()) 
@@ -132,25 +133,31 @@ const clear = () => {
 exports.clear = clear;
 
 
+const htmlMin = () => {
+	return src('app/*.html')
+		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(dest('dist'))
+}
+exports.htmlMin = htmlMin;
 
 
 const buildcopy = () => {
-	return src([ // Выбираем нужные файлы
+	return src([ 
 		'app/css/**/*.min.css',
 		'app/js/**/*.min.js',
         'app/images/**/*',
         'app/fonts/**/*',
-		'app/**/*.html',
 		'app/*.php',
         'app/.htaccess',
         'app/*.{png,xml,ico,webmanifest,svg}'
-		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
-	.pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
+		], { base: 'app' }) 
+	.pipe(dest('dist')) 
 }
+exports.buildcopy = buildcopy;
 
 
 const cleandist = () => {
-	return del('dist/**/*', { force: true }) // Удаляем всё содержимое папки "dist/"
+	return del('dist/**/*', { force: true }) 
 }
 
 
@@ -161,7 +168,7 @@ const startwatch = () => {
 }
 
 exports.default = parallel(styles, scripts, jslibs, browsersync, startwatch);
-exports.build = series(cleandist, styles, scripts, buildcopy);
+exports.build = series(cleandist, styles, scripts, htmlMin, buildcopy);
 
 
 
