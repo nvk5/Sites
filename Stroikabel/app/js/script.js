@@ -1,7 +1,7 @@
 $(function(){
     
     //toggleSmMenu
-    $(document).on('click', '.burger__wrap, .burger__desc', function(){
+    $(document).on('click', '.burger__btn', function(){
         $('.nav').slideToggle('600');
     });
 
