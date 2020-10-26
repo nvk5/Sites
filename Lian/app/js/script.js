@@ -67,7 +67,7 @@ $(function () {
         infinite: true,
         speed: 500,
         autoplay: true,
-        preletrow: '<svg class="slider__arrow  slider__arrow--left"><use class="slider__arrow-icon-left" xlink:href="images/svg/sprite/sprite.svg#arrow-left"></use></svg>',
+        prevArrrow: '<svg class="slider__arrow  slider__arrow--left"><use class="slider__arrow-icon-left" xlink:href="images/svg/sprite/sprite.svg#arrow-left"></use></svg>',
         nextArrow: '<svg class="slider__arrow  slider__arrow--right"><use class="slider__arrow-icon-right" xlink:href="images/svg/sprite/sprite.svg#arrow-right"></use></svg>',
         responsive: [{
             breakpoint: 479.98,
@@ -227,7 +227,7 @@ $(function () {
         infinite: true,
         speed: 500,
         autoplay: true,
-        preletrow: $('.project-btns__item--prev'),
+        prevArrow: $('.project-btns__item--prev'),
         nextArrow: $('.project-btns__item--next'),
         asNavFor: '.project-slider-thumb, .project-details-slider'
     });
@@ -239,7 +239,7 @@ $(function () {
         dots: false,
         fade: false,
         autoplay: true,
-        preletrow: $('.project-btns__item--prev'),
+        prevArrow: $('.project-btns__item--prev'),
         nextArrow: $('.project-btns__item--next'),
     });
     
@@ -252,7 +252,7 @@ $(function () {
         infinite: true,
         speed: 500,
         autoplay: true,
-        preletrow: $('.project-btns__item--prev'),
+        prevArrow: $('.project-btns__item--prev'),
         nextArrow: $('.project-btns__item--next'),
         asNavFor: '.project-slider-thumb, .project-slider'
     });
