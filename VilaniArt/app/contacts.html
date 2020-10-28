@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.min.css" media="all">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Sites/VilaniArt/dist/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Sites/VilaniArt/dist/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Sites/VilaniArt/dist/favicon-16x16.png">
+    <link rel="manifest" href="/Sites/VilaniArt/dist/site.webmanifest">
+    <link rel="mask-icon" href="/Sites/VilaniArt/dist/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/Sites/VilaniArt/dist/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="mstile-144x144.png">
-    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-config" content="/Sites/VilaniArt/dist/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
@@ -50,7 +49,12 @@
                     <img src="img/svg/logo.svg" alt="Логотип VilaniArt" class="img logo__img">
                     <div class="logo__desc">VilaniArt</div>
                 </a>
-                <nav class="header__nav nav fade pushy pushy-right data-focus=" #home" data-menu-btn-class=".hamburger">
+                <nav class="header__nav nav fade pushy pushy-right" data-focus="#home" data-menu-btn-class=".hamburger">
+                    <button class="close-menu">
+                        <svg>
+                            <use xlink:href="/img/svg/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </button>
                     <div class="pushy-content">
                         <ul class="nav__list">
                             <li class="pushy-link nav__item"><a href="index.html" class="nav__link link">Главная</a>
@@ -62,14 +66,12 @@
                         </ul>
                     </div>
                 </nav>
-                <!-- Site Overlay -->
                 <div class="site-overlay"></div>
-                <!-- Your Content -->
-                <div class="header__hamburger hamburger">
-                    <span class="hamburger__line"></span>
-                    <span class="hamburger__line"></span>
-                    <span class="hamburger__line"></span>
-                </div>
+                <button class="hamburger">
+                    <svg>
+                        <use xlink:href="/img/svg/sprite/sprite.svg#burger"></use>
+                    </svg>
+                </button>
             </div>
         </div>
         <div class="header__content header__content-mod header__content--contacts"></div>

@@ -9,26 +9,17 @@ window.addEventListener('DOMContentLoaded', function () {
   svg4everybody();
 
   //Lazyloading
-  var lazyLoadInstance = new LazyLoad({
+  const lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
   });
 
-  
-  function toggleMenu(){
-    var burger = $('.header__hamburger');
-    var burgerItem = $('.hamburger__line');
-    var overlay = $('.site-overlay');
-
-    $(document).on('click', [burger, overlay],  function(event){
-      burger.toggleClass('cross');
-      burgerItem.toggleClass('toggle');
-    });
-  }
-  toggleMenu();
+  //toggleMenu
+  $(document).on('click', '.close-menu', function () {
+    $('body').toggleClass('pushy-open-right');
+  });
 
   
-
-  //Slick slider для хедера
+  //Slick slider header
   $('.header__slider').slick({
     fade: true,
     dots: false,
@@ -72,96 +63,77 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  // $(".projects__content").not(":first").hide();
-
-  // $(".projects__item").click(function (event) {
-  //     $(".projects__block").hide().eq($(this).index()).fadeIn();
-  // });
-
-  // Установка табов блока projects
-  function getTabs() {
-    const links = document.querySelectorAll('.projects__link'),
-      linksParent = document.querySelector('.projects__list'),
-      content = document.querySelectorAll('.projects__block');
-
-    function hideContent(num = 1) {
-      for (let i = num; i < content.length; i++) {
-        content[i].classList.remove('show');
-        content[i].classList.add('hide');
-      }
-    }
-    hideContent();
-
-    function showContent(contentNum) {
-      if (content[contentNum].classList.contains('hide')) {
-        content[contentNum].classList.remove('hide');
-        content[contentNum].classList.add('show');
-      }
-    }
-
-    linksParent.addEventListener('click', function (e) {
-      if (e.target.classList.contains('projects__link') || event.target) {
-        for (let i = 0; i < links.length; i++) {
-          if (e.target == links[i]) {
-            e.preventDefault();
-            hideContent(0);
-            showContent(i);
-            break;
-          }
-        }
-      }
-    });
-
-  }
-  getTabs();
-
-
-
+  ////Tabs
+  $(".projects__block").not(":first").hide();
+  $('.projects__item').on('click', function(i,elem){
+    $(".projects__block").hide().eq($(this).index()).fadeIn('fast');
+    return false;
+  })
  
-  //Кнопка "прокрутить вверх" - показать / убрать
-  $(window).scroll(function(){
+  //toggle scrollTop btn
+  $(window).on('scroll', function(){
     if ( $(this).scrollTop() > $(this).height() ) {
       $('.arrow').addClass('arrow__active');
     } else {
       $('.arrow').removeClass('arrow__active');
     }
-  });
+  })
 
-  //Прокрутка к началу документа
-  $('.arrow').click(function(){
+  //Scroll to top
+  $('.arrow').on('click', function(){
     $('html, body').stop().animate({
       scrollTop: 0
     },'slow','swing');
-  });
+  })
 
   $(document).pjax('.nav__link', '.logo', '.pjax-container', {
     fragment: '.pjax-container'
   });
 
-  //  Ajax отправка формы
-  $(document).ready(function() {
-    $(".form").submit(function() { 
-      var form = $(this);
-      $.ajax({
-        type: "POST",
-        url: "mail.php", 
-        data: form.serialize()
-      }).done(function() {
-        $(form).find('.modal__success').addClass('modal__active').css('display', 'flex').hide().fadeIn();
-        setTimeout(function() {
-          // Done Functions
-          $(form).find('.modal__success').removeClass('modal__active').fadeOut();
-          form.trigger("reset");
-        }, 3000);
-      });
-      return false;
+
+  //Ajax
+  $(".form").on('submit', function(){
+    const form = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", 
+      data: form.serialize()
+    }).done(function() {
+      $(form).find('.modal__success').addClass('modal__active').css('display', 'flex').hide().fadeIn();
+      setTimeout(function() {
+        // Done Functions
+        $(form).find('.modal__success').removeClass('modal__active').fadeOut();
+        form.trigger("reset");
+      }, 3000);
     });
-  });
+    return false;
+  })
 
-  var cleave = new Cleave('input[type="tel"]', {
-    phone: true,
-    phoneRegionCode: 'RU'
-});
+////set href. Magnific popup needs a href attribute in order to work.
+$('.projects__img').on('load', function(){
+  $('.projects__block').not(':hidden').each(function(i,elem){
+    const source = this.querySelectorAll('.projects__img');
+    
+    $(this).find('.projects__block-link').each(function(index,elem){
+      $(elem).attr('href', function(){
+        return source[index].currentSrc;
+      })
+    })
+  })
+})
 
+////Magnific popup init
+$('.projects__block').each(function(){
+  $(this).magnificPopup({
+    type: 'image',
+    delegate: 'a',
+    gallery: {
+      enabled: true
+    },
+    zoom: {
+      enabled: true
+    }
+  })
+})
 
 });
