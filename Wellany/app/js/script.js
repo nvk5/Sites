@@ -294,7 +294,7 @@ window.addEventListener('DOMContentLoaded', function () {
       if (result) {
         // supported
         presentationBg.setAttribute('data-poster', "img/@1x/webp/pres.webp");
-        partners.setAttribute('data-bg', "url('img/@1x/webp/partners.webp')");
+        partners.setAttribute('data-bg', 'img/@1x/webp/partners.webp');
 
         for (let i = 0; i < projectsImg.length; i++) {
           let newPath = projectsImg[i].getAttribute('data-bg').replace(/@[12]x/, '$&/webp').replace(/png|jpg/, "webp");
@@ -329,16 +329,6 @@ window.addEventListener('DOMContentLoaded', function () {
         inner.style.display = 'block';
       }
     }, false);
-
-    // videoEl.addEventListener('play', function () {
-    //   // inner.style.opacity = '0';
-    //   inner.style.display = 'none';
-    // }, false);
-
-    // videoEl.addEventListener('pause', function () {
-    //   // inner.style.opacity = '1';
-    //   inner.style.display = 'block';
-    // }, false);
 
     videoEl.addEventListener('ended', function () {
       videoEl.load();
