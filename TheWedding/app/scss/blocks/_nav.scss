@@ -53,7 +53,7 @@
         &:focus,
         &:active {
             color: lighten($color:  $color-navtop, $amount: 20);
-            text-decoration: overline;
+            text-decoration: underline;
         }
 
         &--footer {

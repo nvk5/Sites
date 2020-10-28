@@ -21,13 +21,13 @@
 }
 
 
-@include font-face('DINMittelschriftStd', normal, 400, '../../fonts/DINMittelschriftStd/DINMittelschriftStd');
-@include font-face('KievitProBold', normal, 700, '../../fonts/KievitProBold/KievitProBold');
-@include font-face('RockwellRegular', normal, 400, '../../fonts/RockwellRegular/RockwellRegular');
-@include font-face('SerlioLTStd', normal, 400, '../../fonts/SerlioLTStd/SerlioLTStd');
-@include font-face('TimesNewRomanItalic', italic, 400, '../../fonts/TimesNewRomanItalic/TimesNewRomanItalic');
-@include font-face('TimesNewRomanRegular', normal, 400, '../../fonts/TimesNewRomanRegular/TimesNewRomanRegular');
-@include font-face('TrebuchetBoldItalic', italic, 700, '../../fonts/TrebuchetBoldItalic/TrebuchetBoldItalic');
-@include font-face('TrebuchetMSItalic', italic, 400, '../../fonts/TrebuchetMSItalic/TrebuchetMSItalic');
-@include font-face('TrebuchetMS', normal, 400, '../../fonts/TrebuchetMS/TrebuchetMS');
-@include font-face('ArialItalic', italic, 400, '../../fonts/ArialItalic/ArialItalic');
+@include font-face('DINMittelschriftStd', normal, 400, '../fonts/DINMittelschriftStd/DINMittelschriftStd');
+@include font-face('KievitProBold', normal, 700, '../fonts/KievitProBold/KievitProBold');
+@include font-face('RockwellRegular', normal, 400, '../fonts/RockwellRegular/RockwellRegular');
+@include font-face('SerlioLTStd', normal, 400, '../fonts/SerlioLTStd/SerlioLTStd');
+@include font-face('TimesNewRomanItalic', italic, 400, '../fonts/TimesNewRomanItalic/TimesNewRomanItalic');
+@include font-face('TimesNewRomanRegular', normal, 400, '../fonts/TimesNewRomanRegular/TimesNewRomanRegular');
+@include font-face('TrebuchetBoldItalic', italic, 700, '../fonts/TrebuchetBoldItalic/TrebuchetBoldItalic');
+@include font-face('TrebuchetMSItalic', italic, 400, '../fonts/TrebuchetMSItalic/TrebuchetMSItalic');
+@include font-face('TrebuchetMS', normal, 400, '../fonts/TrebuchetMS/TrebuchetMS');
+@include font-face('ArialItalic', italic, 400, '../fonts/ArialItalic/ArialItalic');

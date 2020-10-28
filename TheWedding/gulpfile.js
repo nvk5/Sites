@@ -4,6 +4,7 @@ const {	src,dest,parallel,series,watch} = require('gulp');
 		cache = require('gulp-cache'),
 		rename = require("gulp-rename"),
 		concat = require('gulp-concat'),
+		htmlmin = require('gulp-htmlmin'),
 
 
 		//css
@@ -98,7 +99,12 @@ const clear = () => {
 }
 exports.clear = clear;
 
-
+const htmlMin = () => {
+	return src('app/*.html')
+		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(dest('dist'))
+}
+exports.htmlMin = htmlMin;
 
 
 const quality = 80;
@@ -138,9 +144,8 @@ const buildcopy = () => {
 	return src([ // Выбираем нужные файлы
 		'app/css/**/*.min.css',
 		'app/js/**/*.min.js',
-        'app/img/**/*',
+        'app/images/**/*',
         'app/fonts/**/*',
-		'app/**/*.html',
 		'app/*.php',
         'app/.htaccess',
         'app/*.{png,xml,ico,webmanifest,svg}'
@@ -162,7 +167,7 @@ const startwatch = () => {
 }
 
 exports.default = parallel(styles, scripts,  browsersync, startwatch);
-exports.build = series(cleandist, styles, scripts, buildcopy);
+exports.build = series(cleandist, styles, scripts, htmlMin, buildcopy);
 
 
 
