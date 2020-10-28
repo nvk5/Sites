@@ -112,6 +112,7 @@ const jslibs = () => {
         'node_modules/svg4everybody/dist/svg4everybody.min.js',
         'node_modules/vanilla-lazyload/dist/lazyload.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/object-fit-images/dist/ofi.js',
         'node_modules/@cmyee/pushy/js/pushy.min.js',
 		'node_modules/jquery-pjax/jquery.pjax.js',
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
@@ -182,4 +183,4 @@ const startwatch = () => {
 }
 
 exports.default = parallel(styles, scripts, jslibs, browsersync, startwatch);
-exports.build = series(cleandist, styles, scripts, images, htmlMin, buildcopy);
+exports.build = series(cleandist, styles, scripts, htmlMin, buildcopy);

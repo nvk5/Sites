@@ -8,6 +8,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
   svg4everybody();
 
+  objectFitImages();
+  $('img').not('[src$="svg"]').css('font-family', "'object-fit: cover'");
+
   //Lazyloading
   const lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
@@ -62,11 +65,48 @@ window.addEventListener('DOMContentLoaded', function () {
     ]
   });
 
+////set href. Magnific popup needs a href attribute in order to work.
+const setHref = elem => {
+  $('.projects__img').on('load', function(){
+    elem.each(function(){
+      const source = this.querySelectorAll('.projects__img');
+  
+      const href = prop => {
+        $(this).find('.projects__block-link').each(function(index,elem){
+          $(elem).attr('href', function(){
+            return source[index][prop]
+          })
+        })
+      }
+  
+      Modernizr.on('webp', supported => {
+        supported ? href('currentSrc') : href('src')
+      }) 
+    })
+  })
+}
+setHref($('.projects__block').not(':hidden'));
 
+////Magnific popup init
+$('.projects__block').each(function(){
+  $(this).magnificPopup({
+    type: 'image',
+    delegate: 'a',
+    gallery: {
+      enabled: true
+    },
+    zoom: {
+      enabled: true
+    }
+  })
+})
   ////Tabs
   $(".projects__block").not(":first").hide();
   $('.projects__item').on('click', function(i,elem){
     $(".projects__block").hide().eq($(this).index()).fadeIn('fast');
+    const current = $('.projects__block').eq($(this).index());
+    setHref(current);
+
     return false;
   })
  
@@ -109,31 +149,6 @@ window.addEventListener('DOMContentLoaded', function () {
     return false;
   })
 
-////set href. Magnific popup needs a href attribute in order to work.
-$('.projects__img').on('load', function(){
-  $('.projects__block').not(':hidden').each(function(i,elem){
-    const source = this.querySelectorAll('.projects__img');
-    
-    $(this).find('.projects__block-link').each(function(index,elem){
-      $(elem).attr('href', function(){
-        return source[index].currentSrc;
-      })
-    })
-  })
-})
 
-////Magnific popup init
-$('.projects__block').each(function(){
-  $(this).magnificPopup({
-    type: 'image',
-    delegate: 'a',
-    gallery: {
-      enabled: true
-    },
-    zoom: {
-      enabled: true
-    }
-  })
-})
 
 });
