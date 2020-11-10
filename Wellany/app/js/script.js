@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   'use strict';
+
   //forEach polyfill
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
@@ -9,29 +10,22 @@ window.addEventListener('DOMContentLoaded', function () {
   svg4everybody();
 
   //Lazyloading
-  var lazyLoadInstance = new LazyLoad({
+  const lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
   });
 
-  //По завершению загрузки страницы через 1сек прелоадер исчезает
   $('.preload').delay(1000).fadeOut('slow');
 
 
+  //Smooth scroll + preloader 
+  $('.nav__link, .header__logo').on('click', function(event){
+    const offset = $('.header__top').innerHeight();
+    const target = $(this).attr('href');
 
-  //Плавный скролл с прелоадером
-  $('.nav__link, .header__logo').click(function () {
-    var offset = $('.header__top').innerHeight();
-    var target = $(this).attr('href');
-
-    //отменяем переход к якорям по умолчанию
     event.preventDefault();
 
-    //Выпускаем плавный прелоадер. 
     $('.preload').fadeIn('slow');
 
-    // Через 0.6сек(нужно значение больше 0.5 - чтобы был эффект имитации загрузки новой страницы, 
-    // и не было видно прокрутки перед появлением прелоадера) запустится анимация скролла к якорям. 
-    // По завершению скролла (колбэк): возвращаем поле поиска, гамбургер и меню в дефолтное состояние. Также прелоадер исчезает
     setTimeout(() => {
       $('html, body').animate({
         scrollTop: $(target).offset().top - offset
@@ -45,9 +39,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
     $('.nav__link').removeClass('active');
     $(this).addClass('active');
-  });
+  })
 
-  //Slick slider для хедера
+
+  //Header slider
   $('.header__slider').slick({
     autoplay: true,
     infinite: true,
@@ -71,7 +66,7 @@ window.addEventListener('DOMContentLoaded', function () {
     ]
   });
 
-  //Slick slider для блока постов
+  //Posts slider
   $('.posts__slider').slick({
     centerMode: true,
     centerPadding: '0px',
@@ -112,23 +107,23 @@ window.addEventListener('DOMContentLoaded', function () {
     ]
   });
 
-  //Кнопка листать вверх
-  $(window).scroll(function () {
+  //Scroll top button
+  $(window).on('scroll', function(){
     if ($(this).scrollTop() > $(this).height()) {
       $('.arrow').addClass('arrow__active');
     } else {
       $('.arrow').removeClass('arrow__active');
     }
-  });
+  })
 
-  $('.arrow').click(function () {
+  $('.arrow').on('click', function(){
     $('html, body').stop().animate({
       scrollTop: 0
     }, 'slow', 'swing');
-  });
+  })
 
-  //Тугл бургера, установка цвета фикс. шапки при клике на бургер,
-  //скрытие креста бургера при клике на оверлей
+
+  //Toggle burger menu, set header color
   function pushyMenu() {
     const headerTop = document.querySelector('.header__top');
     const burger = document.querySelector('.header__hamburger');
@@ -144,13 +139,12 @@ window.addEventListener('DOMContentLoaded', function () {
       headerTop.classList.add('header__top-color');
       this.classList.toggle('cross');
     });
-
-
-
   }
   pushyMenu();
 
-  //Тугл поля поиска  при клике на кнопку поиска.
+
+
+  //Search toggle
   function getSearch() {
     const searchBtn = document.querySelector('.search__link'),
       searchField = document.querySelector('.header__search');
@@ -169,7 +163,7 @@ window.addEventListener('DOMContentLoaded', function () {
   getSearch();
 
 
-  // Смена цвета фиксированной шапки и меню при скролле
+  //Header bg-color change on scroll
   function changeHeaderColor() {
     const headerTop = document.querySelector('.header__top');
 
@@ -183,7 +177,8 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   changeHeaderColor();
 
-  //Установка модального окна формы обратной связи
+
+  //Modal window
   function toggleForm() {
     const closeBtn = document.querySelector('.form__close'),
       modal = document.querySelector('.modal'),
@@ -212,7 +207,9 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   toggleForm();
 
-  //Установка табов блока projects
+
+
+  //Project tabs
   function getTabs() {
     const links = document.querySelectorAll('.projects__link'),
       linksParent = document.querySelector('.projects__list'),
@@ -249,7 +246,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   getTabs();
 
-  //Открытие табов по кнопке load more
+  //Open more tabs
   function getHiddenTabs() {
     const btn = document.querySelectorAll('.projects__btn'),
       projectsHidden = document.querySelectorAll('.projects__load'),
@@ -283,7 +280,7 @@ window.addEventListener('DOMContentLoaded', function () {
   getHiddenTabs();
 
 
-  //Замена формата изображений на WebP(название и путь должен быть одинаковый)
+  //Replace jpg to webp for lazyloading plugin
   function webpCheck() {
     const presentationBg = document.querySelector('.presentation__video'),
       partners = document.querySelector('.partners'),
@@ -310,7 +307,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   webpCheck();
 
-  //Минимальная настройка видео
+  //Video
   function videoInit() {
     const videoEl = document.querySelector('.presentation__video'),
       playBtn = document.getElementById('playBtn'),
@@ -339,11 +336,10 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   videoInit();
 
-  //Ajax отправка формы
+  //Ajax 
   $(document).ready(function () {
-    //E-mail Ajax Send
     $(".modal__header").submit(function () { 
-      var th = $(this);
+      let th = $(this);
       $.ajax({
         type: "POST",
         url: "mail.php", 
@@ -351,7 +347,6 @@ window.addEventListener('DOMContentLoaded', function () {
       }).done(function () {
         $(th).find('.modal__success').addClass('modal__active').css('display', 'flex').hide().fadeIn();
         setTimeout(function () {
-          // Done Functions
           $(th).find('.modal__success').removeClass('modal__active').fadeOut();
           th.trigger("reset");
         }, 3000);
@@ -361,7 +356,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   });
 
-  var cleave = new Cleave('input[type="tel"]', {
+  const cleave = new Cleave('input[type="tel"]', {
     phone: true,
     phoneRegionCode: 'RU'
   });

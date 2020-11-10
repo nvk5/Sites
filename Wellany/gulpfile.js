@@ -87,7 +87,7 @@ const styles = () => {
             cascade: false,
             grid: true
         }))
-        .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+        .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) 
         .pipe(sourcemaps.write('.'))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream()) 
@@ -172,7 +172,7 @@ exports.cleanimg = cleanImg;
 
 
 const buildcopy = () => {
-	return src([ // Выбираем нужные файлы
+	return src([ 
 		'app/css/**/*.min.css',
 		'app/js/**/*.min.js',
         'app/img/**/*',
@@ -181,13 +181,13 @@ const buildcopy = () => {
 		'app/*.php',
         'app/.htaccess',
         'app/*.{png,xml,ico,webmanifest,svg}'
-		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
-	.pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
+		], { base: 'app' }) 
+	.pipe(dest('dist')) 
 }
 
 
 const cleandist = () => {
-	return del('dist/**/*', { force: true }) // Удаляем всё содержимое папки "dist/"
+	return del('dist/**/*', { force: true }) 
 }
 exports.cleandist = cleandist;
 
@@ -199,108 +199,3 @@ const startwatch = () => {
 
 exports.default = parallel(styles, scripts, jslibs, browsersync, startwatch);
 exports.build = series(cleandist, styles, scripts, buildcopy);
-
-
-
-
-
-const realFavicon = require ('gulp-real-favicon');
-const fs = require('fs');
-
-// File where the favicon markups are stored
-const FAVICON_DATA_FILE = 'faviconData.json';
-
-// Generate the icons. This task takes a few seconds to complete.
-// You should run it at least once to create the icons. Then,
-// you should run it whenever RealFaviconGenerator updates its
-// package (see the check-for-favicon-update task below).
-
-const generateFavicon = (done) => {
-    realFavicon.generateFavicon({
-		masterPicture: 'app/logos.svg',
-		dest: 'app',
-		iconsPath: '/',
-		design: {
-			ios: {
-				pictureAspect: 'backgroundAndMargin',
-				backgroundColor: '#000000',
-				margin: '28%',
-				assets: {
-					ios6AndPriorIcons: false,
-					ios7AndLaterIcons: false,
-					precomposedIcons: false,
-					declareOnlyDefaultIcon: true
-				}
-			},
-			desktopBrowser: {},
-			windows: {
-				pictureAspect: 'noChange',
-				backgroundColor: '#603cba',
-				onConflict: 'override',
-				assets: {
-					windows80Ie10Tile: false,
-					windows10Ie11EdgeTiles: {
-						small: false,
-						medium: true,
-						big: false,
-						rectangle: false
-					}
-				}
-			},
-			androidChrome: {
-				pictureAspect: 'noChange',
-				themeColor: '#ffffff',
-				manifest: {
-					display: 'standalone',
-					orientation: 'notSet',
-					onConflict: 'override',
-					declared: true
-				},
-				assets: {
-					legacyIcon: false,
-					lowResolutionIcons: false
-				}
-			},
-			safariPinnedTab: {
-				pictureAspect: 'silhouette',
-				themeColor: '#5bbad5'
-			}
-		},
-		settings: {
-			scalingAlgorithm: 'Mitchell',
-			errorOnImageTooSmall: false,
-			readmeFile: false,
-			htmlCodeFile: false,
-			usePathAsIs: false
-		},
-		markupFile: FAVICON_DATA_FILE
-	}, function() {
-		done();
-	});
-}
-exports.generateFavicon = generateFavicon;
-
-// Inject the favicon markups in your HTML pages. You should run
-// this task whenever you modify a page. You can keep this task
-// as is or refactor your existing HTML pipeline.
-const injectFaviconMarkups = () => {
-    return src([ 'app/index.html' ])
-		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
-		.pipe(dest('app'));
-}
-exports.injectFaviconMarkups = injectFaviconMarkups;
-
-
-// Check for updates on RealFaviconGenerator (think: Apple has just
-// released a new Touch icon along with the latest version of iOS).
-// Run this task from time to time. Ideally, make it part of your
-// continuous integration system.
-const checkForFaviconUpdates = () => {
-    let currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
-	realFavicon.checkForUpdates(currentVersion, function(err) {
-		if (err) {
-			throw err;
-		}
-	});
-}
-exports.checkForFaviconUpdates = checkForFaviconUpdates;
