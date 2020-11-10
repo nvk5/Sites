@@ -189,7 +189,7 @@ const buildcopy = () => {
 const cleandist = () => {
 	return del('dist/**/*', { force: true }) // Удаляем всё содержимое папки "dist/"
 }
-
+exports.cleandist = cleandist;
 
 const startwatch = () => {
     watch(['app/scss/**/*.scss','app/blocks/**/*'], styles);
