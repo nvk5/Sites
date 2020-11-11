@@ -17,15 +17,15 @@ const video = () => {
     
     const setIframe = () => {
         if (checkVisibility(prevBlock) && search) {
-            [...iframe].forEach( (item,i) => item.src = source[i] );
-           search = false;
+            iframe.forEach( (item,i) => item.src = source[i] );
+            search = false;
+            window.removeEventListener('scroll', setIframe);
         }
     }
-    setIframe();
 
-    window.addEventListener('scroll', () => {
-        setIframe();
-    })
+    setIframe();
+    window.addEventListener('scroll', setIframe);
+
 }
 
 export default video;

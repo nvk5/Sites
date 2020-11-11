@@ -115,8 +115,15 @@ const jsLoaders = () => {
 
 const babelOptions = preset => {
     const options = {
-        presets: ['@babel/preset-env'],
-        // plugins: ['@babel/plugin-proposal-class-properties'] 
+        "presets": [
+            [
+              "@babel/preset-env",
+              {
+                "useBuiltIns": "usage",
+                "corejs": 3
+              }
+            ]
+          ]
     };
 
     if (preset) {

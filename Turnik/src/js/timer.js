@@ -1,5 +1,5 @@
 export default function timer() {
-    const deadline = '2020-08-26';
+    const deadline = '2020-12-12';
 
     function getTimeRemaining(endtime) {
         let today = new Date();

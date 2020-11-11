@@ -17,6 +17,8 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-transform-spread": "^7.12.1",
     "@babel/preset-env": "^7.11.0",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
@@ -45,13 +47,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.10.4",
-    "@glidejs/glide": "^3.4.1",
-    "bootstrap": "^4.5.2",
-    "jquery": "^3.5.1",
-    "normalize.css": "^8.0.1",
-    "object-fit-images": "^3.2.4",
-    "object.fromentries": "^2.0.2",
-    "smoothscroll-polyfill": "^0.4.4"
+    "core-js": "^3.7.0",
+    "normalize.css": "^8.0.1"
   }
 }
