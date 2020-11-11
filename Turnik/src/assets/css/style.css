@@ -881,6 +881,9 @@ textarea:required:valid {
   display: grid;
 }
 
+.success.show {
+  display: flex;
+}
 
 /* Contact */
 .contact {
