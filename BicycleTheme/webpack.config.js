@@ -117,8 +117,9 @@ const jsLoaders = () => {
 
 const babelOptions = preset => {
     const options = {
-        presets: ['@babel/preset-env'],
-        // plugins: ['@babel/plugin-proposal-class-properties'] 
+        presets: [
+            ['@babel/preset-env', { corejs: 3, useBuiltIns: "usage" }]
+        ]
     };
 
     if (preset) {
@@ -134,7 +135,6 @@ module.exports = {
     optimization: optimization(),
     devtool: isDev ? 'source-map' : '',
     entry: {
-        // app: ['@babel/polyfill', PATHS.src]
         app: PATHS.src
     },
     output: {

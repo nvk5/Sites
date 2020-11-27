@@ -1,13 +1,8 @@
-import polyfillsInit from './modules/polyfills';
-import sendMail from './modules/sendMail';
-import slider from './modules/slider';
-import menu from './modules/menu';
-
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
-
-    polyfillsInit();
-    slider();
-    menu();
-    sendMail();
+    
+    import('./modules/polyfills').then(({ polyfillsInit }) => polyfillsInit());
+    import('./modules/slider').then(({ slider }) => slider());
+    import('./modules/menu').then(({menu}) => menu());
+    import('./modules/sendMail').then(({sendMail}) => sendMail());
 })

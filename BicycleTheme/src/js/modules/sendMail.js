@@ -1,4 +1,4 @@
-const sendMail = () => {
+export const sendMail = () => {
     const ajaxSend = function(formData) {
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'mail.php');
@@ -38,5 +38,3 @@ const sendMail = () => {
         })
     })
 }
-
-export default sendMail;

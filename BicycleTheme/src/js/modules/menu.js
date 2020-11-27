@@ -1,4 +1,4 @@
-const menu = () => {
+export const menu = () => {
     const navLinks = document.querySelectorAll('.nav__link');
         const menu = document.querySelector('.nav');
         const closeMenubtn = document.querySelector('.close');
@@ -57,5 +57,3 @@ const menu = () => {
             })
         }));
 }
-
-export default menu;

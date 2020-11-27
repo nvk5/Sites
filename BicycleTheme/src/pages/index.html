@@ -8,18 +8,18 @@
         content="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="76x76" href="/Sites/BicycleTheme/dist/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/Sites/BicycleTheme/dist/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/Sites/BicycleTheme/dist/favicon-16x16.png">
-    <link rel="manifest" href="/Sites/BicycleTheme/dist/site.webmanifest">
-    <link rel="mask-icon" href="/Sites/BicycleTheme/dist/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/Sites/BicycleTheme/dist/favicon.ico">
-    <link rel="preload" as="font" href="/Sites/BicycleTheme/dist/assets/fonts/LatoLight/LatoLight.woff" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/Sites/BicycleTheme/dist/assets/fonts/LatoBold/LatoBold.woff" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/Sites/BicycleTheme/dist/assets/fonts/LatoItalic/LatoItalic.woff" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/Sites/BicycleTheme/dist/assets/fonts/LatoRegular/LatoRegular.woff" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="preload" as="font" href="./assets/fonts/LatoLight/LatoLight.woff" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./assets/fonts/LatoBold/LatoBold.woff" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./assets/fonts/LatoItalic/LatoItalic.woff" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./assets/fonts/LatoRegular/LatoRegular.woff" crossorigin="anonymous">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/Sites/BicycleTheme/dist/browserconfig.xml">
+    <meta name="msapplication-config" content="./browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
 
@@ -29,13 +29,13 @@
             <source type="image/webp" srcset="assets/images/header.webp">
             <img class="header__bg" src="assets/images/header.png" alt="bicycle">
         </picture>
-        <button class="burger">
-            <svg class="burger__icon">
+        <button class="burger" aria-label="open menu">
+            <svg class="burger__icon" aria-hidden="true">
                 <use xlink:href="assets/images/sprite.svg#burger"></use>
             </svg>
         </button>
-        <button class="close">
-            <svg class="close__icon">
+        <button class="close" aria-label="close menu">
+            <svg class="close__icon" aria-hidden="true">
                 <use xlink:href="assets/images/sprite.svg#close"></use>
             </svg>
         </button>
@@ -333,11 +333,9 @@
         </a>
         <span class="contact__text">Stay on the saddle!</span>
         <form class="form">
-            <!-- Hidden Required Fields -->
             <input type="hidden" name="project_name" value="Bicycle Theme">
             <input type="hidden" name="admin_email" value="casowoh800@ofmailer.net">
             <input type="hidden" name="form_subject" value="Request from bicycle theme">
-            <!-- END Hidden Required Fields -->
             <input type="email" class="form__input" name="email" placeholder="enter your email..." required
                 aria-label="Enter your email">
             <button type="submit" class="contact-btn" aria-label="Press to send us your email">Go</button>
@@ -351,22 +349,25 @@
         </address>
         <ul class="socials">
             <li class="socials__item">
-                <a href="https://twitter.com" class="socials__link" target="_blank" rel="nofollow noopener noreferrer">
-                    <svg class="socials__link-icon">
+                <a href="https://twitter.com" class="socials__link" target="_blank" rel="nofollow noopener noreferrer"
+                    aria-label="follow us on twitter">
+                    <svg class="socials__link-icon" aria-hidden="true">
                         <use xlink:href="assets/images/sprite.svg#twitter_rounded"></use>
                     </svg>
                 </a>
             </li>
             <li class="socials__item">
-                <a href="https://www.facebook.com/" class="socials__link" target="_blank" rel="nofollow noopener noreferrer">
-                    <svg class="socials__link-icon">
+                <a href="https://www.facebook.com/" class="socials__link" target="_blank"
+                    rel="nofollow noopener noreferrer" aria-label="follow us on facebook">
+                    <svg class="socials__link-icon" aria-hidden="true">
                         <use xlink:href="assets/images/sprite.svg#facebook_rounded"></use>
                     </svg>
                 </a>
             </li>
             <li class="socials__item">
-                <a href="https://www.pinterest.ru/" class="socials__link" target="_blank" rel="nofollow noopener noreferrer">
-                    <svg class="socials__link-icon">
+                <a href="https://www.pinterest.ru/" class="socials__link" target="_blank"
+                    rel="nofollow noopener noreferrer" aria-label="follow us on pinterest">
+                    <svg class="socials__link-icon" aria-hidden="true">
                         <use xlink:href="assets/images/sprite.svg#pinterest_rounded"></use>
                     </svg>
                 </a>
