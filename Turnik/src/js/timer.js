@@ -66,7 +66,7 @@ export default function timer() {
                 dayNew = day % 100,
                 lastFigure = dayNew % 10;
             if (dayNew > 10 && dayNew < 20) {
-                sb = 'ей';
+                sb = 'дней';
             } else if (lastFigure == 1) {
                 sb = "день";
             } else if (lastFigure > 1 && lastFigure < 5) {

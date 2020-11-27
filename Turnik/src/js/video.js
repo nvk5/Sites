@@ -11,13 +11,13 @@ const video = () => {
         const windowScroll = window.pageYOffset;
         const windowScrollBottom = windowScroll + document.documentElement.clientHeight;
         const elemTop = elem.offsetTop;
-        
+
         return windowScrollBottom >= elemTop;
     }
-    
+
     const setIframe = () => {
         if (checkVisibility(prevBlock) && search) {
-            iframe.forEach( (item,i) => item.src = source[i] );
+            iframe.forEach((item, i) => item.src = source[i]);
             search = false;
             window.removeEventListener('scroll', setIframe);
         }
