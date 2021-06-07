@@ -1,4 +1,5 @@
 import intlTelInput from 'intl-tel-input';
+import 'intl-tel-input/build/js/utils';
 
 export default function () {
     const input = document.querySelector("#phone");
@@ -6,7 +7,6 @@ export default function () {
     const iti = intlTelInput(input, {
         initialCountry: 'RU',
         preferredCountries: ['ru', 'ua', 'by'],
-        utilsScript: "../../node_modules/intl-tel-input/build/js/utils.js",
         separateDialCode: true,
         customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
             const country = selectedCountryData.iso2;
