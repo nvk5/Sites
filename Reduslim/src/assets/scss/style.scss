@@ -1,0 +1,22 @@
+@import 'utils/libs';
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/visually-hidden';
+@import './utils/animations.scss';
+@import 'common/common';
+
+
+@import './layout/header';
+@import './layout/content';
+@import './layout/footer';
+
+@import './components/logo';
+@import './components/submit-button';
+@import './components/order-form';
+@import './components/form';
+@import './components/phone';
+@import './components/loader';
+
+@import 'media/media';
+@import 'media/mediaIE'

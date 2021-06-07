@@ -1,0 +1,100 @@
+/* Large Devices, Desktops, Tablets landscape 992-1200 */
+@media screen and (max-width : 1199.98px) {}
+
+/* Medium Devices, Tablets portrait 768-992 */
+@media screen and (max-width : 991.98px) {
+    .page__body {
+        flex-direction: column;
+    }
+    
+    .order-form {
+        flex-direction: column;
+        width: 320px;
+        background: var(--color-bg-form);
+        padding: 40px 20px 28px;
+        animation: none;
+        display: flex;
+        min-height: auto;
+    }
+    
+    .submit-button {
+        background-position: 70% 50%;
+    }
+
+    .content__headline {
+        background: none;
+        padding: 0;
+        margin: 37px 0 28px;
+    }
+
+    .page__header,
+    .page__content {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .logo {
+        color: var(--color-text);
+    }
+
+    .header {
+        background: none;
+        flex-direction: column;
+
+        &::before {
+            display: none;
+        }
+
+        &__logos {
+            position: static;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 9px;
+            height: auto;
+        }
+
+        &__image-wrap {
+            width: 202px;
+            height: 202px;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        &__image {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .iti {
+        grid-template-columns: 174px 96px;
+        grid-gap: 10px;
+    }
+
+    .iti--allow-dropdown input,
+    .iti--allow-dropdown input[type=text],
+    .iti--allow-dropdown input[type=tel],
+    .iti--separate-dial-code input,
+    .iti--separate-dial-code input[type=text],
+    .iti--separate-dial-code input[type=tel],
+    .iti__selected-flag,
+    .form__field {
+        padding: 16px 10px !important;
+    }
+
+    .footer {
+        display: flex;
+    }
+}
+
+/* Small Devices, Phones (landscape) 576-768 */
+@media screen and (max-width : 767.98px) {}
+
+
+/* Extra Small Devices, Phones (portrait) 320-576 */
+@media screen and (max-width : 575.98px) {}
+
+
+/* Custom, iPhone Retina 0 - 320 */
+@media screen and (max-width : 320px) {}

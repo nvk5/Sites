@@ -1,0 +1,54 @@
+.iti {
+    display: grid;
+    grid-template-columns: 185px 116px;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+    &__flag-container {
+        grid-column: 2;
+        width: 100%;
+    }
+
+    &__selected-flag {
+        padding: 16px 20px;
+    }
+}
+
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=text],
+.iti--allow-dropdown input[type=tel],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=text],
+.iti--separate-dial-code input[type=tel] {
+    padding: 16px 20px !important;
+}
+
+.iti__selected-dial-code {
+    font-family: 'MontserratSemiBold';
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    order: 1;
+    margin-right: 10px;
+    line-height: 1.2;
+}
+
+.iti__arrow {
+    width: 8px;
+    height: 4px;
+    order: 3;
+    margin-left: 0;
+}
+
+.iti__flag {
+    order: 2;
+    margin-right: 10px;
+}
+
+.iti__country-list {
+    font-family: 'MontserratSemiBold';
+    right: 0;
+}
+
+.iti--separate-dial-code .iti__selected-dial-code {
+    margin-left: 0;
+}

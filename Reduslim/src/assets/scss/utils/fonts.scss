@@ -1,0 +1,12 @@
+@mixin font-face($f-name, $f-style, $f-weight, $file-path) {
+    @font-face {
+        font-family: $f-name;
+        font-style: $f-style;
+        font-weight: $f-weight;
+        src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff')
+    }	
+}
+
+@include font-face('MontserratSemiBold', normal, 600,  '../fonts/MontserratSemiBold/MontserratSemiBold');
+@include font-face('MontserratBold', normal, 700,  '../fonts/MontserratBold/MontserratBold');
+@include font-face('MontserratExtraBold', normal, 800,  '../fonts/MontserratExtraBold/MontserratExtraBold');
