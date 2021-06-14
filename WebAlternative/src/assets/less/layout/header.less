@@ -1,0 +1,196 @@
+.header {
+
+    &__top {
+        background: @color-bg-bar;
+    }
+
+    &__contacts {
+        display: none;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__call-btn,
+    &__contact-num {
+        font-family: 'SourceSansProLight', sans-serif;
+
+    }
+
+    &__call-btn {
+        font-size: 16px;
+        border: 1px solid @color-accent;
+        background: none;
+        padding: 13px 28px;
+        color: @color-accent;
+        cursor: pointer;
+        transition: background .3s ease, border .3s ease, color .3s ease;
+        margin-right: 30px;
+
+        &:hover,
+        &:focus {
+            background: @color-accent;
+            border: 1px solid @color-main;
+            color: @color-main;
+        }
+    }
+
+    &__contact-num {
+        font-size: 18px;
+        color: @color-main;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__content {
+        background: radial-gradient(105.09% 130.3% at 52.97% 67.41%, rgba(22, 22, 22, 0) 0%, #161616 100%), 
+            url('../../images/code-fade.png') left bottom, 
+            url('../../images/header.png') bottom 
+            @color-bg-header;
+        background-repeat: no-repeat;
+        padding: 30px 0;
+        background-size: cover;
+        position: relative;
+        color: @color-main;
+
+        @media (min-width: 768px) {
+            padding: 100px 0 30px;
+            background-size: auto;
+        }
+    }
+
+    &__content-image-wrap {
+        grid-row: 2;
+        grid-column: 1;
+        background: url('../../images/mobile-header-sm.png') no-repeat center;
+        height: 252px;
+        
+        @media (min-width: 768px) {
+            grid-row: 1/3;
+            grid-column: 2;
+            position: relative;
+            background: url('../../images/e-commerce.png') no-repeat;
+            height: auto;
+        }
+
+    }
+
+    &__content-image {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: -40px;
+        }
+    }
+
+    &__content-callback,
+    &__content-intro {
+        justify-self: center;
+
+        @media (min-width: 768px) {
+            align-self: center;
+            justify-self: start;
+        }
+    }
+
+    &__headline {
+        font-family: 'MontserratBold';
+        font-size: 21px;
+        line-height: 1.3;
+        margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+            font-size: 52px;
+        }
+    }
+
+    &__headline-desc {
+        font-family: 'MontserratRegular';
+        font-size: 20px;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__headline-pre {
+        font-family: 'MontserratBold';
+        font-size: 13px;
+        background-size: 10px 10px;
+        padding-left: 20px;
+        background: url('../../images/shopping-cart.svg') no-repeat 0 50%;
+        color: @color-accent;
+        margin-bottom: 20px;
+        display: inline-block;
+
+        @media (min-width: 768px) {
+            font-size: 23px;
+            background-size: 19px 19px;
+            padding-left: 31px;
+        }
+    }
+
+    &__content-callback {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__content-callback-text {
+        font-family: 'MontserratLight', sans-serif;
+        font-size: 12px;
+        opacity: 0.5;
+        margin-top: 11px;
+
+        @media (min-width: 768px) {
+            font-family: 'MontserratSemiBold', sans-serif;
+            font-size: 14px;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+    }
+
+    &__content-callback-btn {
+        font-family: 'MontserratRegular', sans-serif;
+        width: 280px;
+        height: 50px;
+        font-size: 16px;
+        padding: 15px;
+        background: @color-accent;
+        color: @color-main;
+
+        display: flex;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 47px;
+            height: 100%;
+            background: #DE774B url('../../images/Union.svg') no-repeat center;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 18px;
+            padding: 22px;
+            width: 329px;
+            height: auto;
+        }
+    }
+}

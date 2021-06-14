@@ -1,0 +1,19 @@
+.include-custom-font(@family: arial, @weight: normal, @style: normal) {
+    @font-face {
+        font-family: @family;
+        src: url('../../fonts/@{family}/@{family}.woff2') format('woff2'),
+        url('../../fonts/@{family}/@{family}.woff') format('woff');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+
+.include-custom-font('TTNormsMedium', 400, normal);
+.include-custom-font('MontserratBold', 700, normal);
+.include-custom-font('MontserratLight', 300, normal);
+.include-custom-font('MontserratMedium', 500, normal);
+.include-custom-font('MontserratRegular', 400, normal);
+.include-custom-font('MontserratSemiBold', 600, normal);
+.include-custom-font('SourceSansProLight', 300, normal);
+.include-custom-font('RobotoMedium', 500, normal);
+.include-custom-font('RobotoLight', 300, normal);

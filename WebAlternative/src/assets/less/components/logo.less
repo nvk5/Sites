@@ -1,0 +1,28 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        width: 45px;
+        height: 23px;
+        margin-right: 14px;
+
+        @media (min-width: 768px) {
+            width: 62px;
+            height: 38px;
+        }
+    }
+
+    &__text {
+        font-family: 'TTNormsMedium', sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.3em;
+        color: @color-main;
+        text-transform: uppercase;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+}

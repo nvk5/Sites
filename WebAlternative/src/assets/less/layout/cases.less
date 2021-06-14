@@ -1,0 +1,120 @@
+.cases {
+    padding: 120px 0 46px;
+    background: url(../../images/case-section.png), url(../../images/GeometryPattrn.png) @color-bg-section;
+    background-size: cover, contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @media (min-width: 768px) {
+        padding: 120px 0 103px;
+    }
+
+    &__headline {
+        font-family: 'MontserratRegular';
+        font-weight: 400;
+        font-size: 21px;
+        margin-bottom: 30px;
+        color: @color-main;
+        text-transform: uppercase;
+        text-align: center;
+        
+        @media (min-width: 768px) {
+            font-size: 42px;
+            margin-bottom: 120px;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 280px;
+        justify-content: center;
+        grid-gap: 40px;
+        margin-bottom: 40px;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+            grid-gap: 31px;
+            margin-bottom: 85px;
+        }
+    }
+
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        padding: 35px 22px;
+        background: linear-gradient(147.62deg, #8D5DCC -128.51%, #55329E 221.38%);
+        box-shadow: 0px 5px 10px rgba(94, 56, 158, 0.35);
+        border-radius: 3px;
+
+        @media (min-width: 576px) {
+            background: #50386F;
+            box-shadow: none;
+            padding: 0;
+            flex-direction: row;
+            max-width: 998px;
+            margin: 0 auto;
+        }
+    }
+
+    &__feedback-text {
+        font-family: 'MontserratBold', sans-serif;
+        font-size: 11px;
+        padding: 0;
+        padding-left: 61px;
+        margin-bottom: 37px;
+        background: url('../../images/love.svg') no-repeat center left;
+        color: @color-main;
+        flex: auto;
+        min-height: 45px;
+        
+        
+        @media (min-width: 576px) {
+            font-family: 'MontserratLight', sans-serif;
+            font-size: 18px;
+            padding: 22px 30px;
+            background: none;
+            flex: 2;
+            text-align: center;
+            margin-bottom: 0;
+            min-height: auto;
+        }
+    }
+
+    &__feedback-text-accent {
+        font-family: 'MontserratBold', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__feedback-button {
+        box-shadow: 0px 5px 10px rgba(94, 56, 158, 0.35);
+        background: none;
+        font-family: 'MontserratBold', sans-serif;
+        font-size: 13px;
+        padding: 13px 54px;
+        color: @color-main;
+        border: 3px solid @color-main;
+        border-radius: 5px;
+
+        @media (min-width: 576px) {
+            font-family: 'MontserratRegular', sans-serif;
+            font-size: 18px;
+            padding: 22px 25px;
+            padding-right: 62px;
+            background: url('../../images/Union.svg') no-repeat 190px center, linear-gradient(147.62deg, #8D5DCC -128.51%, #55329E 221.38%);
+            box-shadow: none;
+            border-radius: 0;
+            border: none;
+        }
+    }
+}

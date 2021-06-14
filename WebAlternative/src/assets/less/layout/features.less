@@ -1,0 +1,144 @@
+.features {
+    background: url(../../images/features-section.png), url(../../images/GeometryPattrn.png) @color-bg-section;
+    background-size: cover, contain;
+    background-repeat: no-repeat;
+    padding: 90px 15px 0;
+    color: @color-main;
+
+    @media (min-width: 768px) {
+        padding: 200px 15px 109px;
+    }
+
+    &__content,
+    &__tabs {
+        max-width: 1084px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        margin: 0;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+
+        @media (min-width: 768px) {
+            margin-right: 140px;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__block {
+        display: grid;
+        justify-items: center;
+        line-height: 1.6;
+        text-align: center;
+
+        &--webpay {
+            order: -1;
+        }
+
+        &--secure {
+            order: 2;
+        }
+
+        &--crm {
+            order: 3;
+        }
+
+        &--secure,
+        &--webpay {
+            margin-bottom: 80px;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 100px;
+            text-align: left;
+        }
+
+        @media (min-width: 1080px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__headline {
+        font-family: 'MontserratSemiBold', sans-serif;
+        font-size: 16px;
+        margin-bottom: 40px;
+
+        @media (min-width: 768px) {
+            font-size: 26px;
+        }
+    }
+
+    &__body {
+        margin-top: 30px;
+
+        @media (min-width: 768px) {
+            margin-top: 0
+        }
+        @media (min-width: 1080px) {
+            margin-top: 134px;
+        }
+    }
+
+    &__text {
+        font-family: 'MontserratRegular', sans-serif;
+        font-size: 12px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+    }
+
+    &__logos {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(75px, auto));
+            grid-gap: 40px;
+            align-items: center;
+        }
+
+    }
+
+    &__tabs {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__tabs-item {
+        font-family: 'MontserratRegular', sans-serif;
+        font-size: 18px;
+        text-decoration: underline;
+        color: @color-main;
+        opacity: 0.4;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: @color-accent2;
+            opacity: 1;
+        }
+
+        &:not(:last-child) {
+            margin-right: 100px;
+        }
+    }
+}
